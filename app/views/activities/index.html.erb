@@ -1,9 +1,10 @@
 <div class="container">
   <div class="row">
-      <% @activities each do |activity| %>
+      <% @activities.each do |activity| %>
         <div class="col-xs-4 col-xs-offset-4">
           <%= render 'shared/horizontalcard' %>
         </div>
+      <% end %>
         <div class="buttons-container">
           <div class="back-button">
 
@@ -12,7 +13,6 @@
 
           </div>
         </div>
-      <% end %>
   </div>
 </div>
 
