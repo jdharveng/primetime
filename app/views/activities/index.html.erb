@@ -1,2 +1,18 @@
-<h1>Activities#index</h1>
-<p>Find me in app/views/activities/index.html.erb</p>
+<div class="container">
+  <div class="row">
+      <% @activities each do |activity| %>
+        <div class="col-xs-4 col-xs-offset-4">
+          <%= render 'shared/horizontalcard' %>
+        </div>
+        <div class="buttons-container">
+          <div class="back-button">
+
+          </div>
+          <div class="next-button">
+
+          </div>
+        </div>
+      <% end %>
+  </div>
+</div>
+
