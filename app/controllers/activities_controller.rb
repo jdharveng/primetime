@@ -55,6 +55,10 @@ class ActivitiesController < ApplicationController
     @activity.destroy
   end
 
+  def filters
+    skip_authorization
+  end
+
   private
 
   def activity_params
@@ -65,7 +69,4 @@ class ActivitiesController < ApplicationController
     @activity = Activity.find(params[:id])
   end
 
-  def filters
-    skip_authorization
-  end
 end
