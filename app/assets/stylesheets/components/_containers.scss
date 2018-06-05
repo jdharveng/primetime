@@ -33,7 +33,10 @@
   height: 510px;
   width: 100%;
   z-index: 1;
-  background-color: #ffff;
+  margin-top: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .card-container {
