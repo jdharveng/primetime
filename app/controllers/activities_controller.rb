@@ -3,13 +3,19 @@ class ActivitiesController < ApplicationController
 
   # GET /activities
   def index
-
     @activities = policy_scope(Activity).order(created_at: :desc)
   end
 
   # GET /activities/1
   def show
    authorize @activity
+   @activity = Activity.find(params[:id])
+   @marker = [
+      {
+        lat: @activity.latitude,
+        lng: @activity.longitude,
+      }
+    ]
   end
 
   # GET /activities/new
