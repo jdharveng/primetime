@@ -65,4 +65,7 @@ class ActivitiesController < ApplicationController
     @activity = Activity.find(params[:id])
   end
 
+  def filters
+    skip_authorization
+  end
 end

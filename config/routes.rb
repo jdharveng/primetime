@@ -7,4 +7,7 @@ Rails.application.routes.draw do
 
   resources :bookings, only: [:index]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get :filters, to: 'activities#filters'
+  get :filter_time, to: 'activities#filter_time'
+  get :filter_money, to: 'activities#filter_money'
 end
