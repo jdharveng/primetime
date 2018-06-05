@@ -1,17 +1,17 @@
 <div class="container">
   <div class="row">
-      <% @activities.each do |activity| %>
-        <div class="col-xs-4 col-xs-offset-4">
-          <%= render 'shared/horizontalcard' %>
-        </div>
-      <% end %>
+
+      <div class="cards-container">
+          <% @activities.sample(5).each do |activity| %>
+          <div class="col-xs-4 card-container">
+            <%= render 'shared/horizontalcards', activity: activity %>
+          </div>
+          <% end %>
+      </div>
+
         <div class="buttons-container">
-          <div class="back-button">
-
-          </div>
-          <div class="next-button">
-
-          </div>
+          <button class="back-button passive-button"><i class="fas fa-caret-left"></i>Back</button>
+          <button class="next-button cta-button">Next<i class="fas fa-caret-right"></i></button>
         </div>
   </div>
 </div>
