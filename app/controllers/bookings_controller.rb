@@ -1,6 +1,6 @@
-class BookingController < ApplicationController
+class BookingsController < ApplicationController
   before_action :set_activity, except: [:index]
-  # before_action :set_booking, only: [:edit]
+  before_action :set_booking, only: [:show]
 
   # GET /bookings
   def index
@@ -26,7 +26,7 @@ class BookingController < ApplicationController
     authorize @booking
 
     if @booking.save
-      redirect_to @booking
+      redirect_to activity_booking_path(@activity,@booking)
     else
       render :new
     end
@@ -43,7 +43,7 @@ class BookingController < ApplicationController
     @activity = Activity.find(params[:activity_id])
   end
 
-  # def set_booking
-  #   @booking = Booking.find(params[:id])
-  # end
+   def set_booking
+     @booking = Booking.find(params[:id])
+  end
 end
