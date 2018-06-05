@@ -1,0 +1,19 @@
+.container {
+  width: 360px;
+  height: 640px;
+  position: relative;
+  border-color: black;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.buttons-container {
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  height: 60px;
+  border-color: black;
+  border-width: 1px;
+  border-style: solid;
+}

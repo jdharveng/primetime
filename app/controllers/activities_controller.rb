@@ -3,7 +3,7 @@ class ActivitiesController < ApplicationController
 
   # GET /activities
   def index
-    # @activities = Activity.all
+
     @activities = policy_scope(Activity).order(created_at: :desc)
   end
 
@@ -14,12 +14,16 @@ class ActivitiesController < ApplicationController
   # GET /activities/new
   def new
     @activity = Activity.new
+    authorize @activity
   end
 
   # POST /activities/
   def create
     @activity = Activity.new(activity_params)
     @activity.user_id = current_user.id
+    authorize @activity
+
+    byebug
     if @activity.save
       redirect_to @activity
     else
@@ -52,7 +56,7 @@ class ActivitiesController < ApplicationController
   private
 
   def activity_params
-    params.require(:activity).permit(:title, :description, :duration, :address, :price)
+    params.require(:activity).permit(:title, :description, :duration, :address, :price, :category_id)
   end
 
   def set_activity
