@@ -18,4 +18,8 @@ class ActivityPolicy < ApplicationPolicy
   def destroy?
     record.user == user
   end
+
+  #def filters?
+   # return true
+  #end
 end
