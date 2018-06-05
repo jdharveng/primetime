@@ -9,6 +9,7 @@ class ActivitiesController < ApplicationController
 
   # GET /activities/1
   def show
+   authorize @activity
   end
 
   # GET /activities/new
@@ -23,7 +24,6 @@ class ActivitiesController < ApplicationController
     @activity.user_id = current_user.id
     authorize @activity
 
-    byebug
     if @activity.save
       redirect_to @activity
     else
@@ -40,7 +40,9 @@ class ActivitiesController < ApplicationController
   # PATCH /activities/1
   def update
     authorize @activity
-    if @activity.update(acitivity_params)
+    @category = Category.find(@activity.category_id)
+
+    if @activity.update(activity_params)
       redirect_to @activity
     else
       render :edit
