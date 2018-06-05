@@ -28,4 +28,20 @@ class ActivitiesController < ApplicationController
 
   def destroy
   end
+
+
+  def filters
+    skip_authorization
+  end
+
+  # def filter_time
+
+  #   skip_authorization
+  # end
+
+  # def filter_money
+
+  #   skip_authorization
+  # end
+
 end
