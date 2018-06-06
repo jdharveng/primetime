@@ -5,7 +5,7 @@
     "@rails/webpacker": "3.5",
     "bootstrap": "3",
     "bootstrap-slider": "^10.0.2",
-    "slideout": "^1.0.1"
+    "slideout": "^1.0.1",
     "gmaps": "^0.4.24",
     "jquery": "^3.3.1"
 
