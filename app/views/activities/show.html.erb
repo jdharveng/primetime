@@ -6,19 +6,15 @@
 
       <div class="box">
         <div class="box-icons-left">
-          <%= cl_image_tag @activity.user.picture, class: "avatar", height: 60, width: 60, crop: :fill%>
-          <i class="fas fa-save"></i>
-          <i class="fas fa-share-alt"></i>
+          <%= cl_image_tag @activity.user.picture, class: "avatar avatar-icon-margin", height: 60, width: 60, crop: :fill%>
+          <i class="fas fa-save icon-style"></i>
+          <i class="fas fa-share-alt icon-style"></i>
         </div>
-        <div>
-          <i class="far fa-map"></i>
+        <div class ="box-icon-right">
+          <i class="far fa-map icon-style fa-lg"></i>
         </div>
       </div>
-
       <div class="card-bottom">
-        <div class="card-distance">
-          123m
-        </div>
         <div class="card-details">
           <div class="rating">
             4.3
@@ -33,21 +29,22 @@
           </div>
         </div>
       </div>
-
-        <h1><%= @activity.title %></h1>
-          <p> <%= @activity.category.name %></p>
-          <p> <%= @activity.description %></p>
+        <div class="container">
+          <h1><%= @activity.title %></h1>
+            <p> <%= @activity.category.name %></p>
+            <p> <%= @activity.description %></p>
+        </div>
     </div>
   </div>
 </div>
 
-    <div class="container">
-      <div class="row">
-          <div class="col-md-8 col-md-offset-4">
+    <div class="buttons-container">
+      <!-- <div class="row">
+          <div class="col-md-8 col-md-offset-4"> -->
             <button class="back-button passive-button"><i class="fas fa-caret-left"></i>Back</button>
             <button class="next-button cta-button">Next<i class="fas fa-caret-right"></i></button>
-        </div>
-      </div>
+        <!-- </div>
+      </div> -->
     </div>
 
 
