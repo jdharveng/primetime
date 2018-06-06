@@ -16,6 +16,15 @@ class ActivitiesController < ApplicationController
         lng: @activity.longitude,
       }
     ]
+    # @lat = request.location.latitude
+    # @long = request.location.longitude
+
+    # require 'json'
+    # require 'open-uri'
+    # url = "https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=#{@lat}|#{@long}&destinations=#{@activity.latitude}|#{@activity.longitude}&key=AIzaSyCleWvsNaz8ws_W5UuN4yPCi5YOfKDMvPM"
+    # user_serialized = open(url).read
+    # user = JSON.parse(user_serialized)
+    # @distance = user['rows'][0]["elements"] [0]["duration"]['text']
   end
 
   # GET /activities/new
