@@ -18,8 +18,12 @@ if (filterPage) {
   getUserLocation()
 }
 
+import { slideout_use} from "../components/slideout";
+
 slide();
 slide_with_ticks();
+
+slideout_use();
 
 
 const next_button = document.getElementById( 'next-filter' );
@@ -38,4 +42,5 @@ next_button.onclick = function() {
         x.style.display = "none";
     }
 }
+
 
