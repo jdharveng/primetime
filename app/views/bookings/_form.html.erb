@@ -1,0 +1,13 @@
+<%= simple_form_for [@activity, @booking] do |f| %>
+ <div class="form-inputs">
+
+<!--   This will have to be removed it's for purpose of testing the booking Controller -->
+    <%= f.input :amount  %>
+
+
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
