@@ -1,9 +1,29 @@
 import "bootstrap";
-
+import initMap from '../components/map';
 import { slide, slide_with_ticks } from "../components/slider";
+import getUserLocation from '../components/userlocation';
+
+//required for Gmaps to work
+window.GMaps = require('gmaps');
+
+const showPage = document.querySelector('.activities.show');
+if (showPage) {
+  const mapElement = document.getElementById('map');
+  initMap(mapElement);
+}
+
+const filterPage = document.querySelector('.activities.filters')
+console.log(filterPage)
+if (filterPage) {
+  getUserLocation()
+}
+
+import { slideout_use} from "../components/slideout";
 
 slide();
 slide_with_ticks();
+
+slideout_use();
 
 
 const next_button = document.getElementById( 'next-filter' );
@@ -21,5 +41,6 @@ next_button.onclick = function() {
     } else {
         x.style.display = "none";
     }
-
 }
+
+
