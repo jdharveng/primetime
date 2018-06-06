@@ -1,8 +1,8 @@
-<div class="container">
+<div class="container-index">
   <div class="row">
 
       <div class="cards-container">
-          <% @activities.sample(5).each do |activity| %>
+          <% @activities_filtered.each do |activity| %>
           <div class="col-xs-4 card-container">
             <%= render 'shared/horizontalcards', activity: activity %>
           </div>
@@ -10,8 +10,8 @@
       </div>
 
         <div class="buttons-container">
-          <button class="back-button passive-button"><i class="fas fa-caret-left"></i>Back</button>
-          <button class="next-button cta-button">Next<i class="fas fa-caret-right"></i></button>
+          <button class="back-button cta-button"><i class="fas fa-caret-left"></i>Back</button>
+<!--           <button class="next-button cta-button">Next<i class="fas fa-caret-right"></i></button> -->
         </div>
   </div>
 </div>

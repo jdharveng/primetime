@@ -1,4 +1,7 @@
 <div class="card-box">
+  <%= link_to activity_path(activity) do %>
+    <div class="card-link"></div>
+  <% end %>
   <div class="card-picture">
     <img src="" alt="">
   </div>
@@ -13,7 +16,12 @@
     </div>
     <div class="card-bottom">
       <div class="card-distance">
-        123m
+        <% if activity.distance > 1 %>
+        <%= activity.distance.round(1) %>km
+        <% else %>
+        <%= (activity.distance * 100).round %>m
+        <% end %>
+
       </div>
       <div class="card-details">
         <div class="rating">
