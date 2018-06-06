@@ -2,7 +2,7 @@
   <div class="row">
 
       <div class="cards-container">
-          <% @activities.sample(5).each do |activity| %>
+          <% @activities_filtered.each do |activity| %>
           <div class="col-xs-4 card-container">
             <%= render 'shared/horizontalcards', activity: activity %>
           </div>

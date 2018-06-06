@@ -1,11 +1,36 @@
 class ActivitiesController < ApplicationController
   before_action :set_activity, only: [:show, :edit, :update, :destroy]
+  require 'json'
+  require 'open-uri'
 
   # GET /activities
   def index
-    @activities = policy_scope(Activity).order(created_at: :desc)
+    @activities = policy_scope(Activity)
+
+    #user location parsed from Filters form
     user_location = JSON.parse(params["user-location"])
-    # @activities_filtered = @activities.where(duration:<params[:time],)
+    ulat = user_location["lat"]
+    ulng = user_location["lng"]
+
+    #filtering activities with Filters
+    @activities_filtered = @activities.near([ulat,ulng],20)
+    .where("duration < ? AND price < ?", params[:time], params[:money])
+
+    #filtering activities_filtered with distance to user location
+    # distance_to_activities = []
+    # @activities_filtered.each do |activity|
+    #     walking_url = "https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=#{ulat},#{ulng}&destinations=#{activity.latitude},#{activity.longitude}&mode=walking&key=AIzaSyCleWvsNaz8ws_W5UuN4yPCi5YOfKDMvPM"
+    #     user_serialized = open(walking_url).read
+    #     user = JSON.parse(user_serialized)
+    #     distance_time = user['rows'][0]["elements"] [0]["duration"]['text']
+    #     distance_meters = user['rows'][0]["elements"] [0]["duration"]['value']
+    #     distance_to_activities << {
+    #       id: activity.id,
+
+    #       distance_time: distance_time,
+    #       distance_meters: distance_meters
+    #     }
+    # end
   end
 
   # GET /activities/1
@@ -18,15 +43,7 @@ class ActivitiesController < ApplicationController
         lng: @activity.longitude,
       }
     ]
-    # @lat = request.location.latitude
-    # @long = request.location.longitude
 
-    # require 'json'
-    # require 'open-uri'
-    # url = "https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=#{@lat}|#{@long}&destinations=#{@activity.latitude}|#{@activity.longitude}&key=AIzaSyCleWvsNaz8ws_W5UuN4yPCi5YOfKDMvPM"
-    # user_serialized = open(url).read
-    # user = JSON.parse(user_serialized)
-    # @distance = user['rows'][0]["elements"] [0]["duration"]['text']
   end
 
   # GET /activities/new
