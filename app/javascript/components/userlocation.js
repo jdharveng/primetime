@@ -3,8 +3,9 @@ import GMaps from 'gmaps/gmaps.js';
 const getUserLocation = function () {
 
     const input = document.getElementById("user-location");
-
+    console.log('function started');
     if (input) {
+      console.log('inside if')
       GMaps.geolocate({
         success: function(position) {
           let userLocation = {

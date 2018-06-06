@@ -4,6 +4,8 @@ class ActivitiesController < ApplicationController
   # GET /activities
   def index
     @activities = policy_scope(Activity).order(created_at: :desc)
+    user_location = JSON.parse(params["user-location"])
+    # @activities_filtered = @activities.where(duration:<params[:time],)
   end
 
   # GET /activities/1
