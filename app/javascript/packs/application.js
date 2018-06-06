@@ -1,6 +1,7 @@
 import "bootstrap";
 import initMap from '../components/map';
 import { slide, slide_with_ticks } from "../components/slider";
+import getUserLocation from '../components/userlocation';
 
 const showPage = document.querySelector('.activities.show');
 if (showPage) {
