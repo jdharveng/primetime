@@ -2,6 +2,8 @@ import "bootstrap";
 import initMap from '../components/map';
 import { slide, slide_with_ticks } from "../components/slider";
 import getUserLocation from '../components/userlocation';
+import { slideout_use, slideout_right} from "../components/slideout";
+
 
 //required for Gmaps to work
 window.GMaps = require('gmaps');
@@ -18,12 +20,13 @@ if (filterPage) {
   getUserLocation()
 }
 
-import { slideout_use} from "../components/slideout";
+
 
 slide();
 slide_with_ticks();
 
 slideout_use();
+slideout_right();
 
 
 const next_button = document.getElementById( 'next-filter' );
