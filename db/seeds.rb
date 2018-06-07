@@ -15,7 +15,7 @@
   first_name:"Andreia",
   last_name: "Domingues",
   bio:"Andreia is a tv host that doesn't like tv and prefers reading, she can be found with a book in hand at the most random places and situations: mountain tops, car repair garages and in the middle of a hurricane ",
-  picture: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_100/v1528135116/Le_Wagon_18.04.27_039.jpg",
+  remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_100/v1528135116/Le_Wagon_18.04.27_039.jpg",
   address: "Rua Moeda 7, Lisboa, Portugal"
   )
 
@@ -25,7 +25,7 @@
   first_name:"Jerome",
   last_name: "Harveng",
   bio: "Jerome is a surfer, that travels the world in championships, but while other surfers like to discuss the waves to discuss philosophy (others eventually leave)",
-  picture: "http://res.cloudinary.com/pmarzagao/image/upload/v1527684917/image_2.png",
+  remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/v1527684917/image_2.png",
   address: "Rua Moeda 7, Lisboa, Portugal"
   )
 
@@ -35,7 +35,7 @@
   first_name:"Pedro",
   last_name: "Marzagão",
   bio:"Pedro is a sky-diving professional who has spent most of his life up in the air. He goes on a new plane everyday but nothings makes him fly like a book",
-  picture: "http://res.cloudinary.com/pmarzagao/image/upload/v1527683243/Pedro_Headshot_2.jpg",
+  remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/v1527683243/Pedro_Headshot_2.jpg",
   address: "Rua Senhora da Glória 104, Lisboa, Portugal"
   )
 
@@ -45,7 +45,7 @@
   first_name:"Marta",
   last_name: "Keller",
   bio:"Spent a weekend promoting glue for no pay. What gets me going now is supervising the production of basketballs in Hanford, CA. Was quite successful at developing jigsaw puzzles for fun and profit. What gets me going now is implementing dolls in Africa. Spent several months merchandising wooden horses in Ocean City, NJ. Spoke at an international conference about marketing country music in Nigeria.",
-  picture: "http://res.cloudinary.com/pmarzagao/image/upload/v1527683260/8GaEWuxK_400x400.jpg",
+  remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/v1527683260/8GaEWuxK_400x400.jpg",
   address: "Rua Moeda 7, Lisboa, Portugal"
   )
 
@@ -55,7 +55,7 @@
   first_name:"Emily",
   last_name: "Burns",
   bio:"Once had a dream of working on g.i. joes in Miami, FL. Spent college summers lecturing about cellos for the underprivileged. Spent high school summers marketing lint in the aftermarket. Crossed the country getting to know crickets in Cuba. Practiced in the art of analyzing dolls on the black market. Garnered an industry award while getting my feet wet with sheep in Fort Lauderdale, FL.",
-  picture: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_100/v1528135035/Le_Wagon_18.04.27_064.jpg",
+  remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_100/v1528135035/Le_Wagon_18.04.27_064.jpg",
   address: "Rua Constantino Fernandes, 2, Lisboa, Portugal"
   )
 
@@ -65,7 +65,7 @@
   first_name:"Swen",
   last_name: "Kunzel",
   bio:"Prior to my current job I was testing the market for g.i. joes in West Palm Beach, FL. Once had a dream of writing about licorice in Atlantic City, NJ. Spent the better part of the 90's investing in puppets in Mexico. Spent the 80's investing in walnuts in Naples, FL. In 2009 I was licensing electric trains in Washington, DC. Spent 2001-2007 working with pubic lice in Ohio.",
-  picture: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_100/v1528135086/Le_Wagon_18.04.27_016.jpg",
+  remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_100/v1528135086/Le_Wagon_18.04.27_016.jpg",
   address: "Rua Manuel Marques, 15, Lisboa, Portugal"
   )
 
@@ -75,7 +75,7 @@
   first_name:"Antoine",
   last_name: "Quellier",
   bio:"Practiced in the art of donating wooden trains for the government. Set new standards for analyzing jump ropes in Africa. Won several awards for donating frisbees in Jacksonville, FL. Spent several months donating teddy bears worldwide. Spent childhood working with pond scum in Orlando, FL. Have a strong interest in buying and selling jigsaw puzzles in Los Angeles, CA.",
-  picture: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_100/v1528135017/Le_Wagon_18.04.27_045.jpg",
+  remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_100/v1528135017/Le_Wagon_18.04.27_045.jpg",
   address: "Rua da Misericordia 15, Lisboa Portugal"
   )
 
@@ -85,7 +85,7 @@
   first_name:"David",
   last_name: "Zwagemaker",
   bio:"Set new standards for working on psoriasis in New York, NY. Spent 2001-2005 supervising the production of bassoons in New York, NY. Spent a year merchandising acne in West Palm Beach, FL. Spent 2001-2005 analyzing cannibalism in Hanford, CA. Spent 2001-2007 selling crayon art in Ohio. Spent 2001-2008 writing about hobos in Washington, DC.",
-  picture: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_100/v1528135049/Le_Wagon_18.04.27_020.jpg",
+  remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_100/v1528135049/Le_Wagon_18.04.27_020.jpg",
   address: "Rua da Atalaia 25, Lisboa, Portugal"
   )
 
@@ -135,7 +135,7 @@ puts 'Created Categories'
   category: Category.all.sample,
   user: User.all.sample,
   duration: 10,
-  picture: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138801/Amanteigaria.jpg"
+  remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138801/Amanteigaria.jpg"
   )
 
   Activity.create!(
@@ -149,7 +149,7 @@ puts 'Created Categories'
   category: Category.all.sample,
   user: User.all.sample,
   duration: 20,
-  picture: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138806/Miradouro-da-Grac%CC%A7a.jpg"
+  remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138806/Miradouro-da-Grac%CC%A7a.jpg"
   )
 
   Activity.create!(
@@ -163,7 +163,7 @@ puts 'Created Categories'
   category: Category.all.sample,
   user: User.all.sample,
   duration: 15,
-  picture: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138805/o-trevo.jpg"
+  remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138805/o-trevo.jpg"
   )
 
   Activity.create!(
@@ -177,7 +177,7 @@ puts 'Created Categories'
   category: Category.all.sample,
   user: User.all.sample,
   duration: 60,
-  picture: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138807/museu-do-azulejo.jpg"
+  remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138807/museu-do-azulejo.jpg"
   )
 
   Activity.create!(
@@ -191,7 +191,7 @@ puts 'Created Categories'
   category: Category.all.sample,
   user: User.all.sample,
   duration: 90,
-  picture: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138795/Oceanario-Lisboa.jpg"
+  remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138795/Oceanario-Lisboa.jpg"
   )
 
   Activity.create!(
@@ -205,7 +205,7 @@ puts 'Created Categories'
   category: Category.all.sample,
   user: User.all.sample,
   duration: 120,
-  picture: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138814/pub-crawl-lisbon-destination-tours-2.jpg"
+  remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138814/pub-crawl-lisbon-destination-tours-2.jpg"
   )
 
   Activity.create!(
@@ -219,7 +219,7 @@ puts 'Created Categories'
   category: Category.all.sample,
   user: User.all.sample,
   duration: 45,
-  picture: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138808/jardim-botanico.jpg"
+  remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138808/jardim-botanico.jpg"
   )
 
 

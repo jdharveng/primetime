@@ -8,4 +8,5 @@ class User < ApplicationRecord
   has_many :followers, class_name: 'Following', foreign_key: 'follower_id'
   has_many :followees, class_name: 'Following', foreign_key: 'followee_id'
 
+  mount_uploader :picture, PhotoUploader
 end
