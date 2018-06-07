@@ -51,8 +51,6 @@ slideLeft.on('beforeopen', () => {
     slideRight.toggle();
   });
 
-
-
 }
 
 

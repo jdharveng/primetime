@@ -1,5 +1,5 @@
 import Slider from "bootstrap-slider";
-import "bootstrap-slider/src/sass/bootstrap-slider.scss"
+
 
 function slide_with_ticks() {
   if (!document.getElementById('ex13')) return null;
@@ -22,4 +22,29 @@ function slide() {
   });
 }
 
-export { slide, slide_with_ticks };
+function transition() {
+  const next_button = document.getElementById( 'next-filter' );
+
+document.getElementById("money").style.display = "none";
+
+next_button.onclick = function() {
+
+  console.log("It's working")
+
+  var x = document.getElementById("money");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+        document.getElementById("time").style.display = "none";
+    } else {
+        x.style.display = "none";
+    }
+}
+}
+
+function loadSlides() {
+  transition()
+  slide()
+  slide_with_ticks()
+}
+
+export { loadSlides };
