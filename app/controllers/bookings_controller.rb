@@ -23,10 +23,12 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.user_id = current_user.id
     @booking.activity_id = @activity.id
+    @booking.state = "pending"
     authorize @booking
 
     if @booking.save
-      redirect_to activity_booking_path(@activity,@booking)
+      redirect_to new_order_payment_path(order)
+      # redirect_to activity_booking_path(@activity,@booking)
     else
       render :new
     end

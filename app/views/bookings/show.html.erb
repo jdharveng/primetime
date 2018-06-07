@@ -4,4 +4,4 @@
 
 
 <p> Booking for : <%= @activity.title  %></p>
-<p>Amount: <%= @booking.amount %></p>
+<p>Amount: <%= humanized_money_with_symbol(@booking.amount) %></p>

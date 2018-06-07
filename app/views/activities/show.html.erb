@@ -39,7 +39,10 @@
 
         </div>
       </div>
-
+        <%= form_tag bookings_path do %>
+        <%= hidden_field_tag 'activity_id', @activity.id %>
+        <%= submit_tag 'Purchase', class: 'btn btn-primary' %>
+        <% end %>
       <div class="card-bottom">
         <div class="card-details">
           <div class="rating">
@@ -47,7 +50,7 @@
           </div>
           <div class="price">
             <i class="fas fa-wallet"></i>
-            <%=@activity.price/10%>€
+            <%= humanized_money_with_symbol(@activity.price) %>
           </div>
           <div class="time">
             <i class="fas fa-clock"></i>
@@ -65,6 +68,7 @@
           <div class="activity-description">
             <%= @activity.description %>
           </div>
+
         </div>
       <div class="col-xs-4 buttons-container">
         <button class="back-button passive-button"><i class="fas fa-caret-left"></i>Back</button>

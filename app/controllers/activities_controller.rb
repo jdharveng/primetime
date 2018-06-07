@@ -15,7 +15,7 @@ class ActivitiesController < ApplicationController
 
     #filtering activities with Filters
     @activities_filtered = @activities.near([ulat,ulng],100)
-    .where("duration < ? AND price < ?", params[:time], params[:money])
+    .where("duration < ? AND price_cents < ?", params[:time], params[:money].to_i*1000)
 
     #filtering activities_filtered with distance to user location
     # distance_to_activities = []
