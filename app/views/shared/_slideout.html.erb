@@ -2,6 +2,7 @@
 <!--   <header> -->
   <h2>Menu</h2>
 <!--   </header> -->
+  <p> Begin </p>
   <p> <%= link_to "New Activity", new_activity_path  %> </p>
   <p> <%= link_to "My Activities", activities_path  %> </p>
   <p> My Bookings </p>
@@ -11,6 +12,8 @@
 
 </nav>
 
-
-
-
+<%= content_for :after_js do %>
+  <script>
+    window.app.slideout_use()
+  </script>
+<% end %>
