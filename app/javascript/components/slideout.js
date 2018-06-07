@@ -6,6 +6,7 @@ function slideout_use() {
     'menu': document.getElementById('menu'),
     'padding': 256,
     'tolerance': 70,
+    'touch': false
   });
 
   var slideRight = new Slideout({
@@ -13,7 +14,8 @@ function slideout_use() {
     'menu': document.getElementById('menu-right'),
     // 'padding': 256,
     // 'tolerance': 70,
-    'side': 'right'
+    'side': 'right',
+    'touch': false
   });
 
 
@@ -52,17 +54,6 @@ slideLeft.on('beforeopen', () => {
   });
 
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 export { slideout_use};

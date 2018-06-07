@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  before_action :set_activity, except: [:index]
+  before_action :set_activity, except: [:index, :mybookings]
   before_action :set_booking, only: [:show]
 
   # GET /bookings
@@ -10,6 +10,11 @@ class BookingsController < ApplicationController
   # GET /activities/1/bookings
   def show
    authorize @booking
+  end
+
+  def mybookings
+    @bookings = Booking.where(user: current_user)
+    authorize @bookings
   end
 
   # GET /activities/1/bookings/new
