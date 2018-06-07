@@ -1,0 +1,35 @@
+.back-button {
+  width: 50%;
+  height: 60px;
+
+}
+
+.next-button {
+  width: 50%;
+  height: 60px;
+}
+
+.cta-button {
+  background-color: #72469F;
+  border-left: #936db9;
+  border-left-width: 0.25px;
+  border-left-style: solid;
+  color: white;
+  i {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
+.passive-button {
+  background-color: #ffff;
+  color: #936db9;
+  i {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
+.full-button {
+  width: 100% !important;
+}
