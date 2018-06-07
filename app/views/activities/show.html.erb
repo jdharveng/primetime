@@ -102,10 +102,20 @@ function goForward() {
 <%= content_for :after_js do %>
     <script>
     window.app.display_map()
+    window.app.hide_map()
     </script>
-
 <% end %>
 
+<%= content_for :after_panel do %>
+    <div id="activity-map" class="map-start">
+          <div id="map" data-markers="<%= @marker.to_json %>"></div>
+    </div>
+    <div class ="close-box">
+      <div id="map-close" class="box-icon map-icon close-button map-start">
+        <i class="far fa-map icon-white fa-lg"></i>
+      </div>
+    </div>
+<% end %>
 
 
 

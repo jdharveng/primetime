@@ -43,9 +43,12 @@
   justify-content: flex-end;
   background: transparent;
   width: 60px;
+  z-index: 999;
 }
 
 .close-button {
+  position: absolute;
+  z-index: 800;
   background-color: white !important;
   color: #72469F !important;
   height: 60px;

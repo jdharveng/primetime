@@ -23,15 +23,14 @@ function slide() {
 }
 
 function transition() {
+  console.log('function transition started');
   const next_button = document.getElementById( 'next-filter' );
+  document.getElementById("money").style.display = "none";
 
-document.getElementById("money").style.display = "none";
+  next_button.onclick = function() {
+    console.log("It's working")
+    var x = document.getElementById("money");
 
-next_button.onclick = function() {
-
-  console.log("It's working")
-
-  var x = document.getElementById("money");
     if (x.style.display === "none") {
         x.style.display = "block";
         document.getElementById("time").style.display = "none";
@@ -42,9 +41,9 @@ next_button.onclick = function() {
 }
 
 function loadSlides() {
-  transition()
-  slide()
-  slide_with_ticks()
+  transition();
+  slide();
+  slide_with_ticks();
 }
 
 export { loadSlides };
