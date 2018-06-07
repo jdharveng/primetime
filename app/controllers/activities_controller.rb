@@ -47,6 +47,13 @@ class ActivitiesController < ApplicationController
 
   end
 
+  def myactivities
+    @activities = Activity.where(user: current_user)
+
+    authorize @activities
+  end
+
+
   # GET /activities/new
   def new
     @activity = Activity.new

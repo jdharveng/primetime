@@ -1,7 +1,14 @@
 class ActivityPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
-      scope.all
+      #scope.all
+      scope.where(user: user)
+    end
+  end
+
+  def myactivities?
+    record.all? do |record_item|
+      record_item.user == user
     end
   end
 
