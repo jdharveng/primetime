@@ -12,6 +12,8 @@
 
 </nav>
 
-
-
-
+<%= content_for :after_js do %>
+  <script>
+    window.app.slideout_use()
+  </script>
+<% end %>
