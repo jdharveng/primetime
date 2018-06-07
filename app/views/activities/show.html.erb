@@ -1,7 +1,7 @@
 <% content_for :head do %>
     <!-- Open Graph tags -->
     <meta property="og:title" content="<%= @activity.title %>" />
-    <meta property="og:type" content="article" />
+    <meta property="og:type" content="website" />
     <meta property="og:url" content="<%= activity_url(@activity) %>" />
     <meta property="og:description" content="<%= @activity.description %>" />
       <meta property="og:image" content="<%=cl_image_path @activity.picture%>" />
