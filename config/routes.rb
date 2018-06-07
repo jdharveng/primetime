@@ -18,4 +18,5 @@ Rails.application.routes.draw do
   get :filter_money, to: 'activities#filter_money'
 
   get :myactivities, to: 'activities#myactivities'
+  get :mybookings, to: 'bookings#mybookings'
 end

@@ -9,4 +9,10 @@ class BookingPolicy < ApplicationPolicy
   def create?
     return true
   end
+
+  def mybookings?
+    record.all? do |record_item|
+      record_item.user == user
+    end
+  end
 end
