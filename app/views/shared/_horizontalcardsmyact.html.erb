@@ -1,0 +1,35 @@
+<div class="card-box">
+  <%= link_to activity_path(activity) do %>
+    <div class="card-link"></div>
+  <% end %>
+  <div class="card-picture" style="background-image: url('<%=cl_image_path activity.picture%>')">
+  </div>
+  <div class="card-content">
+    <div class="card-top">
+      <div class="card-title">
+        <%= activity.title %>
+      </div>
+      <div class="card-category">
+        <%= activity.category.name %>
+      </div>
+    </div>
+    <div class="card-bottom">
+      <div class="card-distance">
+  <!--       Keep this empty section to have the same display as when distance -->
+      </div>
+      <div class="card-details">
+        <div class="rating">
+          4.3
+        </div>
+        <div class="price">
+          <i class="fas fa-wallet"></i>
+          <%=activity.price/10%>€
+        </div>
+        <div class="time">
+          <i class="fas fa-clock"></i>
+          <%=activity.duration%>m
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
