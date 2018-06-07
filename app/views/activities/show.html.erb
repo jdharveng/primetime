@@ -39,9 +39,9 @@
 
         </div>
       </div>
-        <%= form_tag bookings_path do %>
-        <%= hidden_field_tag 'activity_id', @activity.id %>
-        <%= submit_tag 'Purchase', class: 'btn btn-primary' %>
+        <%= form_tag activity_bookings_path(@activity) do %>
+          <%= hidden_field_tag 'activity_id', @activity.id %>
+          <%= submit_tag 'Purchase', class: 'btn btn-primary' %>
         <% end %>
       <div class="card-bottom">
         <div class="card-details">
