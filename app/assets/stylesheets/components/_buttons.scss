@@ -33,3 +33,21 @@
 .full-button {
   width: 100% !important;
 }
+
+.close-box {
+  position: absolute;
+  bottom: 12vh;
+  right: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background: transparent;
+  width: 60px;
+}
+
+.close-button {
+  background-color: white !important;
+  color: #72469F !important;
+  height: 60px;
+  width: 60px;
+}

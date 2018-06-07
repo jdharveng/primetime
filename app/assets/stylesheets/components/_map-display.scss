@@ -1,0 +1,21 @@
+.map-start {
+  display: none;
+  background-color: green;
+}
+
+
+.map-end {
+  display: block;
+  background-color: red;
+}
+
+#activity-map {
+  display: block;
+  background-color: transparent;
+  height: 100%;
+  width: 100%;
+  // padding-top: 20vh;
+  z-index: 3;
+  position: absolute;
+  top: 0;
+}

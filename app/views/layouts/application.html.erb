@@ -16,15 +16,25 @@
   <body class="<%= controller_name %> <%= action_name %>">
     <%= render 'shared/slideout' %>
     <%= render 'shared/slideoutright' %>
+
     <div id="panel">
       <%= render 'shared/navbar' %>
       <%= render 'shared/flashes' %>
       <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?libraries=places&sensor=true&key=#{ENV['GOOGLE_API_BROWSER_KEY']}" %>
       <%= yield %>
+    </div>
+
+      <div id="activity-map" class="map-start">
+          <div id="map" style="width: 100%; height: 100vh;" data-markers="<%= @marker.to_json %>"></div>
+          <div class ="close-box">
+            <div id="map-button" class="box-icon map-icon close-button">
+              <i class="far fa-map icon-white fa-lg"></i>
+            </div>
+          </div>
+      </div>
       <%= javascript_include_tag 'application' %>
       <%= javascript_pack_tag 'application' %>
 
       <%= yield :after_js %>
-    </div>
   </body>
 </html>

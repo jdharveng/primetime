@@ -4,7 +4,7 @@ import initMap from '../components/map';
 import { loadSlides } from "../components/slider";
 import getUserLocation from '../components/userlocation';
 import { slideout_use, slideout_right} from "../components/slideout";
-
+import { display_map } from "../components/mapdisplay";
 
 //required for Gmaps to work
 window.GMaps = require('gmaps');
@@ -41,6 +41,7 @@ if (filterPage) {
 window.app = {
   loadSlides,
   slideout_use,
+  display_map,
 }
 
 
