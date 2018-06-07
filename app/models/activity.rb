@@ -2,6 +2,7 @@ class Activity < ApplicationRecord
   belongs_to :category
   belongs_to :user
   has_many :reviews, through: :bookings
+  has_many :booking, dependent: :destroy
 
   validates :price, presence: true
   validates :title, presence: true
