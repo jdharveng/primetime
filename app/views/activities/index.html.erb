@@ -10,9 +10,9 @@
           </div>
           <% end %>
       </div>
-      <div class="col-xs-4 buttons-container">
-          <button class="back-button cta-button"><i class="fas fa-caret-left"></i>Back</button>
-          <button class="next-button cta-button">Next<i class="fas fa-caret-right"></i></button>
+      <div class="buttons-container">
+          <button class="back-button cta-button full-button" onclick="goBack()"><i class="fas fa-caret-left"></i>GO BACK</button>
+          <!-- <button class="next-button cta-button">Next<i class="fas fa-caret-right"></i></button> -->
       </div>
   </div>
 </div>
@@ -25,7 +25,7 @@
       setTimeout(function() {
         element.style.opacity = "0.9";
       },
-        (500*index)
+        (90*index)
       )
 
   //     element.animate([
@@ -36,4 +36,12 @@
   //     ,{duration: 1000, delay: (1000*index)});
     })
   };
+
+function goBack() {
+    window.history.back();
+}
+
+function goForward() {
+    window.history.forward()
+}
 </script>
