@@ -22,16 +22,15 @@ if (filterPage) {
 }
 
 // Slideouts
-import { slideout_use} from "../components/slideout";
+// import {slideout_use} from "../components/slideout";
 
-slide();
-slide_with_ticks();
+// slide();s
+// slide_with_ticks();
+// slideout_use();
 
-slideout_use();
 
-
-// Filters
-const next_button = document.getElementById( 'next-filter' );
+// // Filters
+// const next_button = document.getElementById( 'next-filter' );
 
 
 
