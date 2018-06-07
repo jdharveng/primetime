@@ -21,12 +21,8 @@ if (filterPage) {
 }
 
 
-
 slide();
 slide_with_ticks();
-
-slideout_use();
-slideout_right();
 
 
 const next_button = document.getElementById( 'next-filter' );
@@ -45,5 +41,8 @@ next_button.onclick = function() {
         x.style.display = "none";
     }
 }
+
+slideout_use();
+slideout_right();
 
 
