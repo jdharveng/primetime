@@ -1,0 +1,11 @@
+<nav id="menu-right">
+  <%= link_to "#" do %>
+        <p class="fa fa-user"></p> <%= t(".profile", default: "Profile") %>
+      <% end %>
+    </p>
+
+      <%= link_to destroy_user_session_path, method: :delete do %>
+        <p class="fa fa-sign-out"></p>  <%= t(".sign_out", default: "Log out") %>
+      <% end %>
+</nav>
+

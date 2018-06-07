@@ -1,7 +1,10 @@
 import "bootstrap";
+import "bootstrap-slider/src/sass/bootstrap-slider.scss";
 import initMap from '../components/map';
-import { slide, slide_with_ticks } from "../components/slider";
+import { loadSlides } from "../components/slider";
 import getUserLocation from '../components/userlocation';
+import { slideout_use, slideout_right} from "../components/slideout";
+
 
 //required for Gmaps to work
 window.GMaps = require('gmaps');
@@ -18,7 +21,6 @@ if (filterPage) {
   getUserLocation()
 }
 
-
 // Slideouts
 import { slideout_use} from "../components/slideout";
 
@@ -31,19 +33,15 @@ slideout_use();
 // Filters
 const next_button = document.getElementById( 'next-filter' );
 
-document.getElementById("money").style.display = "none";
 
-next_button.onclick = function() {
 
-  console.log("It's working")
 
-  var x = document.getElementById("money");
-    if (x.style.display === "none") {
-        x.style.display = "block";
-        document.getElementById("time").style.display = "none";
-    } else {
-        x.style.display = "none";
-    }
+
+// attribute of Window called app
+// that allows you to run JS functions in the HTML views
+window.app = {
+  loadSlides,
+  slideout_use,
 }
 
 
