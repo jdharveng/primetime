@@ -13,7 +13,6 @@
 .card-picture {
   min-width: 80px;
   height: 100%;
-  background-image: url('<%=cl_image_path activity.picture%>');
   background-size: cover;
   background-position: center;
 }

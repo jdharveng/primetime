@@ -2,8 +2,7 @@
   <%= link_to activity_path(activity) do %>
     <div class="card-link"></div>
   <% end %>
-  <div class="card-picture">
-    <img src="" alt="">
+  <div class="card-picture" style="background-image: url('<%=cl_image_path activity.picture%>')">
   </div>
   <div class="card-content">
     <div class="card-top">
