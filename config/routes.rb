@@ -16,4 +16,6 @@ Rails.application.routes.draw do
   get :filters, to: 'activities#filters'
   get :filter_time, to: 'activities#filter_time'
   get :filter_money, to: 'activities#filter_money'
+
+  get :myactivities, to: 'activities#myactivities'
 end
