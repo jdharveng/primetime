@@ -1,0 +1,25 @@
+.map-start {
+  display: none !important;
+}
+
+
+.map-end {
+  display: flex;
+}
+
+
+
+#activity-map {
+  background-color: transparent;
+  height: 100vh;
+  width: 100%;
+  // padding-top: 20vh;
+  z-index: 200;
+  position: absolute;
+  top: 0;
+}
+
+#map {
+  height: 100vh !important;
+  width: 100% !important;
+}

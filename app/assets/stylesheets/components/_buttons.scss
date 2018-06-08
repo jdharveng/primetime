@@ -1,0 +1,60 @@
+.back-button {
+  width: 50%;
+  height: 60px;
+
+}
+
+.next-button {
+  width: 50%;
+  height: 60px;
+}
+
+.cta-button {
+  background-color: #72469F;
+  border-left: #936db9;
+  border-left-width: 0.25px;
+  border-left-style: solid;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  i {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
+.passive-button {
+  background-color: #ffff;
+  color: #936db9;
+  i {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
+.full-button {
+  width: 100% !important;
+}
+
+.close-box {
+  position: absolute;
+  bottom: 12vh;
+  right: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background: transparent;
+  width: 60px;
+  z-index: 999;
+}
+
+.close-button {
+  position: absolute;
+  z-index: 800;
+  background-color: white !important;
+  color: #72469F !important;
+  height: 60px;
+  width: 60px;
+}

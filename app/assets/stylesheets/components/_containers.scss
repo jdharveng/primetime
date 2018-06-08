@@ -8,9 +8,9 @@
 }
 
 .buttons-container {
-    position:fixed;
-    bottom:0px;
-    right:0px;
+    // position:fixed;
+    // bottom:0px;
+    // right:0px;
     display: flex;
     width: 100%;
     height: 60px;
@@ -23,7 +23,7 @@
     padding: 0px;
 }
 
-.cards-container {
+.full-container {
   // position: absolute;
   // top: 0px;
   // left: 0px;
@@ -33,7 +33,15 @@
   margin-top: 0px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+.full-container.container-start {
   justify-content: flex-start;
+  }
+
+.full-container.container-middle {
+  justify-content: center;
 }
 
 .card-container {
@@ -47,37 +55,6 @@
   margin-top: 5px;
 }
 
-.back-button {
-  width: 50%;
-  height: 60px;
-
-}
-
-.next-button {
-  width: 50%;
-  height: 60px;
-}
-
-.cta-button {
-  background-color: #72469F;
-  border-left: #936db9;
-  border-left-width: 0.25px;
-  border-left-style: solid;
-  color: white;
-  i {
-    margin-left: 5px;
-    margin-right: 5px;
-  }
-}
-
-.passive-button {
-  background-color: #ffff;
-  color: #936db9;
-  i {
-    margin-left: 5px;
-    margin-right: 5px;
-  }
-}
 
 .small-padding {
   padding: 5px;

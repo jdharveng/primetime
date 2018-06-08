@@ -33,7 +33,7 @@
 
         </div>
         <div class ="box-icon-right">
-          <div class="box-icon map-icon">
+          <div id="map-button" class="box-icon map-icon">
             <i class="far fa-map icon-style fa-lg"></i>
           </div>
 
@@ -67,9 +67,55 @@
           </div>
         </div>
       <div class="col-xs-4 buttons-container">
-        <button class="back-button passive-button"><i class="fas fa-caret-left"></i>Back</button>
+        <button class="back-button passive-button" onclick="goBack()"><i class="fas fa-caret-left"></i>Back</button>
         <button class="next-button cta-button">Let's Go!<i class="fas fa-caret-right"></i></button>
       </div>
     </div>
   </div>
+
 </div>
+
+
+
+<script>
+function goBack() {
+    window.history.back();
+}
+
+function goForward() {
+    window.history.forward()
+}
+
+// function mapShow() {
+//     var x = document.getElementById('map')
+//     if (x.class = "map-start") {
+//         x.classList.remove("map-start")
+//         x.classList.add("map-end")
+//     } else {
+//         x.classList.remove("map-end")
+//          x.classList.add("map-start")
+//     }
+//   }
+
+</script>
+
+<%= content_for :after_js do %>
+    <script>
+    window.app.display_map()
+    window.app.hide_map()
+    </script>
+<% end %>
+
+<%= content_for :after_panel do %>
+    <div id="activity-map" class="map-start">
+          <div id="map" data-markers="<%= @marker.to_json %>"></div>
+    </div>
+    <div class ="close-box">
+      <div id="map-close" class="box-icon map-icon close-button map-start">
+        <i class="fas fa-times icon-white fa-lg"></i>
+      </div>
+    </div>
+<% end %>
+
+
+

@@ -3,18 +3,45 @@
     <div class="col-xs-12 col-md-4 col-md-offset-4 small-padding" style="background-color: #e6e8ff;">
 <!-- <div class="container-index">
   <div class="row"> -->
-      <div class="cards-container">
+      <div class="full-container container-start">
           <% @activities_filtered[0,5].each do |activity| %>
           <div class="col-xs-4 card-container">
             <%= render 'shared/horizontalcards', activity: activity %>
           </div>
           <% end %>
       </div>
-      <div class="col-xs-4 buttons-container">
-          <button class="back-button cta-button"><i class="fas fa-caret-left"></i>Back</button>
-          <button class="next-button cta-button">Next<i class="fas fa-caret-right"></i></button>
+      <div class="buttons-container">
+          <button class="back-button cta-button full-button" onclick="goBack()"><i class="fas fa-caret-left"></i>GO BACK</button>
+          <!-- <button class="next-button cta-button">Next<i class="fas fa-caret-right"></i></button> -->
       </div>
   </div>
 </div>
 </div>
 
+<script>
+  const cards = document.querySelectorAll(".card-box");
+  window.onload = function() {
+    cards.forEach( function(element, index) {
+      setTimeout(function() {
+        element.style.opacity = "0.9";
+      },
+        (90*index)
+      )
+
+  //     element.animate([
+  // // keyframes
+  //     { opacity: '0' },
+  //     { opacity: '1' }
+  //     ]
+  //     ,{duration: 1000, delay: (1000*index)});
+    })
+  };
+
+function goBack() {
+    window.history.back();
+}
+
+function goForward() {
+    window.history.forward()
+}
+</script>

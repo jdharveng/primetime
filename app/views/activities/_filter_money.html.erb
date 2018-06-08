@@ -1,12 +1,17 @@
-<div id="money" class="container text-center">
-
-  <h1>How much money do you have?</h1>
-
-  <input id="ex13" name="money" type="text" data-slider-ticks="[0, 20, 50, 100, 500]" data-slider-ticks-snap-bounds="30" data-slider-ticks-labels='["$0", "$20", "$50", "$100", "$500"]'/>
-
-  <input id="user-location" type="hidden" name="user-location"
-  />
-
-  <div><%= submit_tag 'Save' %></div>
-
+<div id="money" class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-4 col-md-offset-4 small-padding" style="background-color: #e6e8ff;">
+       <div class="full-container container-middle">
+          <div class="filter-title">
+              How much money do you have?
+          </div>
+          <input id="ex13" name="money" type="text" data-slider-ticks="[0, 20, 50, 100, 500]" data-slider-ticks-snap-bounds="30" data-slider-ticks-labels='["$0", "$20", "$50", "$100", "$500"]'/>
+          <input id="user-location" type="hidden" name="user-location"/>
+       </div>
+       <div class="col-xs-4 buttons-container">
+          <!-- <button class="back-button cta-button"><i class="fas fa-caret-left"></i>Back</button> -->
+          <div class="next-button cta-button full-button"><%= submit_tag 'GET ME RESULTS' %><i class="fas fa-caret-right"></i></div>
+      </div>
+    </div>
+  </div>
 </div>
