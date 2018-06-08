@@ -10,6 +10,7 @@ class BookingsController < ApplicationController
   # GET /activities/1/bookings
   def show
    authorize @booking
+   #@booking = current_user.bookings.find(params[:id])
   end
 
   def mybookings
@@ -26,12 +27,15 @@ class BookingsController < ApplicationController
   # POST /activities/1/bookings
   def create
     @booking = Booking.new(booking_params)
-    @booking.user_id = current_user.id
-    @booking.activity_id = @activity.id
+    @booking.user = current_user
+    @booking.activity = @activity
+    @booking.state = "pending"
+
     authorize @booking
 
     if @booking.save
-      redirect_to activity_booking_path(@activity,@booking)
+      #redirect_to new_booking_payment_path(@booking)
+       redirect_to activity_booking_path(@activity,@booking)
     else
       render :new
     end
@@ -41,7 +45,7 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:amount)
+    #params.require(:booking).permit(:amount)
   end
 
   def set_activity

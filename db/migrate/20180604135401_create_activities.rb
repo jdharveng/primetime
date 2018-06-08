@@ -6,7 +6,7 @@ class CreateActivities < ActiveRecord::Migration[5.2]
       t.string :address
       t.float :latitude
       t.float :longitude
-      t.integer :price
+      # t.integer :price
       t.integer :state
       t.references :category, foreign_key: true
       t.references :user, foreign_key: true
