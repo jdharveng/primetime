@@ -19,4 +19,6 @@ Rails.application.routes.draw do
 
   get :myactivities, to: 'activities#myactivities'
   get :mybookings, to: 'bookings#mybookings'
+  # get "activitytimer/:id", to: 'activities#activitytimer', as: :activitytimer
+  get "bookingtimer/:id", to: 'bookings#bookingtimer', as: :activitytimer
 end

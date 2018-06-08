@@ -4,6 +4,7 @@ import initMap from '../components/map';
 import { loadSlides } from "../components/slider";
 import getUserLocation from '../components/userlocation';
 import { slideout_use, slideout_right} from "../components/slideout";
+import { timer, startTimer } from "../components/countdown";
 
 
 //required for Gmaps to work
@@ -30,6 +31,8 @@ if (filterPage) {
 window.app = {
   loadSlides,
   slideout_use,
+  timer,
+  startTimer
 }
 
 

@@ -1,0 +1,16 @@
+.progress {
+  height: calc(100vh - 180px);
+  background: '#ee061a05';
+}
+.progress > svg {
+  height: 100%;
+  display: block;
+}
+
+.progressbar-text {
+  color: black;
+  font-weight: bold;
+  font-size: 70px;
+}
+
+
