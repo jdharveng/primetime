@@ -136,7 +136,7 @@ puts 'Created Categories'
   user: User.all.sample,
   duration: 10,
   remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138801/Amanteigaria.jpg",
-  payable: false
+  payable: true
   )
 
   Activity.create!(
@@ -151,7 +151,7 @@ puts 'Created Categories'
   user: User.all.sample,
   duration: 20,
   remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138806/Miradouro-da-Grac%CC%A7a.jpg",
-  payable: false
+  payable: true
   )
 
   Activity.create!(
@@ -166,7 +166,7 @@ puts 'Created Categories'
   user: User.all.sample,
   duration: 15,
   remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138805/o-trevo.jpg",
-  payable: false
+  payable: true
   )
 
   Activity.create!(
@@ -226,7 +226,7 @@ puts 'Created Categories'
   user: User.all.sample,
   duration: 45,
   remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138808/jardim-botanico.jpg",
-  payable: false
+  payable: true
   )
 
 
