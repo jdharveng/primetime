@@ -135,7 +135,8 @@ puts 'Created Categories'
   category: Category.all.sample,
   user: User.all.sample,
   duration: 10,
-  remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138801/Amanteigaria.jpg"
+  remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138801/Amanteigaria.jpg",
+  payable: false
   )
 
   Activity.create!(
@@ -149,7 +150,8 @@ puts 'Created Categories'
   category: Category.all.sample,
   user: User.all.sample,
   duration: 20,
-  remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138806/Miradouro-da-Grac%CC%A7a.jpg"
+  remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138806/Miradouro-da-Grac%CC%A7a.jpg",
+  payable: false
   )
 
   Activity.create!(
@@ -163,7 +165,8 @@ puts 'Created Categories'
   category: Category.all.sample,
   user: User.all.sample,
   duration: 15,
-  remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138805/o-trevo.jpg"
+  remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138805/o-trevo.jpg",
+  payable: false
   )
 
   Activity.create!(
@@ -177,7 +180,8 @@ puts 'Created Categories'
   category: Category.all.sample,
   user: User.all.sample,
   duration: 60,
-  remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138807/museu-do-azulejo.jpg"
+  remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138807/museu-do-azulejo.jpg",
+  payable: true
   )
 
   Activity.create!(
@@ -191,7 +195,8 @@ puts 'Created Categories'
   category: Category.all.sample,
   user: User.all.sample,
   duration: 90,
-  remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138795/Oceanario-Lisboa.jpg"
+  remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138795/Oceanario-Lisboa.jpg",
+  payable: true
   )
 
   Activity.create!(
@@ -205,7 +210,8 @@ puts 'Created Categories'
   category: Category.all.sample,
   user: User.all.sample,
   duration: 120,
-  remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138814/pub-crawl-lisbon-destination-tours-2.jpg"
+  remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138814/pub-crawl-lisbon-destination-tours-2.jpg",
+  payable: true
   )
 
   Activity.create!(
@@ -219,7 +225,8 @@ puts 'Created Categories'
   category: Category.all.sample,
   user: User.all.sample,
   duration: 45,
-  remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138808/jardim-botanico.jpg"
+  remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138808/jardim-botanico.jpg",
+  payable: false
   )
 
 
