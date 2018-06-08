@@ -11,15 +11,15 @@
       <li>Amount: <%= humanized_money_with_symbol(@booking.amount) %></li>
     </ul>
 
+    <% if @activity.payable %>
+      <%= form_tag new_booking_payment_path(@booking), method: :get do %>
 
-    <%#= if @activity.payable %>
-      <%= form_tag new_booking_payment_path(@booking) do %>
-        <%= hidden_field_tag 'booking_id', @booking.id %>
+        <%#= hidden_field_tag 'booking_id', @booking.id %>
         <%= submit_tag 'Purchase', class: 'btn btn-primary' %>
       <% end %>
 
-    <%#= else  %>
-        <%#= button_to('Done', map_something_path, :class => 'btn btn-large btn-primary'%>
+      <% else  %>
+        <%= link_to 'Done', activity_path(@activity), class: 'btn btn-large btn-primary'%>
       <% end %>
   </div>
   </div>

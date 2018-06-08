@@ -10,7 +10,7 @@ class BookingsController < ApplicationController
   # GET /activities/1/bookings
   def show
    authorize @booking
-   @booking = current_user.bookings.find(params[:id])
+   #@booking = current_user.bookings.find(params[:id])
   end
 
   # GET /activities/1/bookings/new

@@ -39,10 +39,22 @@
 
         </div>
       </div>
-        <%= form_tag activity_bookings_path(@activity) do %>
-          <%= hidden_field_tag 'activity_id', @activity.id %>
-          <%= submit_tag 'Book activity', class: 'btn btn-primary' %>
+
+        <% @condition = @activity.bookings.find_by(user: current_user) %>
+
+        <% if @condition %>
+            <div>
+             BOOKED!
+            </div>
+        <% else %>
+          <%= form_tag activity_bookings_path(@activity) do %>
+            <%= hidden_field_tag 'activity_id', @activity.id %>
+            <%= submit_tag 'Book activity', class: 'btn btn-primary' %>
+          <% end %>
+
         <% end %>
+
+
       <div class="card-bottom">
         <div class="card-details">
           <div class="rating">
