@@ -32,7 +32,6 @@
 /* Basic navbar item */
 .navbar-wagon-item {
   cursor: pointer;
-  padding: 0 20px;
 }
 
 /* Navbar link */
@@ -74,4 +73,22 @@
   transform: rotate(45deg);
   border-left: 1px solid #E6E6E6;
   border-top: 1px solid #E6E6E6;
+}
+
+#logo_text {
+    font-family: 'Pacifico', cursive;
+    color: #ee061a;
+    margin: 0px;
+}
+
+// .navbar-box {
+//   display: flex;
+//   justify-content: space-between;
+//   width: 100%;
+//   align-items: center;
+// }
+
+i.fa {
+    box-shadow: 0px 0px 2px red !important;;
+    color: red !important;
 }

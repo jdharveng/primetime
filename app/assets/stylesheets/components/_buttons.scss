@@ -10,15 +10,14 @@
 }
 
 .cta-button {
-  background-color: #72469F;
-  border-left: #936db9;
-  border-left-width: 0.25px;
-  border-left-style: solid;
+  background-color: #ee061a;
+  border:none;
   color: white;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  width: 100%;
   i {
     margin-left: 5px;
     margin-right: 5px;
@@ -27,7 +26,8 @@
 
 .passive-button {
   background-color: #ffff;
-  color: #936db9;
+  color: #ee061a;
+  border: none;
   i {
     margin-left: 5px;
     margin-right: 5px;
@@ -36,6 +36,7 @@
 
 .full-button {
   width: 100% !important;
+  border:none;
 }
 
 .close-box {

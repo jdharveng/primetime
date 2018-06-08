@@ -28,7 +28,6 @@
 .card-top {
   display: block;
   height: 42px;
-  color: #72469F;
   // border-width: 1px;
   // border-style: solid;
   // border-color: black;
@@ -36,6 +35,7 @@
 
 .card-title {
   font-size: 13px;
+  color: #ee061a;
 }
 
 .card-category {
@@ -61,6 +61,7 @@
   justify-content: space-around;
   margin-left: 10px;
 
+
 }
 
 .card-details {
@@ -84,10 +85,10 @@
   margin-left: 10px;
   height: 30px;
   margin-right: 10px;
-  color: #72469F;
+  color: #ee061a;
   .fas.fa-wallet{
     font-size: 17px;
-    color: #72469F;
+    color: #ee061a;
   }
 }
 
@@ -95,7 +96,7 @@
   /* border-width: 1px; */
   /* border-style: solid; */
   /* border-color: black; */
-  background-color: #72469F;
+  background-color: #ee061a;
   color: white;
   padding: 5px;
   font-size: 12px;
@@ -110,6 +111,7 @@
   /* flex-direction: column; */
   // margin-top: 10px;
   justify-content: space-around;
+  padding-top: 7px;
 }
 
 .time {
@@ -121,10 +123,10 @@
   flex-direction: column;
   text-align: center;
   height: 30px;
-  color: #72469F;
+  color: #ee061a;
   .fas.fa-clock{
     font-size: 17px;
-    color: #72469F;
+    color: #ee061a;
   }
 }
 
