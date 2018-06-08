@@ -4,3 +4,9 @@
   <li>Item: <%= @activity.title %></li>
   <li>Amount: <%= humanized_money_with_symbol(@booking.amount) %></li>
 <ul>
+
+<% if @activity.payable %>
+  <% button_to('Purchase', new_user_registration_path, :class => 'btn btn-large btn-primary'%>
+  <% else  %>
+  <%= button_to('Done', new_user_registration_path, :class => 'btn btn-large btn-primary'%>
+<% end %>
