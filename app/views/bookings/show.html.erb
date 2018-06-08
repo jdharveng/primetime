@@ -1,12 +1,26 @@
-<h1>Booking</h1>
-<ul>
-  <li>Status: <%= @booking.state %></li>
-  <li>Item: <%= @activity.title %></li>
-  <li>Amount: <%= humanized_money_with_symbol(@booking.amount) %></li>
-<ul>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
 
-<% if @activity.payable %>
-  <% button_to('Purchase', new_user_registration_path, :class => 'btn btn-large btn-primary'%>
-  <% else  %>
-  <%= button_to('Done', new_user_registration_path, :class => 'btn btn-large btn-primary'%>
-<% end %>
+
+
+    <h1>Booking</h1>
+    <ul>
+      <li>Status: <%= @booking.state %></li>
+      <li>Item: <%= @activity.title %></li>
+      <li>Amount: <%= humanized_money_with_symbol(@booking.amount) %></li>
+    </ul>
+
+    <%# if @activity.payable %>
+      <%# button_to('Purchase', new_user_registration_path, :class => 'btn btn-large btn-primary'%>
+      <%# else  %>
+      <%#= button_to('Done', new_user_registration_path, :class => 'btn btn-large btn-primary'%>
+    <%# end %>
+    <%= form_tag new_booking_payment_path(@booking) do %>
+      <%= hidden_field_tag 'booking_id', @booking.id %>
+      <%= submit_tag 'Purchase', class: 'btn btn-primary' %>
+    <% end %>
+
+  </div>
+  </div>
+</div>
