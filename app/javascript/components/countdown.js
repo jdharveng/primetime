@@ -47,8 +47,6 @@ function formatTime(milliseconds) {
 
 function timer() {
 
-
-
 //debugger;
   let progress = 0;
   circle.animate(progress);

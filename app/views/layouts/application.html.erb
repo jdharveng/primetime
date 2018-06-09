@@ -23,14 +23,17 @@
       <%= render 'shared/flashes' %>
       <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?libraries=places&sensor=true&key=#{ENV['GOOGLE_API_BROWSER_KEY']}" %>
       <%= yield %>
-    </div>
-    <%= yield :after_panel %>
 
       <%= javascript_include_tag 'application' %>
       <%= javascript_pack_tag 'application' %>
 
       <%= yield :after_js %>
       <%= yield :after_timer %>
+    </div>
+    <%= yield :after_panel %>
+
+
+
     </div>
   </body>
 </html>
