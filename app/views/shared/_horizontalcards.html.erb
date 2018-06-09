@@ -28,7 +28,7 @@
         </div>
         <div class="price">
           <i class="fas fa-wallet"></i>
-          <%=activity.price/10%>€
+          <%= humanized_money_with_symbol(activity.price) %>
         </div>
         <div class="time">
           <i class="fas fa-clock"></i>

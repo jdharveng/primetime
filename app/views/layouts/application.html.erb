@@ -7,6 +7,7 @@
     <%= yield :head %>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto" rel="stylesheet">
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= stylesheet_pack_tag 'application' %>
     <!-- <script src="https://raw.githubusercontent.com/HPNeo/gmaps/master/gmaps.js"></script> -->
@@ -17,12 +18,14 @@
     <%= render 'shared/slideout' %>
     <%= render 'shared/slideoutright' %>
 
-
     <div id="panel">
       <%= render 'shared/navbar' %>
       <%= render 'shared/flashes' %>
       <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?libraries=places&sensor=true&key=#{ENV['GOOGLE_API_BROWSER_KEY']}" %>
       <%= yield %>
+    </div>
+    <%= yield :after_panel %>
+
       <%= javascript_include_tag 'application' %>
       <%= javascript_pack_tag 'application' %>
 

@@ -5,6 +5,8 @@ import { loadSlides } from "../components/slider";
 import getUserLocation from '../components/userlocation';
 import { slideout_use, slideout_right} from "../components/slideout";
 import { timer, startTimer } from "../components/countdown";
+import { display_map } from "../components/mapdisplay";
+import { hide_map } from "../components/mapdisplay";
 
 
 //required for Gmaps to work
@@ -22,6 +24,17 @@ if (filterPage) {
   getUserLocation()
 }
 
+// Slideouts
+// import {slideout_use} from "../components/slideout";
+
+// slide();s
+// slide_with_ticks();
+// slideout_use();
+
+
+// // Filters
+// const next_button = document.getElementById( 'next-filter' );
+
 
 
 
@@ -32,7 +45,9 @@ window.app = {
   loadSlides,
   slideout_use,
   timer,
-  startTimer
+  startTimer,
+  display_map,
+  hide_map
 }
 
 

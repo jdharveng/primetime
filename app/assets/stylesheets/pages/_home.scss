@@ -1,3 +1,32 @@
 .logo-margin {
   margin-bottom: -10px;
 }
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.filter-title {
+  margin-bottom: 20px;
+}
+
+.form-inputs {
+  width: 45vh;
+  font-size: 15px;
+}
+
+.extra-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  font-size: 13px;
+     a {
+      color: gray;
+      text-decoration: none;
+    }
+}
+
+.background-color {
+  background: #ee061a05;
+}
