@@ -21,4 +21,7 @@ Rails.application.routes.draw do
 
   get :myactivities, to: 'activities#myactivities'
   get :mybookings, to: 'bookings#mybookings'
+
+
+  resources :follows
 end

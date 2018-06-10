@@ -12,10 +12,11 @@
             <%= @user.bio %>
         </div>
         <div class="user-followers">
-            Has 3 followers
+            Has <%= @user.followers.count %> followers
         </div>
         <div class="user-follow">
-          <button class="cta-button">Follow</button>
+          <%= link_to "Follow", new_follow_path(@user.id) %>
+          <button class="cta-button" action=current_user.follow(@user)></button>
         </div>
         <div class="full-container container-start">
           <div class="activity-counter">
