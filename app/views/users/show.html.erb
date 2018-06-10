@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col-xs-12 col-md-4 col-md-offset-4 small-padding background-color">
+    <div class="col-xs-12 col-md-4 col-md-offset-4 small-padding background-color overflow-scroll full-height">
       <div class="user-profile-box">
         <div class="user-picture">
             <%= cl_image_tag(@user.picture, class:"avatar-huge") %>
@@ -11,20 +11,18 @@
         <div class="user-bio">
             <%= @user.bio %>
         </div>
+        <div class="user-name">
+            <p><%= @user.first_name+"'s followers" %></p>
+        </div>
+        <div class="red-line-box full-width">
+            <div class="red-line"></div>
+        </div>
         <div class="follow-box">
           <div class="user-followers-pics">
             <% @user.followers[0,5].each_with_index do |follower, index| %>
               <%= cl_image_tag(follower.picture, class:"avatar-large each-follower", style:"left:#{index*10}px; z-index:#{@user.followers.count-index}") %>
             <% end %>
           </div>
-          <% if @user.followers.count > 5 %>
-          <div class="user-followers half-width">
-              <%= "and "+@user.followers.count-5+" more" %>
-          </div>
-          <% end %>
-        <div class="user-follow half-width">
-          <%= link_to "Follow", new_follow_path(@user.id), class:"cta-button next-button full-width" %>
-        </div>
         </div>
         <div class="full-container container-start">
           <div class="activity-counter">
@@ -35,6 +33,7 @@
                 <%=(@user.activities).size%> activities</p>
             <% end %>
           </div>
+          <div class="red-line"></div>
           <% @user.activities.each do |activity| %>
               <div class="col-xs-4 card-container">
                 <%= render 'shared/horizontalcards', activity: activity %>
@@ -42,10 +41,13 @@
           <% end %>
         </div>
       </div>
+    </div>
+    <div class="col-xs-12 col-md-4 col-md-offset-4 small-padding background-color">
       <div class="col-xs-4 buttons-container">
-          <button class="back-button cta-button half-width" onclick="goBack()"><i class="fas fa-caret-left"></i>GO BACK</button>
-          <button class="next-button cta-button half-width">Next<i class="fas fa-caret-right"></i></button>
+          <button class="back-button passive-button half-width" onclick="goBack()"><i class="fas fa-caret-left"></i>GO BACK</button>
+          <button class="next-button cta-button half-width"><%= link_to "Follow", new_follow_path(@user.id)%> <i class="fas fa-user-plus"></i></button>
       </div>
+    </div>
   </div>
 </div>
 </div>
