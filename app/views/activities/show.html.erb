@@ -18,8 +18,9 @@
       </div>
       <div class="box-icons">
         <div class="box-icons-left">
-          <%= cl_image_tag @activity.user.picture, class: "avatar-large"%>
-
+          <%= link_to user_path(@activity.user) do %>
+            <%= cl_image_tag(@activity.user.picture, class: "avatar-large") %>
+          <% end %>
         <div class="box-icon save-icon">
           <i class="fas fa-save icon-style"></i>
         </div>
