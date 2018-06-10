@@ -1,0 +1,36 @@
+.user-picture {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.user-name {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.user-bio{
+  font-size: 13px;
+  line-height: 2rem;
+  overflow: scroll;
+  height: 29vh;
+  margin-top: 10px;
+  text-align: center;
+}
+
+
+.user-followers {
+  text-align: center;
+  font-size: 13px;
+}
+
+.user-follow {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.activity-counter {
+  font-size: 13px;
+}

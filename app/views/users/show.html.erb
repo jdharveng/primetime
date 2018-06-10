@@ -1,1 +1,71 @@
-<%= @user.first_name %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-4 col-md-offset-4 small-padding background-color">
+      <div class="user-profile-box">
+        <div class="user-picture">
+            <%= cl_image_tag(@user.picture, class:"avatar-huge") %>
+        </div>
+        <div class="user-name">
+            <%= @user.first_name+" "+@user.last_name %>
+        </div>
+        <div class="user-bio">
+            <%= @user.bio %>
+        </div>
+        <div class="user-followers">
+            Has 3 followers
+        </div>
+        <div class="user-follow">
+          <button class="cta-button">Follow</button>
+        </div>
+        <div class="full-container container-start">
+          <div class="activity-counter">
+            <p> <%= @user.first_name%> has
+            <% if (@user.activities).size === 1 %>
+                1 activity</p>
+            <% else %>
+                <%=(@user.activities).size%> activities</p>
+            <% end %>
+          </div>
+          <% @user.activities.each do |activity| %>
+              <div class="col-xs-4 card-container">
+                <%= render 'shared/horizontalcards', activity: activity %>
+              </div>
+          <% end %>
+        </div>
+      </div>
+      <div class="col-xs-4 buttons-container">
+          <button class="back-button cta-button half-width" onclick="goBack()"><i class="fas fa-caret-left"></i>GO BACK</button>
+          <button class="next-button cta-button half-width">Next<i class="fas fa-caret-right"></i></button>
+      </div>
+  </div>
+</div>
+</div>
+
+
+<script>
+  const cards = document.querySelectorAll(".card-box");
+  window.onload = function() {
+    cards.forEach( function(element, index) {
+      setTimeout(function() {
+        element.style.opacity = "0.9";
+      },
+        (90*index)
+      )
+
+  //     element.animate([
+  // // keyframes
+  //     { opacity: '0' },
+  //     { opacity: '1' }
+  //     ]
+  //     ,{duration: 1000, delay: (1000*index)});
+    })
+  };
+
+function goBack() {
+    window.history.back();
+}
+
+function goForward() {
+    window.history.forward()
+}
+</script>
