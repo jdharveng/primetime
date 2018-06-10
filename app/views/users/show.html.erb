@@ -11,12 +11,20 @@
         <div class="user-bio">
             <%= @user.bio %>
         </div>
-        <div class="user-followers">
-            Has <%= @user.followers.count %> followers
+        <div class="follow-box">
+          <div class="user-followers-pics">
+            <% @user.followers[0,5].each_with_index do |follower, index| %>
+              <%= cl_image_tag(follower.picture, class:"avatar-large each-follower", style:"left:#{index*10}px; z-index:#{@user.followers.count-index}") %>
+            <% end %>
+          </div>
+          <% if @user.followers.count > 5 %>
+          <div class="user-followers half-width">
+              <%= "and "+@user.followers.count-5+" more" %>
+          </div>
+          <% end %>
+        <div class="user-follow half-width">
+          <%= link_to "Follow", new_follow_path(@user.id), class:"cta-button next-button full-width" %>
         </div>
-        <div class="user-follow">
-          <%= link_to "Follow", new_follow_path(@user.id) %>
-          <button class="cta-button" action=current_user.follow(@user)></button>
         </div>
         <div class="full-container container-start">
           <div class="activity-counter">

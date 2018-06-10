@@ -17,10 +17,25 @@
   text-align: center;
 }
 
+.follow-box {
+  display: flex;
+}
 
 .user-followers {
   text-align: center;
   font-size: 13px;
+}
+
+.user-followers-pics {
+  position: relative;
+  width: 50%;
+  align-items: center;
+  display: flex;
+}
+.each-follower {
+  position: absolute;
+  border: 1px solid #ccc;
+  box-shadow: 5px 0 5px 1px rgba(0, 0, 0, 0.3);
 }
 
 .user-follow {
@@ -34,3 +49,4 @@
 .activity-counter {
   font-size: 13px;
 }
+
