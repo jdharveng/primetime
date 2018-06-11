@@ -1,11 +1,21 @@
 <div id="money" class="container">
   <div class="row">
-    <div class="col-xs-12 col-md-4 col-md-offset-4 small-padding background-color">
-       <div class="full-container container-middle full-height">
+    <div class="col-xs-12 col-md-4 col-md-offset-4 small-padding background-color full-height">
+       <div class="full-container container-middle slider-middle-page">
+          <div class="slider-small-money">
+            <span id="ex2SliderValMinRange">0</span> to
+          </div>
+          <div class="slider-big-nums">
+            <span id="ex2SliderValMaxRange">0</span>
+          </div>
+          <div class="slider-small-money-metric">
+            euros
+          </div>
           <div class="filter-title">
               How much money do you have?
           </div>
-          <input id="ex13" name="money" type="text" data-slider-ticks="[0, 20, 50, 100, 500]" data-slider-ticks-snap-bounds="30" data-slider-ticks-labels='["$0", "$20", "$50", "$100", "$500"]'/>
+          <!-- <input id="ex13" name="money" type="text" data-slider-ticks="[0, 20, 50, 100, 500]" data-slider-ticks-snap-bounds="30" data-slider-ticks-labels='["$0", "$20", "$50", "$100", "$500"]'/> -->
+          <!-- <b>€ 0</b> --> <input id="ex2" type="text" name="money" class="span2" value="" data-slider-min="0" data-slider-max="500" data-slider-step="5" data-slider-value="[0,250]" data-slider-tooltip="hide"/> <!-- <b>€ 500</b> -->
           <input id="user-location" type="hidden" name="user-location"/>
        </div>
        <div class="col-xs-4 buttons-container">

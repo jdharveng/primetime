@@ -6,4 +6,9 @@ class UsersController < ApplicationController
   @user = User.find(params[:id])
   end
 
+  def peopleIfollow
+    skip_authorization
+    @user = current_user
+  end
+
 end
