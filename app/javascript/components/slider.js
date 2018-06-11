@@ -16,11 +16,25 @@ function slide_with_ticks() {
 function slide() {
   if (!document.getElementById('ex1')) return null;
 
+  const minsValue = document.getElementById("ex1SliderVal");
+
   const slider = new Slider('#ex1', {
     formatter: function(value) {
       return 'Current value: ' + value;
+      // slider.on("slideStart", function(sliderValue) {
+      //   console.log("Sliding")
+      //   document.getElementById("ex1SliderVal").textContent = sliderValue;
+      // });
     }
   });
+  slider.on("slide", function(sliderValue) {
+        console.log("Sliding")
+        minsValue.innerHTML = sliderValue
+      });
+    slider.on("slideStop", function(sliderValue) {
+        console.log("Sliding")
+        minsValue.innerHTML = sliderValue
+      });
 }
 
 function transition() {
