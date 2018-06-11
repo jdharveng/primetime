@@ -5,7 +5,6 @@ class BookingPolicy < ApplicationPolicy
     end
   end
 
-
   def create?
     return true
   end
@@ -14,5 +13,9 @@ class BookingPolicy < ApplicationPolicy
     record.all? do |record_item|
       record_item.user == user
     end
+  end
+
+  def bookingtimer?
+    return true
   end
 end

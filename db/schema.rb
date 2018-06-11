@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2018_06_10_170321) do
     t.string "address"
     t.float "latitude"
     t.float "longitude"
+    t.integer "price"
     t.integer "state", default: 0
     t.bigint "category_id"
     t.bigint "user_id"
@@ -35,6 +36,7 @@ ActiveRecord::Schema.define(version: 2018_06_10_170321) do
   end
 
   create_table "bookings", force: :cascade do |t|
+    t.integer "amount"
     t.bigint "user_id"
     t.bigint "activity_id"
     t.datetime "created_at", null: false
