@@ -1,32 +1,40 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-6 col-md-offset-3">
-      <div class="primetime-logo">
-        <%= image_tag "logo.png", height:100 %>
+    <div class="col-xs-12 col-md-4 col-md-offset-4 small-padding background-color">
+     <div class="banner-show" style="background-image: url('<%= cl_image_path "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528592650/dog-man-pedestrian-10517.jpg" %>')">
       </div>
-      <div class="form-box">
-            <h1>Add an Activity</h1>
+      <div class="full-container container-middle">
+            <div class="filter-title">
+              Add a new Activity
+            </div>
               <%= simple_form_for @activity do |f| %>
                <div class="form-inputs">
-                  <%= f.input :title %>
-                  <%= f.input :description %>
-                  <%= f.input :category_id, collection: Category.all, as: :select  %>
-                  <%= f.input :duration %>
-                  <%= f.input :address, id:"activity_address" %>
-                  <%= f.input :price %>
-                  <%= f.input :payable %>
+                  <%= f.input :title, label: false, placeholder:"title"%>
+                  <%= f.input :description, label: false, placeholder:"description" %>
+                  <%= f.input :category_id, collection: Category.all, as: :select, label: false, include_blank: "-- Select category --" %>
+                  <%= f.input :duration, label: false, placeholder:"duration in minutes" %>
+                  <%= f.input :address, id:"activity_address", label: false, placeholder:"address" %>
+                  <%= f.input :price, label: false, as: :currency, currency: "€" %>
+                  <%#= f.input :payable %>
                   <%= f.input :picture %>
                   <%= f.input :picture_cache, as: :hidden %>
                 </div>
-                <div class="form-actions">
-                  <%= f.button :submit %>
-                </div>
-              <% end %>
-              <div class="extra-links">
-              <%#= render "devise/shared/links"%>
-            </div>
       </div>
+      <div class="col-xs-4 buttons-container">
+        <button class="back-button passive-button" onclick="goBack()"><i class="fas fa-caret-left"></i>Back</button>
+        <div id="next-filter" class="next-button cta-button"><%= f.button :submit, "Create!" ,class: "next-button cta-button"%></div>
+      </div>
+              <% end %>
     </div>
   </div>
 </div>
 
+<script>
+function goBack() {
+    window.history.back();
+}
+
+function goForward() {
+    window.history.forward()
+}
+</script>

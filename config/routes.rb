@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
+  resources :users, only: [:show]
   resources :activities do
     resources :bookings, except: [:index] do
       # resources :reviews, only: [:show, :new, :create]
@@ -20,4 +21,7 @@ Rails.application.routes.draw do
 
   get :myactivities, to: 'activities#myactivities'
   get :mybookings, to: 'bookings#mybookings'
+
+
+  resources :follows
 end
