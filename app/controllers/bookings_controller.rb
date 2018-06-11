@@ -32,7 +32,7 @@ class BookingsController < ApplicationController
 
   # POST /activities/1/bookings
   def create
-    @booking = Booking.new(booking_params)
+    @booking = Booking.new
     @booking.user = current_user
     @booking.activity = @activity
     @booking.state = "pending"
@@ -45,13 +45,21 @@ class BookingsController < ApplicationController
     else
       render :new
     end
-
   end
+
+  def update
+    @booking = Booking.find(booking_params)
+    @booking.state = "paid"
+    @booking.save
+    redirect_back(fallback_location: @booking)
+    authorize @booking
+  end
+
 
   private
 
   def booking_params
-    #params.require(:booking).permit(:amount)
+    params.require(:booking).permit(:state)
   end
 
   def set_activity

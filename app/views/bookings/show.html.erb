@@ -13,7 +13,12 @@
             <div class="red-line"></div>
         </div>
           <div class="booking-info-card">
-              <%= @booking.state.capitalize %>
+              <% if @activity.payable %>
+                <%= @booking.state.capitalize %>
+              <% else %>
+                <% @booking.update({state: "paid"}) %>
+                <%= @booking.state.capitalize %>
+              <% end %>
           </div>
         </div>
         <div class="booking-activity">
