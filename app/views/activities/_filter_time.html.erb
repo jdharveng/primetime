@@ -1,11 +1,18 @@
 <div id="time" class="container" style="display:block">
   <div class="row">
     <div class="col-xs-12 col-md-4 col-md-offset-4 small-padding background-color full-height">
-       <div class="full-container container-middle">
+       <div class="full-container container-middle slider-middle-page">
+          <div class="slider-big-nums">
+            <%#= slider.getValue();%>
+            <span id="ex1SliderVal">0</span>
+            <div class="slider-small-time-metric">
+            mins
+            </div>
+          </div>
           <div class="filter-title">
               How much time do you have?
           </div>
-          <input id="ex1" name="time" data-slider-id='ex1Slider' type="text" data-slider-min="20" data-slider-max="180" data-slider-step="1" data-slider-value="14"/>
+          <input id="ex1" name="time" data-slider-id='ex1Slider' type="text" data-slider-min="20" data-slider-max="180" data-slider-step="1" data-slider-value="14" data-slider-tooltip="hide" />
        </div>
        <div class="col-xs-4 buttons-container">
           <!-- <button class="back-button cta-button"><i class="fas fa-caret-left"></i>Back</button> -->
