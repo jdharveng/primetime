@@ -7,6 +7,8 @@ import { slideout_use, slideout_right} from "../components/slideout";
 import { initTimer } from "../components/countdown";
 import { display_map } from "../components/mapdisplay";
 import { hide_map } from "../components/mapdisplay";
+import { fillStars } from "../components/ratingstar";
+
 
 
 //required for Gmaps to work
@@ -28,6 +30,12 @@ const timerPage = document.querySelector('.bookings.bookingtimer');
 if (timerPage) {
   initTimer();
 }
+
+const ratingPage = document.querySelector('.reviews.new');
+if (ratingPage) {
+  fillStars();
+}
+
 
 
 
