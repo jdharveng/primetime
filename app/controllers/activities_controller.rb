@@ -50,17 +50,6 @@ class ActivitiesController < ApplicationController
 
   end
 
-  def myactivities
-    @activities = Activity.where(user: current_user)
-
-    authorize @activities
-  end
-
-  # def activitytimer
-  #   @duration = @activity.duration
-  #   authorize @activity
-  # end
-
 
   # GET /activities/new
   def new

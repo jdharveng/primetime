@@ -3,18 +3,20 @@ import ProgressBar from 'progressbar.js'
 function getDuration (){
   const activityEl = document.querySelector('.card-box');
   return activityEl.dataset.duration * 60000;
-  // return 1000 * 60 ;
+  //return 1000 * 5 ;
 }
 
 function formatTime(milliseconds) {
   // "3 h : 12 m : 12 s"
   var TimeFormat = require('hh-mm-ss');
-  console.log(milliseconds);
-  console.log(parseInt(milliseconds,10));
   return TimeFormat.fromMs(parseInt(milliseconds,10), 'hh:mm:ss');
 }
 
 function initTimer() {
+  // check current time
+  // if time diff than duration activity (finnd if timer has started in the past)
+  // if it has start timer with current time (received from the server)
+
   const circle = new ProgressBar.Circle('#progress', {
         color: '#ee061a',
         trailColor:'ee061a05',
@@ -57,9 +59,19 @@ function initTimer() {
 };
 
 function startTimer(element) {
+  // send post request to controller to save start time
+  // js fetch API
+
   let remainingMilliseconds = getDuration ();
 
-  setInterval(function() {
+  let timerId = setInterval(function() {
+    if (remainingMilliseconds === 1000) {
+      clearInterval(timerId);
+      setTimeout(function() {
+        let path = window.location.pathname.split('/').slice(0, 3).join('/');
+        window.location.href = path + '/reviews/new';
+      }, 3000);
+    }
     remainingMilliseconds -= 1000;
     element.setText(formatTime(remainingMilliseconds))
   }, 1000);
