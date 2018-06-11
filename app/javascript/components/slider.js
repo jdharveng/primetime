@@ -2,24 +2,57 @@ import Slider from "bootstrap-slider";
 
 
 function slide_with_ticks() {
-  if (!document.getElementById('ex13')) return null;
+  if (!document.getElementById('ex2')) return null;
 
-  const slider = new Slider("#ex13", {
-      ticks: [0, 100, 200, 300, 400],
-      ticks_labels: ['$0', '$100', '$200', '$300', 'Splash it'],
-      ticks_snap_bounds: 30,
-  });
+  // const slider = new Slider("#ex13", {
+  //     ticks: [0, 100, 200, 300, 400],
+  //     ticks_labels: ['$0', '$100', '$200', '$300', 'Splash it'],
+  //     ticks_snap_bounds: 30,
+  // });
+    const slider = new Slider("#ex2", {});
+
+    const moneyLowestValue = document.getElementById("ex2SliderValMinRange");
+    const moneyHighestValue = document.getElementById("ex2SliderValMaxRange");
+
+    slider.on("slide", function(sliderValues) {
+        moneyLowestValue.innerHTML = sliderValues[0]
+        moneyHighestValue.innerHTML = sliderValues[1]
+      });
+
+        slider.on("slideStop", function(sliderValues) {
+        moneyLowestValue.innerHTML = sliderValues[0]
+        moneyHighestValue.innerHTML = sliderValues[1]
+      });
+
+
+
+
+
 }
 
 
 function slide() {
   if (!document.getElementById('ex1')) return null;
 
+  const minsValue = document.getElementById("ex1SliderVal");
+
   const slider = new Slider('#ex1', {
     formatter: function(value) {
       return 'Current value: ' + value;
+      // slider.on("slideStart", function(sliderValue) {
+      //   console.log("Sliding")
+      //   document.getElementById("ex1SliderVal").textContent = sliderValue;
+      // });
     }
   });
+  slider.on("slide", function(sliderValue) {
+        console.log("Sliding")
+        minsValue.innerHTML = sliderValue
+      });
+    slider.on("slideStop", function(sliderValue) {
+        console.log("Sliding")
+        minsValue.innerHTML = sliderValue
+      });
 }
 
 function transition() {
