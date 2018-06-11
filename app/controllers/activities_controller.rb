@@ -7,6 +7,7 @@ class ActivitiesController < ApplicationController
   # GET /activities
   def index
     @activities = policy_scope(Activity)
+    extract_money_params
 
     #user location parsed from Filters form
     user_location = JSON.parse(params["user-location"])
@@ -17,7 +18,7 @@ class ActivitiesController < ApplicationController
 
     #filtering activities with Filters
     @activities_filtered = @activities.near([ulat,ulng],100)
-    .where("duration < ? AND price_cents < ?", params[:time], params[:money].to_i*1000)
+    .where("duration < ? AND price_cents BETWEEN ? AND ?", params[:time], @money_min, @money_max)
 
   end
 
@@ -101,6 +102,11 @@ class ActivitiesController < ApplicationController
 
   def set_activity
     @activity = Activity.find(params[:id])
+  end
+
+  def extract_money_params
+    @money_min = params[:money].split(",")[0].to_i*100
+    @money_max = params[:money].split(",")[1].to_i*100
   end
 
 end

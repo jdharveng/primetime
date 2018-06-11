@@ -1,0 +1,36 @@
+.booking-info {
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  text-align: center;
+}
+
+.booking-activity-name {
+  font-size: 20px;
+  margin-top: 25px;
+}
+
+.booking-activity {
+  font-size: 16px;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.booking-amount {
+
+}
+
+.booking-info-card {
+  background-color: #c1bcbd;
+  width: 80%;
+  color: white;
+  text-align: center;
+  height: 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: -7px;
+}
