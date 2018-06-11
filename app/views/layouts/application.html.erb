@@ -20,7 +20,7 @@
     <div id="panel">
       <%= render 'shared/navbar' %>
       <%= render 'shared/flashes' %>
-      <%#= javascript_include_tag "https://maps.googleapis.com/maps/api/js?libraries=places&sensor=true&key=#{ENV['GOOGLE_API_BROWSER_KEY']}" %>
+      <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?libraries=places&key=#{ENV['GOOGLE_API_BROWSER_KEY']}" %>
       <%= yield %>
     </div>
     <%= yield :after_panel %>
