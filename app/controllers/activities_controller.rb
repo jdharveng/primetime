@@ -1,5 +1,5 @@
 class ActivitiesController < ApplicationController
-  before_action :set_activity, only: [:show, :edit, :update, :destroy]
+  before_action :set_activity, only: [:show, :edit, :update, :destroy, :activitytimer]
   skip_before_action :authenticate_user!, only: [:show]
   require 'json'
   require 'open-uri'
@@ -54,6 +54,11 @@ class ActivitiesController < ApplicationController
 
     authorize @activities
   end
+
+  # def activitytimer
+  #   @duration = @activity.duration
+  #   authorize @activity
+  # end
 
 
   # GET /activities/new

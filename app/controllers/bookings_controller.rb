@@ -1,6 +1,6 @@
 class BookingsController < ApplicationController
-  before_action :set_activity, except: [:index, :mybookings]
-  before_action :set_booking, only: [:show]
+  before_action :set_activity, except: [:index, :mybookings, :bookingtimer]
+  before_action :set_booking, only: [:show, :bookingtimer]
 
   # GET /bookings
   def index
@@ -16,6 +16,12 @@ class BookingsController < ApplicationController
   def mybookings
     @bookings = Booking.where(user: current_user)
     authorize @bookings
+  end
+
+  def bookingtimer
+    @activity = @booking.activity
+    @duration = @booking.activity.duration
+    authorize @booking
   end
 
   # GET /activities/1/bookings/new

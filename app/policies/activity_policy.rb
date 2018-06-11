@@ -16,6 +16,10 @@ class ActivityPolicy < ApplicationPolicy
     return true
   end
 
+  # def activitytimer?
+  #   return true
+  # end
+
   def update?
     record.user == user
     # - record: the activity passed to the `authorize` method in controller
