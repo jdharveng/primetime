@@ -10,6 +10,24 @@ function slide_with_ticks() {
   //     ticks_snap_bounds: 30,
   // });
     const slider = new Slider("#ex2", {});
+
+    const moneyLowestValue = document.getElementById("ex2SliderValMinRange");
+    const moneyHighestValue = document.getElementById("ex2SliderValMaxRange");
+
+    slider.on("slide", function(sliderValues) {
+        moneyLowestValue.innerHTML = sliderValues[0]
+        moneyHighestValue.innerHTML = sliderValues[1]
+      });
+
+        slider.on("slideStop", function(sliderValues) {
+        moneyLowestValue.innerHTML = sliderValues[0]
+        moneyHighestValue.innerHTML = sliderValues[1]
+      });
+
+
+
+
+
 }
 
 
