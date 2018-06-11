@@ -24,15 +24,42 @@
 
 <%= content_for :after_timer do %>
 <script>
-    // setINterval needs a reference to a function not the executing function
-    // setInterval(()=> {
-    //   window.app.timer(<% @activity.duration %>)
-    // },1000);
-    window.app.timer();
-    const startB = document.querySelector(".back-button.cta-button");
+    // window.app.timer();
+    // const startB = document.querySelector(".back-button.cta-button");
 
-    startB.addEventListener("click", (event) => {
-      window.app.startTimer();
-    });
+    // startB.addEventListener("click", (event) => {
+    //   window.app.startTimer();
+    // });
   </script>
-  <% end %>
+<% end %>
+
+
+<script>
+  const cards = document.querySelectorAll(".card-box");
+  window.onload = function() {
+    cards.forEach( function(element, index) {
+      setTimeout(function() {
+        element.style.opacity = "0.9";
+      },
+        (90*index)
+      )
+
+  //     element.animate([
+  // // keyframes
+  //     { opacity: '0' },
+  //     { opacity: '1' }
+  //     ]
+  //     ,{duration: 1000, delay: (1000*index)});
+    })
+  };
+
+function goBack() {
+    window.history.back();
+}
+
+function goForward() {
+    window.history.forward()
+}
+</script>
+
+

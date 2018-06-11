@@ -1,6 +1,21 @@
 import ProgressBar from 'progressbar.js'
 
-    var circle = new ProgressBar.Circle('#progress', {
+function getDuration (){
+  const activityEl = document.querySelector('.card-box');
+  return activityEl.dataset.duration * 60000;
+  // return 1000 * 60 ;
+}
+
+function formatTime(milliseconds) {
+  // "3 h : 12 m : 12 s"
+  var TimeFormat = require('hh-mm-ss');
+  console.log(milliseconds);
+  console.log(parseInt(milliseconds,10));
+  return TimeFormat.fromMs(parseInt(milliseconds,10), 'hh:mm:ss');
+}
+
+function initTimer() {
+  const circle = new ProgressBar.Circle('#progress', {
         color: '#ee061a',
         trailColor:'ee061a05',
         duration: getDuration(),
@@ -30,43 +45,32 @@ import ProgressBar from 'progressbar.js'
        // fill: '',
     });
 
+  const startB = document.querySelector(".back-button.cta-button");
 
-function getDuration (){
-  const activityEl = document.querySelector('.card-box');
-  //return activityEl.dataset.duration * 60000;
-  return 1000 * 60 ;
-}
+  startB.addEventListener("click", (event) => {
+      startTimer(circle);
+    });
 
-function formatTime(milliseconds) {
-  // "3 h : 12 m : 12 s"
-  var TimeFormat = require('hh-mm-ss');
-  console.log(milliseconds);
-  console.log(parseInt(milliseconds,10));
-  return TimeFormat.fromMs(parseInt(milliseconds,10), 'hh:mm:ss');
-}
-
-function timer() {
-
-//debugger;
+//debugger - prob not needed below;
   let progress = 0;
   circle.animate(progress);
 };
 
-function startTimer() {
+function startTimer(element) {
   let remainingMilliseconds = getDuration ();
 
   setInterval(function() {
     remainingMilliseconds -= 1000;
-    circle.setText(formatTime(remainingMilliseconds))
+    element.setText(formatTime(remainingMilliseconds))
   }, 1000);
 
   let progress = 1 ;
-  circle.animate(progress);
+  element.animate(progress);
 }
 
 
 // export { timerInit, timer };
- export {  timer, startTimer };
+ export {  initTimer };
 
 
 
