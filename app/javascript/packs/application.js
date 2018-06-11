@@ -19,7 +19,7 @@ if (showPage) {
 }
 
 const filterPage = document.querySelector('.activities.filters')
-console.log(filterPage)
+// console.log(filterPage)
 if (filterPage) {
   getUserLocation()
 }

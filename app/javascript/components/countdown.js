@@ -45,7 +45,7 @@ function initTimer() {
        // fill: '',
     });
 
-  const startB = document.querySelector(".back-button.cta-button");
+  const startB = document.querySelector(".start-button.cta-button");
 
   startB.addEventListener("click", (event) => {
       startTimer(circle);

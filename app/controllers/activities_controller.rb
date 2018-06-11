@@ -12,6 +12,8 @@ class ActivitiesController < ApplicationController
     user_location = JSON.parse(params["user-location"])
     ulat = user_location["lat"]
     ulng = user_location["lng"]
+    @update_current_profile = User.update(current_user.id, {:latitude => ulat, :longitude => ulng})
+
 
     #filtering activities with Filters
     @activities_filtered = @activities.near([ulat,ulng],100)
