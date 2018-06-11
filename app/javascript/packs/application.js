@@ -7,6 +7,7 @@ import { slideout_use, slideout_right} from "../components/slideout";
 import { display_map } from "../components/mapdisplay";
 import { hide_map } from "../components/mapdisplay";
 
+
 //required for Gmaps to work
 window.GMaps = require('gmaps');
 

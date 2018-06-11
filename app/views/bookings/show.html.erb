@@ -38,6 +38,12 @@
         <% else %>
             <%= link_to 'Done', activity_path(@activity), class: 'next-button cta-button half-width'%>
         <% end %>
-    </div>
+      </div>
   </div>
 </div>
+
+<script>
+  function goBack() {
+    window.history.back();
+}
+</script>
