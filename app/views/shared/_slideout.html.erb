@@ -6,8 +6,8 @@
   <p> <%= link_to "New Activity", new_activity_path  %> </p>
   <p> <%= link_to "My Activities", myactivities_path  %> </p>
   <p> <%= link_to "My Bookings", mybookings_path  %> </p>
-  <p> My Profile </p>
-  <p> My Followers</p>
+  <p> <%= link_to "My Profile", user_path(current_user)  %> </p>
+  <p> <%= link_to "People I Follow", peopleIfollow_path  %></p>
 
 
 </nav>
