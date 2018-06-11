@@ -2,13 +2,14 @@ import Slider from "bootstrap-slider";
 
 
 function slide_with_ticks() {
-  if (!document.getElementById('ex13')) return null;
+  if (!document.getElementById('ex2')) return null;
 
-  const slider = new Slider("#ex13", {
-      ticks: [0, 100, 200, 300, 400],
-      ticks_labels: ['$0', '$100', '$200', '$300', 'Splash it'],
-      ticks_snap_bounds: 30,
-  });
+  // const slider = new Slider("#ex13", {
+  //     ticks: [0, 100, 200, 300, 400],
+  //     ticks_labels: ['$0', '$100', '$200', '$300', 'Splash it'],
+  //     ticks_snap_bounds: 30,
+  // });
+    const slider = new Slider("#ex2", {});
 }
 
 
