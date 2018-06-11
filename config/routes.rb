@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
+  get :peopleIfollow, to: 'users#peopleIfollow'
   resources :users, only: [:show]
   resources :activities do
     resources :bookings, except: [:index] do
@@ -24,6 +25,7 @@ Rails.application.routes.draw do
 
   get :myactivities, to: 'activities#myactivities'
   get :mybookings, to: 'bookings#mybookings'
+
   # get "activitytimer/:id", to: 'activities#activitytimer', as: :activitytimer
   # get "bookingtimer/:id", to: 'bookings#bookingtimer', as: :activitytimer
 
