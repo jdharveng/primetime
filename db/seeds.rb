@@ -243,7 +243,7 @@ puts 'Created Categories'
   user: User.all.sample,
   duration: 20,
   remote_picture_url: "https://cache.mrporter.com/images/journal/7e9c15b3-3744-45c0-94f6-d3ecb17b9a25/w1000_q65.jpg",
-  payable: false,
+  payable: true,
   )
 
   Activity.create!(
@@ -288,7 +288,7 @@ puts 'Created Categories'
   user: User.all.sample,
   duration: 60,
   remote_picture_url: "http://images-cdn.impresa.pt/activa/2017-04-19-Cinco-Lounge.jpg/original",
-  payable: false,
+  payable: true,
   )
 
   Activity.create!(
