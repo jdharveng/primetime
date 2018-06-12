@@ -20,21 +20,6 @@ class ActivitiesController < ApplicationController
     @activities_filtered = @activities.near([ulat,ulng],100)
     .where("duration < ? AND price_cents BETWEEN ? AND ?", params[:time], @money_min, @money_max)
 
-    #filtering activities_filtered with distance to user location
-    # distance_to_activities = []
-    # @activities_filtered.each do |activity|
-    #     walking_url = "https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=#{ulat},#{ulng}&destinations=#{activity.latitude},#{activity.longitude}&mode=walking&key=AIzaSyCleWvsNaz8ws_W5UuN4yPCi5YOfKDMvPM"
-    #     user_serialized = open(walking_url).read
-    #     user = JSON.parse(user_serialized)
-    #     distance_time = user['rows'][0]["elements"] [0]["duration"]['text']
-    #     distance_meters = user['rows'][0]["elements"] [0]["duration"]['value']
-    #     distance_to_activities << {
-    #       id: activity.id,
-
-    #       distance_time: distance_time,
-    #       distance_meters: distance_meters
-    #     }
-    # end
   end
 
   # GET /activities/1
