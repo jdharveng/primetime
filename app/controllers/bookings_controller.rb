@@ -35,15 +35,22 @@ class BookingsController < ApplicationController
     @booking = Booking.new
     @booking.user = current_user
     @booking.activity = @activity
-    @booking.state = "pending"
-
-    authorize @booking
-
-    if @booking.save
-      #redirect_to new_booking_payment_path(@booking)
-       redirect_to activity_booking_path(@activity,@booking)
+    if @booking.activity.price == 0 || @booking.activity.payable == false
+        @booking.state = "paid"
+        authorize @booking
+        if @booking.save
+           redirect_to bookingtimer_booking_path(@booking)
+        else
+          render :new
+        end
     else
-      render :new
+        @booking.state = "pending"
+        authorize @booking
+        if @booking.save
+           redirect_to activity_booking_path(@activity,@booking)
+        else
+          render :new
+        end
     end
   end
 

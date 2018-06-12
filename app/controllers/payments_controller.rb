@@ -24,7 +24,7 @@ class PaymentsController < ApplicationController
   )
 
   @booking.update(payment: charge.to_json, state: 'paid')
-  redirect_to activity_path(@activity)
+  redirect_to bookingtimer_booking_path(@booking)
 
 rescue Stripe::CardError => e
   flash[:alert] = e.message
@@ -35,7 +35,7 @@ rescue Stripe::CardError => e
 private
 
   def set_booking
-    @booking = current_user.bookings.where(state: 'pending').find(params[:booking_id])
+    @booking = current_user.bookings.find(params[:booking_id])
   end
 
 end
