@@ -59,7 +59,7 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:state)
+    params.require(:booking).permit(:state, :payment)
   end
 
   def set_activity

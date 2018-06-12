@@ -31,6 +31,7 @@ rescue Stripe::CardError => e
   redirect_to new_booking_payment_path(@booking)
   end
 
+
 private
 
   def set_booking

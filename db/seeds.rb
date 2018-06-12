@@ -153,7 +153,7 @@ puts 'Created Categories'
   user: User.all.sample,
   duration: 20,
   remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138806/Miradouro-da-Grac%CC%A7a.jpg",
-  payable: true
+  payable: false
   )
 
   Activity.create!(
@@ -354,10 +354,18 @@ puts 'Created Categories'
 puts 'Created Activities'
 
 20.times do
+ activity = Activity.all.sample
+ if activity.price == 0
+    state = "paid"
+  else
+    state = "pending"
+  end
+
 
  Booking.create!(
   user: User.all.sample,
-  activity: Activity.all.sample,
+  activity: activity,
+  state: state,
   )
 
 end
