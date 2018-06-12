@@ -8,6 +8,8 @@ before_action :set_booking, only: [:show, :new, :create]
 
   def new
     @review = Review.new
+    @review.booking_id = @booking.id
+    @activity = @review.booking.activity
     authorize @review
 
   end
