@@ -1,5 +1,5 @@
 <div class="card-box" data-duration="<%=activity.duration%>">
-  <%= link_to activity_booking_path(activity,booking) do %>
+  <%= link_to activity_booking_path(activity.id, booking.id) do %>
     <div class="card-link"></div>
   <% end %>
   <div class="card-picture" style="background-image: url('<%=cl_image_path activity.picture%>')">
