@@ -1,1 +1,86 @@
-<%=@user.all_following %>
+<%#=@user.all_following %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-4 col-md-offset-4 small-padding background-color full-height">
+      <div class="user-profile-box overflow-scroll">
+<!--         <div class="user-picture">
+            <%#= cl_image_tag(@user.picture, class:"avatar-huge") %>
+        </div>
+        <div class="user-name">
+            <%#= @user.first_name+" "+@user.last_name %>
+        </div>
+        <div class="user-bio">
+            <%= @user.bio %>
+        </div> -->
+        <div class="user-name-followers">
+            <p><%= @user.first_name+" is following" %></p>
+        </div>
+        <div class="red-line-box full-width">
+            <div class="red-line"></div>
+        </div>
+      <!--   <div class="follow-box"> -->
+          <div class="user-followers-pics">
+            <% if @user.all_following.count == 0 %>
+              <div class="no-followers-info">
+                <p>Not following anyone</p>
+                <%="Be the first to follow "+@user.first_name %>
+              </div>
+            <% else %>
+                <% @user.all_following.each do |following| %>
+
+                <%= cl_image_tag(following.picture, class:"avatar-large") %>
+                <div class="details-people-I-follow">
+                  <%= following.first_name%>
+                </div>
+                <div class="details-people-I-follow">
+                  <%= following.bio%>
+                </div>
+               <!--  <div class="details-people-I-follow">
+                  <ul>
+                    <% following.activities.each do |activity| %>
+                      <li><%= activity.title %></li>
+                  <% end %>
+                  </ul>
+                </div> -->
+            </div>
+            <% end %>
+          <% end %>
+        <!--   </div> -->
+        </div>
+
+      <div class="col-xs-4 buttons-container">
+          <button class="back-button passive-button half-width" onclick="goBack()"><i class="fas fa-caret-left"></i>GO BACK</button>
+          <button class="next-button cta-button half-width"><%= link_to "Follow", new_follow_path(@user.id)%> <i class="fas fa-user-plus"></i></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  // const cards = document.querySelectorAll(".card-box");
+  // window.onload = function() {
+  //   cards.forEach( function(element, index) {
+  //     setTimeout(function() {
+  //       element.style.opacity = "0.9";
+  //     },
+  //       (90*index)
+  //     )
+
+  // //     element.animate([
+  // // // keyframes
+  // //     { opacity: '0' },
+  // //     { opacity: '1' }
+  // //     ]
+  // //     ,{duration: 1000, delay: (1000*index)});
+  //   })
+  // };
+
+function goBack() {
+    window.history.back();
+}
+
+function goForward() {
+    window.history.forward()
+}
+</script>
