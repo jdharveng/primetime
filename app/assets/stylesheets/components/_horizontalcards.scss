@@ -1,6 +1,6 @@
 .card-box {
   display: flex;
-  height: 100px;
+  height: 100%;
   // width: 360px;
   // border-color: black;
   // border-width: 1px;
@@ -27,7 +27,7 @@
 
 .card-top {
   display: block;
-  height: 42px;
+  height: 50%;
   // border-width: 1px;
   // border-style: solid;
   // border-color: black;
@@ -48,14 +48,14 @@
   // border-width: 1px;
   // border-style: solid;
   // border-color: black;
-  height: 43px;
+  height: 50%;
   margin-top: 5px;
 }
 
 
 
 .card-distance {
-  font-size: 14px;
+  font-size: 12px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;

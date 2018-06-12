@@ -9,8 +9,9 @@
         </div>
 
         <% if @activity.payable == true || @activity.price != 0 %>
+            <div class="booking-activity-box">
 
-              <div class="booking-activity">
+                <div class="booking-activity">
                 <p>Payment Status</p>
               <div class="red-line-box full-width">
                   <div class="red-line"></div>
@@ -33,8 +34,11 @@
                     <%= humanized_money_with_symbol(@booking.amount) %>
                 </div>
               </div>
-        <% else %>
 
+            </div>
+
+        <% else %>
+            <div class="booking-activity-box">
                   <div class="booking-activity">
                 <p>Payment Status</p>
               <div class="red-line-box full-width">
@@ -53,7 +57,7 @@
                     FREE
                 </div>
               </div>
-
+            </div>
         <% end %>
 
       </div>

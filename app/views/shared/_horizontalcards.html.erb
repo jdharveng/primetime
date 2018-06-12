@@ -7,7 +7,7 @@
   <div class="card-content">
     <div class="card-top">
       <div class="card-title">
-        <%= activity.title %>
+        <%= h truncate(activity.title, :length => 45) %>
       </div>
       <div class="card-category">
         <%= activity.category.name %>
