@@ -349,6 +349,7 @@ puts 'Created Categories'
   duration: 30,
   remote_picture_url:"https://i.pinimg.com/originals/4e/32/8e/4e328e75195911f55f009ae60fb71037.jpg",
   payable: false,
+
   )
 
 puts 'Created Activities'
