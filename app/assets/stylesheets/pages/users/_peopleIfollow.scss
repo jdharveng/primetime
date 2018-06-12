@@ -1,3 +1,26 @@
-.details-people-I-follow {
-  font-size: 8px;
+
+.profiles-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 30px 20px 30px;
+  font-size: 13px;
+}
+
+
+
+.avatar-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+
+.owned-activities {
+    margin-top: -12px;
+    text-align: center;
+    font-size: 13px;
+    color: #ee061a;
+    margin-bottom: 0px;
 }
