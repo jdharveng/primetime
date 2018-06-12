@@ -3,10 +3,10 @@
     <div class="col-xs-12 col-md-4 col-md-offset-4 small-padding background-color full-height">
 <!-- <div class="container-index">
   <div class="row"> -->
-      <div class="cards-container overflow-scroll">
+      <div class="full-container overflow-scroll">
           <% @activities.each do |activity| %>
           <div class="col-xs-4 card-container">
-            <%= render 'shared/horizontalcardsmyact', activity: activity %>
+            <%= render 'shared/horizontalcards', activity: activity %>
           </div>
           <% end %>
       </div>
@@ -18,7 +18,30 @@
 </div>
 
 <script>
-  function goBack() {
+  const cards = document.querySelectorAll(".card-box");
+  window.onload = function() {
+    cards.forEach( function(element, index) {
+      setTimeout(function() {
+        element.style.opacity = "0.9";
+      },
+        (90*index)
+      )
+
+  //     element.animate([
+  // // keyframes
+  //     { opacity: '0' },
+  //     { opacity: '1' }
+  //     ]
+  //     ,{duration: 1000, delay: (1000*index)});
+    })
+  };
+
+function goBack() {
     window.history.back();
 }
+
+function goForward() {
+    window.history.forward()
+}
 </script>
+
