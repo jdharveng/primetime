@@ -1,6 +1,6 @@
 <div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-md-4 col-md-offset-4 small-padding background-colo full-height">
+  <div class="row full-height">
+    <div class="col-xs-12 col-md-4 col-md-offset-4 small-padding background-color full-height">
       <div class="banner-show" style="background-image: url('<%=cl_image_path @activity.picture%>')">
       </div>
       <div class="booking-info">
@@ -65,23 +65,23 @@
 
         <% if @booking.state == "paid" %>
             <% if @booking.review == nil %>
-                <button class="back-button passive-button half-width" onclick="goBack()"><i class="fas fa-caret-left"></i>Back</button>
-                <%= link_to 'Review', new_booking_review_path(@booking), class: 'next-button cta-button half-width'%>
+                <button class="back-button passive-button half-width height-full-percent" onclick="goBack()"><i class="fas fa-caret-left"></i>Back</button>
+                <%= link_to 'Review', new_booking_review_path(@booking), class: 'next-button cta-button half-width height-full-percent'%>
             <% else %>
-                <button class="back-button passive-button full-width" onclick="goBack()"><i class="fas fa-caret-left"></i>Back</button>
+                <button class="back-button passive-button full-width height-full-percent" onclick="goBack()"><i class="fas fa-caret-left"></i>Back</button>
             <% end %>
 
         <% else %>
 
             <% if @activity.payable %>
-                <button class="back-button passive-button half-width" onclick="goBack()"><i class="fas fa-caret-left"></i>Back</button>
-                <%= form_tag new_booking_payment_path(@booking), html: { style: "height: 60px; margin: 0px; display: flex; justify-content: center; padding: 0px;"}, class:"half-width", method: :get do %>
-                    <%= submit_tag 'Purchase', class: 'next-button cta-button full-width' %>
+                <button class="back-button passive-button half-width height-full-percent" onclick="goBack()"><i class="fas fa-caret-left"></i>Back</button>
+                <%= form_tag new_booking_payment_path(@booking), html: { style: "height: 100%; margin: 0px; display: flex; justify-content: center; padding: 0px;"}, class:"half-width", method: :get do %>
+                    <%= submit_tag 'Purchase', class: 'next-button cta-button full-width height-full-percent' %>
                 <% end %>
 
             <% else %>
 
-                <button class="back-button passive-button full-width" onclick="goBack()"><i class="fas fa-caret-left"></i>Back</button>
+                <button class="back-button passive-button full-width height-full-percent" onclick="goBack()"><i class="fas fa-caret-left"></i>Back</button>
             <% end %>
 
         <% end %>

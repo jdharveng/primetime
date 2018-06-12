@@ -9,6 +9,7 @@
   background-position: center;
   margin-left: -5px;
   margin-top: -5px;
+  flex-grow: 1;
 
 }
 
@@ -36,4 +37,8 @@
   color: white;
   opacity: 0.6;
   margin-bottom: 30px;
+}
+
+.big-banner-show {
+  height: 60vh;
 }
