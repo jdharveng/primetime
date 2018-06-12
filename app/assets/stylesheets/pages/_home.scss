@@ -32,7 +32,6 @@ body {
   background: #ee061a05;
 }
 
-
 .landing-value-prop-main-title {
   font-size: 30px;
   color:  #696969;
@@ -59,3 +58,12 @@ body {
   margin-top: 20px;
 }
 
+.overflow-scroll {
+  height: 520px;
+  overflow: scroll;
+}
+
+.overflow-scroll-half {
+  height: 260px;
+  overflow: scroll;
+}
