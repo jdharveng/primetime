@@ -98,6 +98,11 @@ class ActivitiesController < ApplicationController
     skip_authorization
   end
 
+  def myactivities
+    @activities = Activity.where(user: current_user)
+    authorize @activities
+  end
+
   private
 
   def activity_params
