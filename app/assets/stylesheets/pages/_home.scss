@@ -33,25 +33,49 @@ body {
 }
 
 .landing-value-prop-main-title {
-  font-size: 30px;
+  font-size: 25px;
   color:  #696969;
-  margin-top: 30px;
+  margin-top: 20px;
   text-align: center;
+  margin-bottom: 20px;
 }
 
+.props-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-prop {
+    margin-left: 19px;
+    margin-right: -23px;
+    margin-bottom: 21px;
+}
 
 .landing-value-prop-title {
   font-size: 20px;
   color:  #696969;
   margin-top: 30px;
+  text-align: left;
+  flex: 1 1 20em;
+}
+
+.landing-user-name {
+  font-size: 15px;
+  color:  #696969;
   text-align: center;
+  margin-top: 6px;
+
 }
 
 
 .landing-value-prop-paragraph {
   font-size: 10px;
   margin-bottom: 30px;
-  text-align: center;
+  text-align: left;
+  margin-top: 40px;
+  flex: 2 2 20em;
+  margin-left: 33px;
 }
 
 #first-element-value-prop {
