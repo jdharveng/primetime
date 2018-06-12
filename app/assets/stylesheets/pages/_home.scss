@@ -31,3 +31,13 @@ body {
 .background-color {
   background: #ee061a05;
 }
+
+.overflow-scroll {
+  height: 520px;
+  overflow: scroll;
+}
+
+.overflow-scroll-half {
+  height: 260px;
+  overflow: scroll;
+}

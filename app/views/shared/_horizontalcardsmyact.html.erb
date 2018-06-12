@@ -1,5 +1,5 @@
 <div class="card-box" data-duration="<%=activity.duration%>">
-  <%= link_to activity_path(activity) do %>
+  <%= link_to activity_booking_path(activity.id, booking.id) do %>
     <div class="card-link"></div>
   <% end %>
   <div class="card-picture" style="background-image: url('<%=cl_image_path activity.picture%>')">
@@ -15,20 +15,19 @@
     </div>
     <div class="card-bottom">
       <div class="card-distance">
-  <!--       Keep this empty section to have the same display as when distance -->
+        <% d = DateTime.parse(booking.created_at.to_s) %>
+        <%=d.day%>/<%= d.month %>/<%= d.year %> - <%= d.hour %>: <%= d.minute %>
       </div>
       <div class="card-details">
-        <div class="rating">
-          4.3
-        </div>
-        <div class="price">
-          <i class="fas fa-wallet"></i>
-          <%=activity.price/10%>€
-        </div>
-        <div class="time">
-          <i class="fas fa-clock"></i>
-          <%=activity.duration%>m
-        </div>
+        <% if booking.state == "paid" %>
+          <div class="booking-state green">
+              <%= booking.state %>
+          </div>
+        <% else %>
+          <div class="booking-state red">
+              <%= booking.state %>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>

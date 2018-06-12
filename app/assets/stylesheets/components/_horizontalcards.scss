@@ -135,3 +135,25 @@
   top: 0; left: 0;
   height: 100%; width: 100%;
   }
+
+.green {
+   background-color: green;
+  }
+
+.red {
+   background-color: #ee061a;
+  }
+
+.booking-state {
+    color: white;
+    padding: 5px;
+    font-size: 12px;
+    width: 60px;
+    text-align: center;
+    border-radius: 3px;
+    height: 28px;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 7px;
+  }

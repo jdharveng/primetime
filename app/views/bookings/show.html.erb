@@ -13,11 +13,16 @@
             <div class="red-line"></div>
         </div>
           <div class="booking-info-card">
-              <%= @booking.state.capitalize %>
+              <% if @activity.payable %>
+                <%= @booking.state.capitalize %>
+              <% else %>
+                <% @booking.update({state: "paid"}) %>
+                <%= @booking.state.capitalize %>
+              <% end %>
           </div>
         </div>
         <div class="booking-activity">
-          <p>Booking Status</p>
+          <p>Booking Value</p>
         <div class="red-line-box full-width">
             <div class="red-line"></div>
         </div>
@@ -25,18 +30,19 @@
               <%= humanized_money_with_symbol(@booking.amount) %>
           </div>
         </div>
-        <div class="booking-activity-payment">
-          <%= @booking.payment %>
-        </div>
       </div>
        <div class="col-xs-4 buttons-container">
-        <button class="back-button passive-button half-width" onclick="goBack()"><i class="fas fa-caret-left"></i>Back</button>
-        <% if @activity.payable %>
-            <%= form_tag new_booking_payment_path(@booking), html: { style: "height: 60px; margin: 0px; display: flex; justify-content: center; padding: 0px;"}, class:"half-width", method: :get do %>
-                <%= submit_tag 'Purchase', class: 'next-button cta-button full-width' %>
-            <% end %>
+        <% if @booking.state == "paid" %>
+            <button class="back-button passive-button full-width" onclick="goBack()"><i class="fas fa-caret-left"></i>Back</button>
         <% else %>
-            <%= link_to 'Done', activity_path(@activity), class: 'next-button cta-button half-width'%>
+            <button class="back-button passive-button half-width" onclick="goBack()"><i class="fas fa-caret-left"></i>Back</button>
+            <% if @activity.payable %>
+                <%= form_tag new_booking_payment_path(@booking), html: { style: "height: 60px; margin: 0px; display: flex; justify-content: center; padding: 0px;"}, class:"half-width", method: :get do %>
+                    <%= submit_tag 'Purchase', class: 'next-button cta-button full-width' %>
+                <% end %>
+            <% else %>
+                <%= link_to 'Done', activity_path(@activity), class: 'next-button cta-button half-width'%>
+            <% end %>
         <% end %>
       </div>
   </div>
