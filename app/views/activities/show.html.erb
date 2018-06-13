@@ -12,83 +12,70 @@
   <% end %>
 
 <div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-md-4 col-md-offset-4 small-padding background-color full-height">
-      <div class="banner-show" style="background-image: url('<%=cl_image_path @activity.picture%>')">
-      </div>
-      <div class="box-icons">
-        <div class="box-icons-left">
-          <%= link_to user_path(@activity.user) do %>
-            <%= cl_image_tag(@activity.user.picture, class: "avatar-large") %>
-          <% end %>
-        <div class="box-icon save-icon">
-          <i class="fas fa-save icon-style"></i>
-        </div>
+  <div class="row full-height">
+    <div class="col-xs-12 col-md-4 col-md-offset-4 small-padding background-color height-full-percent">
+      <div class="full-container overflow-scroll">
+          <div class="banner-show" style="background-image: url('<%=cl_image_path @activity.picture%>')">
+          </div>
+          <div class="box-icons">
+            <div class="box-icons-left">
+              <%= link_to user_path(@activity.user) do %>
+                <%= cl_image_tag(@activity.user.picture, class: "avatar-large") %>
+              <% end %>
+            <div class="box-icon save-icon">
+              <i class="fas fa-save icon-style"></i>
+            </div>
 
-        <div class="box-icon share-icon">
-         <a href="https://www.facebook.com/sharer/sharer.php?u=<%= activity_url(@activity) %>">
-            <i class="fas fa-share-alt icon-style"></i>
-         </a>
+            <div class="box-icon share-icon">
+             <a href="https://www.facebook.com/sharer/sharer.php?u=<%= activity_url(@activity) %>">
+                <i class="fas fa-share-alt icon-style"></i>
+             </a>
 
-        </div>
+            </div>
 
-        </div>
-        <div class ="box-icon-right">
-          <div id="map-button" class="box-icon map-icon">
-            <i class="far fa-map icon-style fa-lg"></i>
+            </div>
+            <div class ="box-icon-right">
+              <div id="map-button" class="box-icon map-icon">
+                <i class="far fa-map icon-style fa-lg"></i>
+              </div>
+
+            </div>
           </div>
 
-        </div>
-      </div>
+            <% @condition = @activity.bookings.find_by(user: current_user) %>
 
-        <% @condition = @activity.bookings.find_by(user: current_user) %>
-
-       <%# if @condition %>
-          <!--   <div>
-             BOOKED!
-            </div> -->
-        <%# else %>
-          <%#= form_tag activity_bookings_path(@activity) do %>
-            <%#= hidden_field_tag 'activity_id', @activity.id %>
-            <%#= submit_tag 'Book activity', class: 'btn btn-primary' %>
-          <%# end %>
-
-        <%# end %>
-
-
-      <div class="card-bottom">
-        <div class="card-details">
-          <div class="rating">
-            4.3
-          </div>
-          <div class="price">
-            <i class="fas fa-wallet"></i>
-            <%= humanized_money_with_symbol(@activity.price) %>
-          </div>
-          <div class="time">
-            <i class="fas fa-clock"></i>
-            <%=@activity.duration%>m
-          </div>
-        </div>
-      </div>
-        <div class="activity-details">
-          <div class="activity-title">
-            <%= @activity.title %>
-          </div>
-          <div class="activity-category">
-            <%= @activity.category.name %>
-          </div>
-          <div class="activity-description">
-            <%= @activity.description %>
+          <div class="v-card-bottom">
+            <div class="v-card-details">
+              <div class="v-rating">
+                4.3
+              </div>
+              <div class="v-price">
+                <%= humanized_money_with_symbol(@activity.price) %>
+              </div>
+              <div class="v-time">
+                <%=@activity.duration%>m
+              </div>
+            </div>
+            <div class="activity-details">
+              <div class="activity-title">
+                <%= @activity.title %>
+              </div>
+              <div class="activity-category">
+                <%= @activity.category.name %>
+              </div>
+              <div class="activity-description">
+                <%= @activity.description %>
+              </div>
+            </div>
           </div>
 
         </div>
       <!--   <% @condition = @activity.bookings.find_by(user: current_user) %> -->
       <div class="col-xs-4 buttons-container">
-        <button class="back-button passive-button" onclick="goBack()"><i class="fas fa-caret-left"></i>Back</button>
-        <%= form_tag activity_bookings_path(@activity), html: { style: "height: 60px; margin: 0px; display: flex; justify-content: center; padding: 0px;"}, class:"half-width" do %>
+        <button class="back-button passive-button half-width" onclick="goBack()"><i class="fas fa-caret-left"></i>Back</button>
+        <%= form_tag activity_bookings_path(@activity), html: { style: "height: 100%; margin: 0px; display: flex; justify-content: center; padding: 0px;"}, class:"half-width" do %>
             <%= hidden_field_tag 'activity_id', @activity.id %>
-            <%= submit_tag 'Book activity', class: 'next-button cta-button full-width' %>
+            <%= submit_tag 'Book activity', class: 'next-button cta-button full-width height-full-percent' %>
         <% end %>
 
       </div>

@@ -10,7 +10,7 @@
           </div>
           <h1>primetime</h1>
           <p>enjoy yours, everyday</p>
-          <%= link_to 'I want it', root_url + "filters", class: "btn btn-danger btn-lg"%>
+          <%= link_to 'I want it', root_url + "filters", id: "cta", class: "btn btn-danger btn-lg"%>
         </div>
       </div>
 </div>
@@ -89,3 +89,9 @@
   </div>
 </div>
 
+<script>
+  var goFS = document.getElementById("cta");
+  goFS.addEventListener("click", function() {
+      document.body.requestFullscreen();
+  }, false);
+</script>

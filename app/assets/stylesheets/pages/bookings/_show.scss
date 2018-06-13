@@ -17,6 +17,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 30vh;
 }
 
 .booking-amount {
@@ -33,4 +34,10 @@
   flex-direction: column;
   justify-content: center;
   margin-top: -7px;
+}
+
+
+.booking-activity-box {
+  display: flex;
+  justify-content: space-around;
 }

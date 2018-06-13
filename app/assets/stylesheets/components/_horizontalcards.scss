@@ -1,6 +1,6 @@
 .card-box {
   display: flex;
-  height: 100px;
+  height: 100%;
   // width: 360px;
   // border-color: black;
   // border-width: 1px;
@@ -27,7 +27,8 @@
 
 .card-top {
   display: block;
-  height: 42px;
+  height: 50%;
+  width: 100%;
   // border-width: 1px;
   // border-style: solid;
   // border-color: black;
@@ -48,14 +49,21 @@
   // border-width: 1px;
   // border-style: solid;
   // border-color: black;
-  height: 43px;
+  height: 50%;
   margin-top: 5px;
+  width: 100%;
+}
+
+.v-card-bottom {
+  height: 50%;
+  margin-top: 10px;
+  width: 100%;
 }
 
 
 
 .card-distance {
-  font-size: 14px;
+  font-size: 12px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -74,6 +82,11 @@
   margin-right:5px;
 }
 
+.v-card-details {
+  display: flex;
+  margin-left:10px;
+}
+
 .price {
   // border-width: 1px;
   // border-style: solid;
@@ -90,6 +103,20 @@
     font-size: 17px;
     color: #ee061a;
   }
+}
+
+.v-price {
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-left: 10px;
+    height: 30px;
+    margin-right: 10px;
+    /* color: #ee061a; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .rating {
@@ -114,6 +141,29 @@
   padding-top: 7px;
 }
 
+.v-rating {
+    /* border-width: 1px; */
+    /* border-style: solid; */
+    /* border-color: black; */
+    /* background-color: #ee061a; */
+    color: #ee061a;
+    padding: 5px;
+    font-size: 18px;
+    width: 60px;
+    text-align: center;
+    border-radius: 3px;
+    height: 28px;
+    align-items: center;
+    /* vertical-align: middle; */
+    /* justify-items: center; */
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-around;
+    padding-top: 7px;
+    border-width: 1px;
+    border-style: solid;
+}
+
 .time {
   // border-width: 1px;
   // border-style: solid;
@@ -128,6 +178,17 @@
     font-size: 17px;
     color: #ee061a;
   }
+}
+
+.v-time {
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .card-link {
