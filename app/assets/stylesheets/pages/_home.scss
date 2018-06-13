@@ -14,8 +14,11 @@ body {
 }
 
 .form-inputs {
-  width: 45vh;
   font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 54px;
 }
 
 .extra-links {
