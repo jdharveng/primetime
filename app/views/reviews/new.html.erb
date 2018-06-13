@@ -1,44 +1,43 @@
 <div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-md-4 col-md-offset-4 small-padding background-color">
-      <div class="cards-container">
+  <div class="row full-height">
+    <div class="col-xs-12 col-md-4 col-md-offset-4 small-padding background-color height-full-percent">
+      <div class="full-container container-start overflow-scroll">
 
-        <div class="rating-title">
-              How did it go?
+            <div class="rating-title">
+                  How did it go?
+            </div>
+
+            <div class="col-xs-4 card-container">
+              <div class="rating-stars">
+                      <i class="far fa-star star1"></i>
+                      <i class="far fa-star star2"></i>
+                      <i class="far fa-star star3"></i>
+                      <i class="far fa-star star4"></i>
+                      <i class="far fa-star star5"></i>
+              </div>
+            </div>
+
+            <%= simple_form_for [@booking, @review] do |f| %>
+
+             <div class="col-xs-4 rating-content">
+              <div class="form-inputs">
+                <%= f.input :content %>
+                <%= f.input :rating, as: :hidden %>
+              </div>
+            </div>
+
+              <div class="col-xs-4 card-container">
+                <%= render 'shared/horizontalcardsmyact', activity: @activity, booking: @booking %>
+              </div>
+
         </div>
-
-        <div class="col-xs-4 card-container">
-          <div class="rating-stars">
-                  <i class="far fa-star star1"></i>
-                  <i class="far fa-star star2"></i>
-                  <i class="far fa-star star3"></i>
-                  <i class="far fa-star star4"></i>
-                  <i class="far fa-star star5"></i>
-          </div>
-        </div>
-
-        <%= simple_form_for [@booking, @review] do |f| %>
-
-         <div class="col-xs-4 rating-content">
-          <div class="form-inputs">
-            <%= f.input :content %>
-            <%= f.input :rating, as: :hidden %>
-          </div>
-        </div>
-
-          <div class="col-xs-4 card-container">
-            <%= render 'shared/horizontalcardsmyact', activity: @activity, booking: @booking %>
-          </div>
-
-
-          <div class="form-actions">
-            <%= f.submit 'Rate it!', class: 'rate-button cta-button' %>
+          <div class="buttons-container">
+            <%= f.submit 'Rate it!', class: "cta-button full-width" %>
           </div>
         <% end %>
    <!--    <div class="col-xs-4 buttons-container">
         <button class="rate-button cta-button">Rate it!</button>
       </div> -->
-    </div>
   </div>
 </div>
 
