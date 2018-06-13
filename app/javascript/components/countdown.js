@@ -2,8 +2,8 @@ import ProgressBar from 'progressbar.js'
 
 function getDuration (){
   const activityEl = document.querySelector('.card-box');
-  // return activityEl.dataset.duration * 60000;
-  return 1000 * 5 ;
+  return activityEl.dataset.duration * 60000;
+  // return 1000 * 5 ;
 }
 
 function formatTime(milliseconds) {
@@ -23,6 +23,10 @@ function initTimer() {
         duration: getDuration(),
         easing: 'linear',
         strokeWidth: 8,
+        // svgStyle: {
+        //   width:"80%",
+        //   height:"80%"
+        // },
         text: {
           value: formatTime(getDuration()),
           style: {
@@ -35,7 +39,7 @@ function initTimer() {
             padding: 0,
             margin: 0,
             fontWeight: 'bold',
-            fontSize: '70px',
+            fontSize: '60px',
             // You can specify styles which will be browser prefixed
             transform: {
                 prefix: true,
@@ -47,16 +51,21 @@ function initTimer() {
        // fill: '',
     });
 
-  const startB = document.querySelector(".start-button.cta-button");
 
-  startB.addEventListener("click", (event) => {
+  const startB = document.querySelector(".cta-button.half-width");
+  const handleStartClick = (event) => {
       startTimer(circle);
-    });
+      startB.removeEventListener("click", handleStartClick);
+    }
+
+  startB.addEventListener("click", handleStartClick);
 
 //debugger - prob not needed below;
   let progress = 0;
   circle.animate(progress);
 };
+
+
 
 function startTimer(element) {
   // send post request to controller to save start time
