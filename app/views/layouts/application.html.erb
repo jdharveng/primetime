@@ -15,8 +15,6 @@
   </head>
 
   <body class="<%= controller_name %> <%= action_name %>">
-    <%= render 'shared/slideout' %>
-    <%= render 'shared/slideoutright' %>
 
     <div id="panel">
       <%= render 'shared/navbar' %>
@@ -25,6 +23,8 @@
       <%= yield %>
     </div>
 
+      <%= render 'shared/slideout' %>
+      <%= render 'shared/slideoutright' %>
       <%= yield :after_panel %>
       <%= javascript_include_tag 'application' %>
       <%= javascript_pack_tag 'application' %>

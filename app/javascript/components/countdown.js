@@ -3,7 +3,7 @@ import ProgressBar from 'progressbar.js'
 function getDuration (){
   const activityEl = document.querySelector('.card-box');
   //return activityEl.dataset.duration * 60000;
-  return 1000 * 5 ;
+   return 1000 * 5 ;
 }
 
 function formatTime(milliseconds) {
@@ -23,6 +23,10 @@ function initTimer() {
         duration: getDuration(),
         easing: 'linear',
         strokeWidth: 8,
+        // svgStyle: {
+        //   width:"80%",
+        //   height:"80%"
+        // },
         text: {
           value: formatTime(getDuration()),
           style: {
@@ -35,7 +39,7 @@ function initTimer() {
             padding: 0,
             margin: 0,
             fontWeight: 'bold',
-            fontSize: '70px',
+            fontSize: '60px',
             // You can specify styles which will be browser prefixed
             transform: {
                 prefix: true,
@@ -49,11 +53,8 @@ function initTimer() {
 
 
   const startB = document.querySelector(".cta-button.half-width");
-  consol.log(startB);
   const handleStartClick = (event) => {
       startTimer(circle);
-      console.log("just after startTimer");
-      setStartTime(event.target.dataset.bookingId);
       startB.removeEventListener("click", handleStartClick);
     }
 
