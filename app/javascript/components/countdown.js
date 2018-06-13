@@ -2,7 +2,7 @@ import ProgressBar from 'progressbar.js'
 
 function getDuration (){
   const activityEl = document.querySelector('.card-box');
-  // return activityEl.dataset.duration * 60000;
+  //return activityEl.dataset.duration * 60000;
   return 1000 * 5 ;
 }
 
@@ -47,7 +47,8 @@ function initTimer() {
        // fill: '',
     });
 
-  const startB = document.querySelector(".start-button.cta-button");
+  const startB = document.querySelector(".cta-button.half-width");
+  //const startB = document.querySelector(".start-button.cta-button");
 
   startB.addEventListener("click", (event) => {
       startTimer(circle);
