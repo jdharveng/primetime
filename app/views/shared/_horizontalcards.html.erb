@@ -19,7 +19,7 @@
         <% if distance > 1 %>
         <%= distance.round(1) %>km
         <% else %>
-        <%= (distance * 100).round %>m
+        <%= (distance * 100).round %> meters
         <% end %>
       </div>
       <div class="card-details">
@@ -27,7 +27,6 @@
           4.3
         </div>
         <div class="price">
-          <i class="fas fa-wallet"></i>
           <%= humanized_money_with_symbol(activity.price) %>
         </div>
         <div class="time">
