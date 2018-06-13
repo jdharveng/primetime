@@ -2,7 +2,7 @@
   Category.destroy_all
   User.destroy_all
 
-  user1 = User.create!(
+  userAndreia = User.create!(
   email:"andreiadomingues@gmail.com",
   password:"123456",
   first_name:"Andreia",
@@ -12,7 +12,7 @@
   address: "Rua Moeda 7, Lisboa, Portugal"
   )
 
-  user2 = User.create!(
+  userJerome = User.create!(
   email:"jeromedharveng@gmail.com",
   password:"123456",
   first_name:"Jerome",
@@ -22,7 +22,7 @@
   address: "Rua Moeda 7, Lisboa, Portugal"
   )
 
-  user3 = User.create!(
+  userPedro = User.create!(
   email:"pedromarzagao@gmail.com",
   password:"123456",
   first_name:"Pedro",
@@ -32,7 +32,7 @@
   address: "Rua Senhora da Glória 104, Lisboa, Portugal"
   )
 
-  user4 = User.create!(
+  userMarta = User.create!(
   email:"marta.keller.pie@gmail.com",
   password:"123456",
   first_name:"Marta",
@@ -42,7 +42,7 @@
   address: "Rua Moeda 7, Lisboa, Portugal"
   )
 
-  user5 = User.create!(
+  userEmily = User.create!(
   email:"emily@gmail.com",
   password:"123456",
   first_name:"Emily",
@@ -52,7 +52,7 @@
   address: "Rua Constantino Fernandes, 2, Lisboa, Portugal"
   )
 
-  user6 = User.create!(
+  userSwen = User.create!(
   email:"swen@gmail.com",
   password:"123456",
   first_name:"Swen",
@@ -62,7 +62,7 @@
   address: "Rua Manuel Marques, 15, Lisboa, Portugal"
   )
 
-  user7 = User.create!(
+  userAntoine = User.create!(
   email:"antoine@gmail.com",
   password:"123456",
   first_name:"Antoine",
@@ -72,7 +72,7 @@
   address: "Rua da Misericordia 15, Lisboa Portugal"
   )
 
-  user8 = User.create!(
+  userDavid = User.create!(
   email:"david@gmail.com",
   password:"123456",
   first_name:"David",
@@ -120,7 +120,7 @@ puts 'Created Categories'
   price: 1.2,
   state: 1,
   category: Category.find_by_name("Food Tasting"),
-  user: user8,
+  user: userDavid,
   duration: 10,
   remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138801/Amanteigaria.jpg",
   payable: true
@@ -135,7 +135,7 @@ puts 'Created Categories'
   price: 0,
   state: 1,
   category: Category.find_by_name("Sightseeing"),
-  user: user8,
+  user: userDavid,
   duration: 20,
   remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138806/Miradouro-da-Grac%CC%A7a.jpg",
   payable: false
@@ -150,7 +150,7 @@ puts 'Created Categories'
   price: 1.8,
   state: 1,
   category: Category.find_by_name("Food Tasting"),
-  user: user3,
+  user: userPedro,
   duration: 15,
   remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138805/o-trevo.jpg",
   payable: true
@@ -165,7 +165,7 @@ puts 'Created Categories'
   price: 5,
   state: 1,
   category: Category.find_by_name("Museum"),
-  user: user2,
+  user: userJerome,
   duration: 40,
   remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138807/museu-do-azulejo.jpg",
   payable: true
@@ -180,7 +180,7 @@ puts 'Created Categories'
   price: 15 ,
   state: 1,
   category: Category.find_by_name("Exhibition"),
-  user: user1,
+  user: userAndreia,
   duration: 80,
   remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138795/Oceanario-Lisboa.jpg",
   payable: true
@@ -195,7 +195,7 @@ puts 'Created Categories'
   price: 15 ,
   state: 1,
   category: Category.find_by_name("Bar"),
-  user: user6,
+  user: userSwen,
   duration: 120,
   remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138814/pub-crawl-lisbon-destination-tours-2.jpg",
   payable: true,
@@ -210,7 +210,7 @@ puts 'Created Categories'
   price: 2 ,
   state: 1,
   category: Category.find_by_name("Sightseeing"),
-  user: user1,
+  user: userAndreia,
   duration: 45,
   remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138808/jardim-botanico.jpg",
   payable: true,
@@ -225,7 +225,7 @@ puts 'Created Categories'
   price: 35,
   state: 1,
   category: Category.find_by_name("Shopping"),
-  user: user7,
+  user: userAntoine,
   duration: 20,
   remote_picture_url: "https://cache.mrporter.com/images/journal/7e9c15b3-3744-45c0-94f6-d3ecb17b9a25/w1000_q65.jpg",
   payable: true,
@@ -240,7 +240,7 @@ puts 'Created Categories'
   price: 50,
   state: 1,
   category: Category.find_by_name("Glamour"),
-  user: user5,
+  user: userEmily,
   duration: 30,
   remote_picture_url: "http://images-cdn.impresa.pt/visao/2016-07-21-mj12173.jpg-1/original/mw-860",
   payable: true,
@@ -255,7 +255,7 @@ puts 'Created Categories'
   price: 0,
   state: 1,
   category: Category.find_by_name("Sightseeing"),
-  user: user3,
+  user: userPedro,
   duration: 30,
   remote_picture_url: "https://www.lisbonlux.com/images/lisbon/miradouro-de-sao-pedro-alcantara.jpg",
   payable: false,
@@ -270,7 +270,7 @@ puts 'Created Categories'
   price: 10,
   state: 1,
   category: Category.find_by_name("Bar"),
-  user: user2,
+  user: userJerome,
   duration: 60,
   remote_picture_url: "http://images-cdn.impresa.pt/activa/2017-04-19-Cinco-Lounge.jpg/original",
   payable: true,
@@ -285,7 +285,7 @@ puts 'Created Categories'
   price: 50,
   state: 1,
   category: Category.find_by_name("Food Tasting"),
-  user: user5,
+  user: userEmily,
   duration: 240,
   remote_picture_url: "https://www.trymykitchen.com/wp-content/uploads/2017/12/DSC_0244_12.jpeg",
   payable: true,
@@ -300,7 +300,7 @@ puts 'Created Categories'
   price: 0,
   state: 1,
   category: Category.find_by_name("Museum"),
-  user: user1,
+  user: userAndreia,
   duration: 120,
   remote_picture_url: "https://images.graph.cool/v1/cj6c28vh912680101ozc2paxj/cj80e0fsc00190160mfqdlxnw/0x0:1400x915/960x960/294_mu_ch_Gulbenkian_ext_01.jpg",
   payable: false,
@@ -315,7 +315,7 @@ puts 'Created Categories'
   price: 34,
   state: 1,
   category: Category.find_by_name("Tour"),
-  user: user5,
+  user: userEmily,
   duration: 180,
   remote_picture_url: "https://www.likealocalguide.com/media/cache/30/ed/30ed122ac92b1debce09c4ec841d26fe.jpg",
   payable: true,
@@ -330,7 +330,7 @@ puts 'Created Categories'
   price: 0,
   state: 1,
   category: Category.find_by_name("Sightseeing"),
-  user: user1,
+  user: userAndreia,
   duration: 30,
   remote_picture_url:"https://i.pinimg.com/originals/4e/32/8e/4e328e75195911f55f009ae60fb71037.jpg",
   payable: false,
@@ -345,7 +345,7 @@ puts 'Created Categories'
   price: 25,
   state: 1,
   category: Category.find_by_name("Sports"),
-  user: user2,
+  user: userJerome,
   duration: 70,
   remote_picture_url:"http://res.cloudinary.com/pmarzagao/image/upload/v1528895123/indoorclimbing.jpg",
   payable: true,
@@ -360,7 +360,7 @@ puts 'Created Categories'
   price: 10,
   state: 1,
   category: Category.find_by_name("Literature"),
-  user: user5,
+  user: userEmily,
   duration: 60,
   remote_picture_url:"http://res.cloudinary.com/pmarzagao/image/upload/v1528895968/fabricabracodeprata.jpg",
   payable: true,
@@ -375,24 +375,57 @@ puts 'Created Categories'
   price: 30,
   state: 1,
   category: Category.find_by_name("Theatre"),
-  user: user3,
+  user: userPedro,
   duration: 90,
   remote_picture_url:"http://res.cloudinary.com/pmarzagao/image/upload/v1528896657/teatromeridional.jpg",
   payable: true,
   )
 
-user3.follow(user7)
-user3.follow(user1)
-user3.follow(user2)
-user3.follow(user5)
-
-user8.follow(user3)
-user6.follow(user3)
-user5.follow(user3)
-user2.follow(user3)
-
-
 puts 'Created Activities'
+#Pedro following these user
+
+userPedro.follow(userAntoine)
+userPedro.follow(userAndreia)
+userPedro.follow(userJerome)
+userPedro.follow(userEmily)
+
+#Pedro's followers
+
+userDavid.follow(userPedro)
+userSwen.follow(userPedro)
+userEmily.follow(userPedro)
+userJerome.follow(userPedro)
+
+#Andreia is following these users
+
+userAndreia.follow(userAntoine)
+userAndreia.follow(userPedro)
+userAndreia.follow(userJerome)
+userAndreia.follow(userEmily)
+
+#Andreia's followers
+
+userDavid.follow(userAndreia)
+userSwen.follow(userAndreia)
+userEmily.follow(userAndreia)
+userJerome.follow(userAndreia)
+
+#Jerome is following these users
+
+userJerome.follow(userAntoine)
+userJerome.follow(userPedro)
+userJerome.follow(userAndreia)
+userJerome.follow(userEmily)
+
+#Jerome's followers
+
+userDavid.follow(userJerome)
+userSwen.follow(userJerome)
+userEmily.follow(userJerome)
+userJerome.follow(userJerome)
+
+
+puts 'Created Followers and Followees'
 
 20.times do
  activity = Activity.all.sample
