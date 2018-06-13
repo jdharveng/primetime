@@ -47,17 +47,24 @@ function initTimer() {
        // fill: '',
     });
 
-  const startB = document.querySelector(".cta-button.half-width");
-  //const startB = document.querySelector(".start-button.cta-button");
 
-  startB.addEventListener("click", (event) => {
+  const startB = document.querySelector(".cta-button.half-width");
+  consol.log(startB);
+  const handleStartClick = (event) => {
       startTimer(circle);
-    });
+      console.log("just after startTimer");
+      setStartTime(event.target.dataset.bookingId);
+      startB.removeEventListener("click", handleStartClick);
+    }
+
+  startB.addEventListener("click", handleStartClick);
 
 //debugger - prob not needed below;
   let progress = 0;
   circle.animate(progress);
 };
+
+
 
 function startTimer(element) {
   // send post request to controller to save start time
