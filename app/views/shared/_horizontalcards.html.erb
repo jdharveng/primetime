@@ -7,7 +7,7 @@
   <div class="card-content">
     <div class="card-top">
       <div class="card-title">
-        <%= h truncate(activity.title, :length => 45) %>
+        <%= h truncate(activity.title, :length => 40) %>
       </div>
       <div class="card-category">
         <%= activity.category.name %>
@@ -27,7 +27,8 @@
               <% if activity.reviews_average.round(1) == 0 %>
                   <%= "N/A" %>
               <% else %>
-                  <%= activity.reviews_average.round(1) %>
+                  <i class="far fa-star"></i>
+                  <%=activity.reviews_average.round(1) %>
               <% end %>
           </div>
         <div class="price">

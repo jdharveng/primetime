@@ -50,6 +50,7 @@
                   <% if @activity.reviews_average.round(1) == 0 %>
                       <%= "N/A" %>
                   <% else %>
+                      <i class="far fa-star small-star"></i>
                       <%= @activity.reviews_average.round(1) %>
                   <% end %>
               </div>
