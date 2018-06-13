@@ -1,6 +1,6 @@
 <div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-md-4 col-md-offset-4 small-padding background-color">
+  <div class="row full-height">
+    <div class="col-xs-12 col-md-4 col-md-offset-4 small-padding background-color height-full-percent">
 <!-- <div class="container-index">
   <div class="row"> -->
       <div class="cards-container">
@@ -15,8 +15,8 @@
      <!--  </div> -->
 
       <div class="col-xs-4 buttons-container">
-        <button class="start-button cta-button">Start</button>
-        <%= link_to "Review", new_booking_review_path(@booking), class: "review-button cta-button" %>
+        <button class="cta-button half-width">Start</button>
+        <%= link_to "Review", new_booking_review_path(@booking), class: "passive-button half-width" %>
   <!--       <button class="review-button cta-button">Review<i class="fas fa-caret-right"></i></button> -->
       </div>
     </div>
