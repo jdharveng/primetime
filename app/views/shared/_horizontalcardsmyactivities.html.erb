@@ -15,21 +15,16 @@
     </div>
     <div class="card-bottom">
       <div class="card-distance">
-        <% distance = Geocoder::Calculations.distance_between([current_user.latitude,current_user.longitude], [activity.latitude,activity.longitude]) %>
-        <% if distance > 1 %>
-        <%= distance.round(1) %>km
-        <% else %>
-        <%= (distance * 100).round %> meters
-        <% end %>
+        Bookings: <%= activity.bookings.count %>
       </div>
       <div class="card-details">
-          <div class="rating">
-              <% if activity.reviews_average.round(1) == 0 %>
-                  <%= "N/A" %>
-              <% else %>
-                  <%= activity.reviews_average.round(1) %>
-              <% end %>
-          </div>
+        <div class="rating">
+          <% if activity.reviews_average.round(1) == 0 %>
+              <%= "N/A" %>
+          <% else %>
+              <%= activity.reviews_average.round(1) %>
+          <% end %>
+        </div>
         <div class="price">
           <%= humanized_money_with_symbol(activity.price) %>
         </div>

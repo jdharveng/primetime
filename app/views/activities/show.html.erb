@@ -47,7 +47,11 @@
           <div class="v-card-bottom">
             <div class="v-card-details">
               <div class="v-rating">
-                <%= @activity.reviews_average.round(1) %>
+                  <% if @activity.reviews_average.round(1) == 0 %>
+                      <%= "N/A" %>
+                  <% else %>
+                      <%= @activity.reviews_average.round(1) %>
+                  <% end %>
               </div>
               <div class="v-price">
                 <%= humanized_money_with_symbol(@activity.price) %>
