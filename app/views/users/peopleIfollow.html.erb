@@ -31,7 +31,7 @@
                               <% counter += 1 %>
                           <% end %>
                           <i class="far fa-star mini-star"></i>
-                          <%= sum_rating.round(1) %>
+                          <%= (sum_rating / counter).round(1) %>
                       </div>
                 </div>
                 <div class="follow-first-name-container">

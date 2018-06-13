@@ -21,11 +21,11 @@
               </div>
             </div>
 
-            <%= simple_form_for [@booking, @review] do |f| %>
+            <%= simple_form_for [@booking, @review] do |f|%>
 
              <div class="col-xs-4 rating-content">
               <div class="form-inputs">
-                <%= f.input :content %>
+                <%= f.input :content, label: "Tell us more about it."%>
                 <%= f.input :rating, as: :hidden %>
               </div>
             </div>
