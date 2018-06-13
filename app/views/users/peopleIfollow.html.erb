@@ -17,30 +17,34 @@
         <% else %>
           <% @user.all_following.each do |following| %>
               <div class="user-follow-profile">
-                <div class="follow-avatar-container ">
-                  <%= cl_image_tag(following.picture, class:"avatar-large") %>
-                </div>
-                <div class="rating-box">
-                      <div class="follow-rating">
-                          <% sum_rating = 0 %>
-                          <% counter = 0 %>
-                          <% following.activities.each do |activity|%>
-                              <% @activity = activity %>
-                              <% rating = activity.reviews_average%>
-                              <% sum_rating += rating %>
-                              <% counter += 1 %>
-                          <% end %>
-                          <i class="far fa-star mini-star"></i>
-                          <%= (sum_rating / counter).round(1) %>
+
+                <div class="top-box">
+                      <div class="follow-avatar-container ">
+                        <%= cl_image_tag(following.picture, class:"avatar-large") %>
+                      </div>
+                      <div class="rating-box">
+                            <div class="follow-rating">
+                                <% sum_rating = 0 %>
+                                <% counter = 0 %>
+                                <% following.activities.each do |activity|%>
+                                    <% @activity = activity %>
+                                    <% rating = activity.reviews_average%>
+                                    <% sum_rating += rating %>
+                                    <% counter += 1 %>
+                                <% end %>
+                                <i class="far fa-star mini-star"></i>
+                                <%= (sum_rating / counter).round(1) %>
+                            </div>
+                      </div>
+                      <div class="follow-first-name-container">
+                        <%= link_to following.first_name, user_path(following)%>
                       </div>
                 </div>
-                <div class="follow-first-name-container">
-                  <%= link_to following.first_name, user_path(following)%>
-                </div>
+
                 <div class="follow-bio-container">
                   <%= following.bio%>
                 </div>
-                <div class="follow-activities-container">
+                <!-- <div class="follow-activities-container">
                   <p class="owned-activities-title">Owner of the activities:</p>
                   <div class="owned-activities-list">
                       <ul>
@@ -49,7 +53,7 @@
                           <% end %>
                       </ul>
                   </div>
-                </div>
+                </div> -->
               </div>
           <% end %>
         <% end %>
