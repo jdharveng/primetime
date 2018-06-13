@@ -288,7 +288,7 @@ puts 'Created Categories'
   user: User.all.sample,
   duration: 60,
   remote_picture_url: "http://images-cdn.impresa.pt/activa/2017-04-19-Cinco-Lounge.jpg/original",
-  payable: false,
+  payable: true,
   )
 
   Activity.create!(

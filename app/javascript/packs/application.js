@@ -32,7 +32,9 @@ if (timerPage) {
 }
 
 const ratingPage = document.querySelector('.reviews.new');
-if (ratingPage) {
+// if user doesn't put any stars
+const ratingRedirect = document.querySelector('.reviews.create');
+if (ratingPage || ratingRedirect) {
   fillStars();
 }
 

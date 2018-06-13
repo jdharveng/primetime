@@ -35,25 +35,75 @@ body {
 }
 
 .landing-value-prop-main-title {
-  font-size: 30px;
+  font-size: 25px;
   color:  #696969;
-  margin-top: 30px;
+  margin-top: 20px;
   text-align: center;
+  margin-bottom: 15px;
 }
 
+.props-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// .props-container :first-child {
+//   width: 150px;
+// }
+
+.props-container > * {
+        flex: 1 1 0;
+}
+
+
+.props-container-testimonials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.logo-prop {
+  margin-left: 19px;
+  margin-right: -23px;
+  margin-bottom: 21px;
+}
 
 .landing-value-prop-title {
   font-size: 20px;
   color:  #696969;
   margin-top: 30px;
+  text-align: left;
+  margin-left: 10px;
+}
+
+.landing-user-name {
+  font-size: 15px;
+  color:  #696969;
   text-align: center;
+  margin-top: 6px;
+
 }
 
 
 .landing-value-prop-paragraph {
   font-size: 10px;
-  margin-bottom: 30px;
-  text-align: center;
+  margin-bottom: 10px;
+  text-align: left;
+  margin-top: 40px;
+  margin-left: 25px;
+  margin-right: 10px;
+}
+
+.avatar-testimonial {
+  margin-right: -19px;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
+.signature {
+  font-size: 10px;
 }
 
 #first-element-value-prop {

@@ -13,7 +13,7 @@
                   <%= f.input :duration, label: false, placeholder:"duration in minutes" %>
                   <%= f.input :address, id:"activity_address", label: false, placeholder:"address" %>
                   <%= f.input :price, label: false, as: :currency, currency: "€" %>
-                  <%#= f.input :payable %>
+                  <%= f.input :payable, label: "able to pay online?" %>
                   <%= f.input :picture %>
                   <%= f.input :picture_cache, as: :hidden %>
                 </div>
