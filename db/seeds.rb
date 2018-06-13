@@ -9,7 +9,7 @@
   Category.destroy_all
   User.destroy_all
 
-  User.create!(
+  user1 = User.create!(
   email:"andreiadomingues@gmail.com",
   password:"123456",
   first_name:"Andreia",
@@ -19,7 +19,7 @@
   address: "Rua Moeda 7, Lisboa, Portugal"
   )
 
-  User.create!(
+  user2 = User.create!(
   email:"jeromedharveng@gmail.com",
   password:"123456",
   first_name:"Jerome",
@@ -29,7 +29,7 @@
   address: "Rua Moeda 7, Lisboa, Portugal"
   )
 
-  User.create!(
+  user3 = User.create!(
   email:"pedromarzagao@gmail.com",
   password:"123456",
   first_name:"Pedro",
@@ -39,7 +39,7 @@
   address: "Rua Senhora da Glória 104, Lisboa, Portugal"
   )
 
-  User.create!(
+  user4 = User.create!(
   email:"marta.keller.pie@gmail.com",
   password:"123456",
   first_name:"Marta",
@@ -49,7 +49,7 @@
   address: "Rua Moeda 7, Lisboa, Portugal"
   )
 
-  User.create!(
+  user5 = User.create!(
   email:"emily@gmail.com",
   password:"123456",
   first_name:"Emily",
@@ -59,7 +59,7 @@
   address: "Rua Constantino Fernandes, 2, Lisboa, Portugal"
   )
 
-  User.create!(
+  user6 = User.create!(
   email:"swen@gmail.com",
   password:"123456",
   first_name:"Swen",
@@ -69,7 +69,7 @@
   address: "Rua Manuel Marques, 15, Lisboa, Portugal"
   )
 
-  User.create!(
+  user7 = User.create!(
   email:"antoine@gmail.com",
   password:"123456",
   first_name:"Antoine",
@@ -79,7 +79,7 @@
   address: "Rua da Misericordia 15, Lisboa Portugal"
   )
 
-  User.create!(
+  user8 = User.create!(
   email:"david@gmail.com",
   password:"123456",
   first_name:"David",
@@ -93,35 +93,23 @@ puts 'Created Users'
 
   Category.create!(
   [
+    {name: "Alternative Therapy"},
+    {name: "Bar"},
     {name: "Cinema"},
+    {name: "Concert"},
+    {name: "Exhibition"},
     {name: "Festival"},
-    {name: "Restaurant"},
-    {name: "Cafe"},
-    {name: "Theatre"},
-    {name: "Dance"},
+    {name: "Food Tasting"},
+    {name: "Gathering"},
+    {name: "Glamour"},
     {name: "Workshop"},
     {name: "Wine Tasting"},
-    {name: "Conference"},
-    {name: "Concert"},
-    {name: "Meetup"},
-    {name: "Clubbing"},
     {name: "Music Bar"},
-    {name: "Literature"},
-    {name: "Exhibition"},
     {name: "Museum"},
-    {name: "Tour"},
-    {name: "Food Tasting"},
-    {name: "Fair"},
-    {name: "Market"},
     {name: "Park"},
-    {name: "Children"},
-    {name: "Alternative Therapy"},
-    {name: "Brunch"},
-    {name: "Birdwatching"},
-    {name: "Sightseeing"},
-    {name: "Snack"},
-    {name: "Shopping"},
-    {name: "Cocktails"},
+    {name: "Sports"},
+    {name: "Tour"},
+    {name: "Theatre"},
   ])
 
 puts 'Created Categories'
@@ -134,8 +122,8 @@ puts 'Created Categories'
   longitude: 0,
   price: 1.2,
   state: 1,
-  category: Category.all.sample,
-  user: User.all.sample,
+  category: Category.find_by_name("Food Tasting"),
+  user: user8,
   duration: 10,
   remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138801/Amanteigaria.jpg",
   payable: true
@@ -149,8 +137,8 @@ puts 'Created Categories'
   longitude: 0,
   price: 0,
   state: 1,
-  category: Category.all.sample,
-  user: User.all.sample,
+  category: Category.find_by_name("Sightseeing"),
+  user: user8,
   duration: 20,
   remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138806/Miradouro-da-Grac%CC%A7a.jpg",
   payable: false
@@ -164,8 +152,8 @@ puts 'Created Categories'
   longitude: 0,
   price: 1.8,
   state: 1,
-  category: Category.all.sample,
-  user: User.all.sample,
+  category: Category.find_by_name("Food Tasting"),
+  user: user3,
   duration: 15,
   remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138805/o-trevo.jpg",
   payable: true
@@ -179,8 +167,8 @@ puts 'Created Categories'
   longitude: 0,
   price: 5,
   state: 1,
-  category: Category.all.sample,
-  user: User.all.sample,
+  category: Category.find_by_name("Museum"),
+  user: user2,
   duration: 60,
   remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138807/museu-do-azulejo.jpg",
   payable: true
@@ -194,8 +182,8 @@ puts 'Created Categories'
   longitude: 0,
   price: 15 ,
   state: 1,
-  category: Category.all.sample,
-  user: User.all.sample,
+  category: Category.find_by_name("Exhibition"),
+  user: user1,
   duration: 90,
   remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138795/Oceanario-Lisboa.jpg",
   payable: true
@@ -209,8 +197,8 @@ puts 'Created Categories'
   longitude: 0,
   price: 15 ,
   state: 1,
-  category: Category.all.sample,
-  user: User.all.sample,
+  category: Category.find_by_name("Bar"),
+  user: user6,
   duration: 120,
   remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138814/pub-crawl-lisbon-destination-tours-2.jpg",
   payable: true,
@@ -224,8 +212,8 @@ puts 'Created Categories'
   longitude: 0,
   price: 2 ,
   state: 1,
-  category: Category.all.sample,
-  user: User.all.sample,
+  category: Category.find_by_name("Sightseeing"),
+  user: user1,
   duration: 45,
   remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138808/jardim-botanico.jpg",
   payable: true,
@@ -239,8 +227,8 @@ puts 'Created Categories'
   longitude: 0,
   price: 35,
   state: 1,
-  category: Category.all.sample,
-  user: User.all.sample,
+  category: Category.find_by_name("Glamour"),
+  user: user7,
   duration: 20,
   remote_picture_url: "https://cache.mrporter.com/images/journal/7e9c15b3-3744-45c0-94f6-d3ecb17b9a25/w1000_q65.jpg",
   payable: true,
@@ -254,8 +242,8 @@ puts 'Created Categories'
   longitude: 0,
   price: 50,
   state: 1,
-  category: Category.all.sample,
-  user: User.all.sample,
+  category: Category.find_by_name("Glamour"),
+  user: user5,
   duration: 30,
   remote_picture_url: "http://images-cdn.impresa.pt/visao/2016-07-21-mj12173.jpg-1/original/mw-860",
   payable: true,
@@ -269,8 +257,8 @@ puts 'Created Categories'
   longitude: 0,
   price: 0,
   state: 1,
-  category: Category.all.sample,
-  user: User.all.sample,
+  category: Category.find_by_name("Sightseeing"),
+  user: user3,
   duration: 30,
   remote_picture_url: "https://www.lisbonlux.com/images/lisbon/miradouro-de-sao-pedro-alcantara.jpg",
   payable: false,
@@ -284,8 +272,8 @@ puts 'Created Categories'
   longitude: 0,
   price: 10,
   state: 1,
-  category: Category.all.sample,
-  user: User.all.sample,
+  category: Category.find_by_name("Bar"),
+  user: user2,
   duration: 60,
   remote_picture_url: "http://images-cdn.impresa.pt/activa/2017-04-19-Cinco-Lounge.jpg/original",
   payable: true,
@@ -299,8 +287,8 @@ puts 'Created Categories'
   longitude: 0,
   price: 50,
   state: 1,
-  category: Category.all.sample,
-  user: User.all.sample,
+  category: Category.find_by_name("Food Tasting"),
+  user: user5,
   duration: 240,
   remote_picture_url: "https://www.trymykitchen.com/wp-content/uploads/2017/12/DSC_0244_12.jpeg",
   payable: true,
@@ -314,8 +302,8 @@ puts 'Created Categories'
   longitude: 0,
   price: 0,
   state: 1,
-  category: Category.all.sample,
-  user: User.all.sample,
+  category: Category.find_by_name("Museum"),
+  user: user1,
   duration: 120,
   remote_picture_url: "https://images.graph.cool/v1/cj6c28vh912680101ozc2paxj/cj80e0fsc00190160mfqdlxnw/0x0:1400x915/960x960/294_mu_ch_Gulbenkian_ext_01.jpg",
   payable: false,
@@ -329,8 +317,8 @@ puts 'Created Categories'
   longitude: 0,
   price: 34,
   state: 1,
-  category: Category.all.sample,
-  user: User.all.sample,
+  category: Category.find_by_name("Art"),
+  user: user5,
   duration: 180,
   remote_picture_url: "https://www.likealocalguide.com/media/cache/30/ed/30ed122ac92b1debce09c4ec841d26fe.jpg",
   payable: true,
@@ -344,8 +332,8 @@ puts 'Created Categories'
   longitude: 0,
   price: 0,
   state: 1,
-  category: Category.all.sample,
-  user: User.all.sample,
+  category: Category.find_by_name("Sightseeing"),
+  user: user1,
   duration: 30,
   remote_picture_url:"https://i.pinimg.com/originals/4e/32/8e/4e328e75195911f55f009ae60fb71037.jpg",
   payable: false,
