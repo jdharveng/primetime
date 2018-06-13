@@ -18,7 +18,7 @@ class ActivitiesController < ApplicationController
 
     #filtering activities with Filters
     @activities_filtered = @activities.near([ulat,ulng],100)
-    .where("duration < ? AND price_cents BETWEEN ? AND ?", params[:time], @money_min, @money_max)
+    .where("duration <= ? AND price_cents BETWEEN ? AND ?", params[:time], @money_min, @money_max)
 
   end
 
