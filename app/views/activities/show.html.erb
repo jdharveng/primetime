@@ -73,16 +73,13 @@
               </div>
             </div>
           </div>
-
-        </div>
-      <!--   <% @condition = @activity.bookings.find_by(user: current_user) %> -->
+      </div>
       <div class="col-xs-4 buttons-container">
         <button class="back-button passive-button half-width" onclick="goBack()"><i class="fas fa-caret-left"></i>Back</button>
         <%= form_tag activity_bookings_path(@activity), html: { style: "height: 100%; margin: 0px; display: flex; justify-content: center; padding: 0px;"}, class:"half-width" do %>
             <%= hidden_field_tag 'activity_id', @activity.id %>
             <%= submit_tag 'Book activity', class: 'next-button cta-button full-width height-full-percent' %>
         <% end %>
-
       </div>
     </div>
   </div>
