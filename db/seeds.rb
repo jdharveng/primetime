@@ -406,7 +406,8 @@ puts 'Created Bookings'
 100.times do
 
   Review.create!(
-    rating: rand(3-5),
+
+    rating: rand(3..5),
     content: "This is a review sample",
     booking: Booking.all.sample,
   )
