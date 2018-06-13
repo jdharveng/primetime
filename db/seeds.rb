@@ -110,6 +110,7 @@ puts 'Created Users'
     {name: "Sports"},
     {name: "Tour"},
     {name: "Theatre"},
+    {name: "Shopping"},
   ])
 
 puts 'Created Categories'
@@ -227,7 +228,7 @@ puts 'Created Categories'
   longitude: 0,
   price: 35,
   state: 1,
-  category: Category.find_by_name("Glamour"),
+  category: Category.find_by_name("Shopping"),
   user: user7,
   duration: 20,
   remote_picture_url: "https://cache.mrporter.com/images/journal/7e9c15b3-3744-45c0-94f6-d3ecb17b9a25/w1000_q65.jpg",
@@ -339,6 +340,52 @@ puts 'Created Categories'
   payable: false,
   )
 
+  Activity.create!(
+  title: "Indoor Rock Climbing",
+  description: "Vértigo is the biggest indoor climbing center of Lisbon, targeted at those who looking for an alternative way to keep in shape with adrenaline, without the hazards and risks of outdoors climbing or those that wish to decompress after a long week of work and demo day presentations. It's guaranteed you will leave with a clear head (or at least a broken arm)",
+  address: "Avenida Infante Dom Henrique, 1950-408 Lisboa",
+  latitude: 0,
+  longitude: 0,
+  price: 25,
+  state: 1,
+  category: Category.find_by_name("Sports"),
+  user: user2,
+  duration: 30,
+  remote_picture_url:"http://res.cloudinary.com/pmarzagao/image/upload/v1528895123/indoorclimbing.jpg",
+  payable: true,
+  )
+
+  Activity.create!(
+  title: "Book Launch of 'Like a Fading Shadow' by António Muñoz Molina",
+  description: "António Muñoz Molina will be present at Fábrica Moderna to launch his book, finalist of Man Booker Prize 2018. This is the chance to make conversation with the author and get that authograph for your aunt - the number two fan of António after you, in our trendy space. Admission includes copy of the book",
+  address: "R. Fábrica de Material de Guerra 1, 1950-128 Lisboa",
+  latitude: 0,
+  longitude: 0,
+  price: 10,
+  state: 1,
+  category: Category.find_by_name("Literature"),
+  user: user5,
+  duration: 30,
+  remote_picture_url:"http://res.cloudinary.com/pmarzagao/image/upload/v1528895968/fabricabracodeprata.jpg",
+  payable: true,
+  )
+
+  Activity.create!(
+  title: "Watch Shakespear's'A Midnight Summer's Dream' ",
+  description: "Teatro Meridional is presenting this timeless piece by Shakespeare. It is not yet the middle of the Summer, but sure feels like it is. This is the opportunity to revisit one of the most famous plays of one of the most famous writers and be sheltered from the heat for while.",
+  address: "Avenida Infante Dom Henrique, 1950-408 Lisboa",
+  latitude: 0,
+  longitude: 0,
+  price: 30,
+  state: 1,
+  category: Category.find_by_name("Theatre"),
+  user: user3,
+  duration: 30,
+  remote_picture_url:"http://res.cloudinary.com/pmarzagao/image/upload/v1528896657/teatromeridional.jpg",
+  payable: true,
+  )
+
+
 puts 'Created Activities'
 
 20.times do
@@ -363,7 +410,7 @@ puts 'Created Bookings'
 100.times do
 
   Review.create!(
-    rating: rand(0-5),
+    rating: rand(3-5),
     content: "This is a review sample",
     booking: Booking.all.sample,
   )
