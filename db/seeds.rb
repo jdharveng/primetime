@@ -1,15 +1,8 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
   Review.destroy_all
   Category.destroy_all
   User.destroy_all
 
-  User.create!(
+  user1 = User.create!(
   email:"andreiadomingues@gmail.com",
   password:"123456",
   first_name:"Andreia",
@@ -19,7 +12,7 @@
   address: "Rua Moeda 7, Lisboa, Portugal"
   )
 
-  User.create!(
+  user2 = User.create!(
   email:"jeromedharveng@gmail.com",
   password:"123456",
   first_name:"Jerome",
@@ -29,7 +22,7 @@
   address: "Rua Moeda 7, Lisboa, Portugal"
   )
 
-  User.create!(
+  user3 = User.create!(
   email:"pedromarzagao@gmail.com",
   password:"123456",
   first_name:"Pedro",
@@ -39,7 +32,7 @@
   address: "Rua Senhora da Glória 104, Lisboa, Portugal"
   )
 
-  User.create!(
+  user4 = User.create!(
   email:"marta.keller.pie@gmail.com",
   password:"123456",
   first_name:"Marta",
@@ -49,7 +42,7 @@
   address: "Rua Moeda 7, Lisboa, Portugal"
   )
 
-  User.create!(
+  user5 = User.create!(
   email:"emily@gmail.com",
   password:"123456",
   first_name:"Emily",
@@ -59,7 +52,7 @@
   address: "Rua Constantino Fernandes, 2, Lisboa, Portugal"
   )
 
-  User.create!(
+  user6 = User.create!(
   email:"swen@gmail.com",
   password:"123456",
   first_name:"Swen",
@@ -69,7 +62,7 @@
   address: "Rua Manuel Marques, 15, Lisboa, Portugal"
   )
 
-  User.create!(
+  user7 = User.create!(
   email:"antoine@gmail.com",
   password:"123456",
   first_name:"Antoine",
@@ -79,7 +72,7 @@
   address: "Rua da Misericordia 15, Lisboa Portugal"
   )
 
-  User.create!(
+  user8 = User.create!(
   email:"david@gmail.com",
   password:"123456",
   first_name:"David",
@@ -93,35 +86,27 @@ puts 'Created Users'
 
   Category.create!(
   [
-    {name: "Cinema"},
-    {name: "Festival"},
-    {name: "Restaurant"},
-    {name: "Cafe"},
-    {name: "Theatre"},
-    {name: "Dance"},
-    {name: "Workshop"},
-    {name: "Wine Tasting"},
-    {name: "Conference"},
-    {name: "Concert"},
-    {name: "Meetup"},
-    {name: "Clubbing"},
-    {name: "Music Bar"},
-    {name: "Literature"},
-    {name: "Exhibition"},
-    {name: "Museum"},
-    {name: "Tour"},
-    {name: "Food Tasting"},
-    {name: "Fair"},
-    {name: "Market"},
-    {name: "Park"},
-    {name: "Children"},
     {name: "Alternative Therapy"},
-    {name: "Brunch"},
-    {name: "Birdwatching"},
+    {name: "Bar"},
+    {name: "Cinema"},
+    {name: "Concert"},
+    {name: "Exhibition"},
+    {name: "Festival"},
+    {name: "Food Tasting"},
+    {name: "Gathering"},
+    {name: "Glamour"},
+    {name: "Literature"},
+    {name: "Museum"},
+    {name: "Music Bar"},
+    {name: "Park"},
     {name: "Sightseeing"},
-    {name: "Snack"},
     {name: "Shopping"},
-    {name: "Cocktails"},
+    {name: "Sports"},
+    {name: "Tour"},
+    {name: "Theatre"},
+    {name: "Wine Tasting"},
+    {name: "Workshop"},
+
   ])
 
 puts 'Created Categories'
@@ -134,8 +119,8 @@ puts 'Created Categories'
   longitude: 0,
   price: 1.2,
   state: 1,
-  category: Category.all.sample,
-  user: User.all.sample,
+  category: Category.find_by_name("Food Tasting"),
+  user: user8,
   duration: 10,
   remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138801/Amanteigaria.jpg",
   payable: true
@@ -149,8 +134,8 @@ puts 'Created Categories'
   longitude: 0,
   price: 0,
   state: 1,
-  category: Category.all.sample,
-  user: User.all.sample,
+  category: Category.find_by_name("Sightseeing"),
+  user: user8,
   duration: 20,
   remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138806/Miradouro-da-Grac%CC%A7a.jpg",
   payable: false
@@ -164,8 +149,8 @@ puts 'Created Categories'
   longitude: 0,
   price: 1.8,
   state: 1,
-  category: Category.all.sample,
-  user: User.all.sample,
+  category: Category.find_by_name("Food Tasting"),
+  user: user3,
   duration: 15,
   remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138805/o-trevo.jpg",
   payable: true
@@ -173,15 +158,15 @@ puts 'Created Categories'
 
   Activity.create!(
   title: "Museu do Azulejo",
-  description: "A must-see for people interested in the history and design of ceramic tiles, this specialty museum houses a splendid collection of decorative tiles dating from the 15th century to the present.",
+  description: "A must-see for people interested in the history and design of ceramic tiles, this specialty museum houses a splendid collection of decorative tiles dating from the 15th century to the present. Come inside and let the tiles do the talk, while get acquainted with one of the portuguese creations most appreciated by tourists",
   address: "Rua Madre de Deus 4, Lisbon 1900-312, Portugal",
   latitude: 0,
   longitude: 0,
   price: 5,
   state: 1,
-  category: Category.all.sample,
-  user: User.all.sample,
-  duration: 60,
+  category: Category.find_by_name("Museum"),
+  user: user2,
+  duration: 40,
   remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138807/museu-do-azulejo.jpg",
   payable: true
   )
@@ -194,9 +179,9 @@ puts 'Created Categories'
   longitude: 0,
   price: 15 ,
   state: 1,
-  category: Category.all.sample,
-  user: User.all.sample,
-  duration: 90,
+  category: Category.find_by_name("Exhibition"),
+  user: user1,
+  duration: 80,
   remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138795/Oceanario-Lisboa.jpg",
   payable: true
   )
@@ -209,8 +194,8 @@ puts 'Created Categories'
   longitude: 0,
   price: 15 ,
   state: 1,
-  category: Category.all.sample,
-  user: User.all.sample,
+  category: Category.find_by_name("Bar"),
+  user: user6,
   duration: 120,
   remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138814/pub-crawl-lisbon-destination-tours-2.jpg",
   payable: true,
@@ -224,23 +209,23 @@ puts 'Created Categories'
   longitude: 0,
   price: 2 ,
   state: 1,
-  category: Category.all.sample,
-  user: User.all.sample,
+  category: Category.find_by_name("Sightseeing"),
+  user: user1,
   duration: 45,
   remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138808/jardim-botanico.jpg",
   payable: true,
   )
 
   Activity.create!(
-  title: "Buy an old fashioned hat at Chapelaria Azevedo",
+  title: "Buy a vintage-style hat at Chapelaria Azevedo",
   description: "A leftover from the days when a gentleman did not leave the house without his hat, and the era when Praça D. Pedro IV [Rossio square] was the hub of hat makers and milliners, by royal decree, the Chapelaria Azevedo Rua continues today, keeping abreast with new generations and trends. Today it offers an eclectic mix of classic and contemporary hat models – in addition to the experience of shopping in what looks like a cathedral, albeit a profane cathedral of the hat – with its wooden furnishings with glass doors filled with wondrous items from floor to ceiling. Behind the shop, where hats were once made, one can still find the chimney through which the fumes and vapours resulting from the moulding of felt were released. The most frequently told story in the shop is of how the founder fled phylloxera in 1886, a disastrous wine harvest forcing Manuel Aquino de Azevedo Rua to leave wine-making in his rural home behind and try his luck in the country’s capital. We hereby challenge the visitor to locate, inside the shop, a discreetly exhibited bottle of wine. For that is the story it tells, without making an explicit reference to the shop’s origins. The shop is peopled by many other stories; the hat is, after all, a social emblem loaded with symbolism and interpretations. It was not so long ago that we distinguished between rich and poor, and various professions, just by the hat the people in question wore. Only a few vestiges remain of that symbolism, but lots of variety: festive headpieces for bridal parties; the noble top hat, be it small or tall, for diplomats; the democratic beret; the protective woollen hat; the bowler; the Panama; the colonial war helmet; and the youthful cap. But the shop doesn’t stock just hats – it also sells gloves, walking sticks and umbrellas. If you don’t know what a Portuguese tricorne is then feel free to ask here, as the shop is a Portuguese reference in making this three-cornered hat worn by the traditional horseback bullfighter. So much so, that one particular memory, or perhaps a legend, persists in the story told by José Manuel, who owned the shop in the 1990s: I remember my father watching bullfights on television and whenever a tricorne fell to the ground he would shout: ‘Stamp on it, bull. Stamp on it!’ Given that a new one would most probably have to be ordered from Azevedo Rua… - Step on it, bull. Step on it!",
   address: "Praça D. Pedro IV 73, Lisbon",
   latitude: 0,
   longitude: 0,
   price: 35,
   state: 1,
-  category: Category.all.sample,
-  user: User.all.sample,
+  category: Category.find_by_name("Shopping"),
+  user: user7,
   duration: 20,
   remote_picture_url: "https://cache.mrporter.com/images/journal/7e9c15b3-3744-45c0-94f6-d3ecb17b9a25/w1000_q65.jpg",
   payable: true,
@@ -254,8 +239,8 @@ puts 'Created Categories'
   longitude: 0,
   price: 50,
   state: 1,
-  category: Category.all.sample,
-  user: User.all.sample,
+  category: Category.find_by_name("Glamour"),
+  user: user5,
   duration: 30,
   remote_picture_url: "http://images-cdn.impresa.pt/visao/2016-07-21-mj12173.jpg-1/original/mw-860",
   payable: true,
@@ -269,8 +254,8 @@ puts 'Created Categories'
   longitude: 0,
   price: 0,
   state: 1,
-  category: Category.all.sample,
-  user: User.all.sample,
+  category: Category.find_by_name("Sightseeing"),
+  user: user3,
   duration: 30,
   remote_picture_url: "https://www.lisbonlux.com/images/lisbon/miradouro-de-sao-pedro-alcantara.jpg",
   payable: false,
@@ -284,8 +269,8 @@ puts 'Created Categories'
   longitude: 0,
   price: 10,
   state: 1,
-  category: Category.all.sample,
-  user: User.all.sample,
+  category: Category.find_by_name("Bar"),
+  user: user2,
   duration: 60,
   remote_picture_url: "http://images-cdn.impresa.pt/activa/2017-04-19-Cinco-Lounge.jpg/original",
   payable: true,
@@ -299,8 +284,8 @@ puts 'Created Categories'
   longitude: 0,
   price: 50,
   state: 1,
-  category: Category.all.sample,
-  user: User.all.sample,
+  category: Category.find_by_name("Food Tasting"),
+  user: user5,
   duration: 240,
   remote_picture_url: "https://www.trymykitchen.com/wp-content/uploads/2017/12/DSC_0244_12.jpeg",
   payable: true,
@@ -314,8 +299,8 @@ puts 'Created Categories'
   longitude: 0,
   price: 0,
   state: 1,
-  category: Category.all.sample,
-  user: User.all.sample,
+  category: Category.find_by_name("Museum"),
+  user: user1,
   duration: 120,
   remote_picture_url: "https://images.graph.cool/v1/cj6c28vh912680101ozc2paxj/cj80e0fsc00190160mfqdlxnw/0x0:1400x915/960x960/294_mu_ch_Gulbenkian_ext_01.jpg",
   payable: false,
@@ -329,8 +314,8 @@ puts 'Created Categories'
   longitude: 0,
   price: 34,
   state: 1,
-  category: Category.all.sample,
-  user: User.all.sample,
+  category: Category.find_by_name("Tour"),
+  user: user5,
   duration: 180,
   remote_picture_url: "https://www.likealocalguide.com/media/cache/30/ed/30ed122ac92b1debce09c4ec841d26fe.jpg",
   payable: true,
@@ -344,12 +329,58 @@ puts 'Created Categories'
   longitude: 0,
   price: 0,
   state: 1,
-  category: Category.all.sample,
-  user: User.all.sample,
+  category: Category.find_by_name("Sightseeing"),
+  user: user1,
   duration: 30,
   remote_picture_url:"https://i.pinimg.com/originals/4e/32/8e/4e328e75195911f55f009ae60fb71037.jpg",
   payable: false,
   )
+
+  Activity.create!(
+  title: "Indoor Rock Climbing",
+  description: "Vértigo is the biggest indoor climbing center of Lisbon, targeted at those who looking for an alternative way to keep in shape with adrenaline, without the hazards and risks of outdoors climbing or those that wish to decompress after a long week of work and demo day presentations. It's guaranteed you will leave with a clear head (or at least a broken arm).",
+  address: "Avenida Infante Dom Henrique, 1950-408 Lisboa",
+  latitude: 0,
+  longitude: 0,
+  price: 25,
+  state: 1,
+  category: Category.find_by_name("Sports"),
+  user: user2,
+  duration: 70,
+  remote_picture_url:"http://res.cloudinary.com/pmarzagao/image/upload/v1528895123/indoorclimbing.jpg",
+  payable: true,
+  )
+
+  Activity.create!(
+  title: "Book Launch by António Muñoz Molina",
+  description: "António Muñoz Molina will be present at Fábrica Moderna to launch his book, finalist of Man Booker Prize 2018. This is the chance to make conversation with the author and get that authograph for your aunt - the number two fan of António after you, in our trendy space. Admission includes copy of the book.",
+  address: "R. Fábrica de Material de Guerra 1, 1950-128 Lisboa",
+  latitude: 0,
+  longitude: 0,
+  price: 10,
+  state: 1,
+  category: Category.find_by_name("Literature"),
+  user: user5,
+  duration: 60,
+  remote_picture_url:"http://res.cloudinary.com/pmarzagao/image/upload/v1528895968/fabricabracodeprata.jpg",
+  payable: true,
+  )
+
+  Activity.create!(
+  title: "Shakespeare in 90 minutes",
+  description: "Teatro Meridional is presenting this humurous compilation of all of Shakespeare's works in just 90 minutes. This is the opportunity to revisit the most famous plays of one of the most famous writers of all time, without the dust and the boredoom. Fun guranteed!",
+  address: "Avenida Infante Dom Henrique, 1950-408 Lisboa",
+  latitude: 0,
+  longitude: 0,
+  price: 30,
+  state: 1,
+  category: Category.find_by_name("Theatre"),
+  user: user3,
+  duration: 90,
+  remote_picture_url:"http://res.cloudinary.com/pmarzagao/image/upload/v1528896657/teatromeridional.jpg",
+  payable: true,
+  )
+
 
 puts 'Created Activities'
 
@@ -375,23 +406,10 @@ puts 'Created Bookings'
 100.times do
 
   Review.create!(
-    rating: rand(0-5),
+    rating: rand(3-5),
     content: "This is a review sample",
     booking: Booking.all.sample,
   )
 
 end
-
-  # Activity.create!(
-  # title: ""
-  # description: "",
-  # address: ""
-  # latitude: 0,
-  # longitude: 0,
-  # price:  ,
-  # state: 1,
-  # category_id: Category.where(name: "").ids,
-  # user_id: User.sample,
-  # duration:
-  # )
 
