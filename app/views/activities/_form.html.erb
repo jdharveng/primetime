@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row full-height">
     <div class="col-xs-12 col-md-4 col-md-offset-4 small-padding background-color height-full-percent">
-      <div class="full-container container-middle overflow-scroll">
+      <div class="full-container overflow-scroll">
             <div class="filter-title">
               Add a new Activity
             </div>
@@ -19,8 +19,8 @@
                 </div>
       </div>
       <div class="col-xs-4 buttons-container">
-        <button class="back-button passive-button" onclick="goBack()"><i class="fas fa-caret-left"></i>Back</button>
-        <div id="next-filter" class="next-button cta-button"><%= f.button :submit, "Create!" ,class: "next-button cta-button"%></div>
+        <button class="back-button passive-button half-width" onclick="goBack()"><i class="fas fa-caret-left"></i>Back</button>
+        <div id="next-filter" class="next-button cta-button half-width"><%= f.button :submit, "Create!" ,class: "next-button cta-button"%></div>
       </div>
               <% end %>
     </div>
