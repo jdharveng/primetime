@@ -16,10 +16,12 @@
     <div class="card-bottom">
       <div class="card-distance">
         <% distance = Geocoder::Calculations.distance_between([current_user.latitude,current_user.longitude], [activity.latitude,activity.longitude]) %>
-        <% if distance > 1 %>
-        <%= distance.round(1) %>km
-        <% else %>
-        <%= (distance * 100).round %> meters
+        <% if distance >= 0 %>
+          <% if distance > 1 %>
+          <%= distance.round(1) %>km
+          <% else %>
+          <%= (distance * 100).round %> meters
+          <% end %>
         <% end %>
       </div>
       <div class="card-details">
