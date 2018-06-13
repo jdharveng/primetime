@@ -1,0 +1,5 @@
+
+meta_product_name: "primetime"
+meta_title: "primetime - enjoy yours, every day"
+meta_description: "Helps you make time for the things you value"
+meta_image: "cover.png"                       # should exist in `app/assets/images/`
