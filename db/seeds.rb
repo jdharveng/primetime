@@ -381,6 +381,16 @@ puts 'Created Categories'
   payable: true,
   )
 
+user3.follow(user7)
+user3.follow(user1)
+user3.follow(user2)
+user3.follow(user5)
+
+user8.follow(user3)
+user6.follow(user3)
+user5.follow(user3)
+user2.follow(user3)
+
 
 puts 'Created Activities'
 
