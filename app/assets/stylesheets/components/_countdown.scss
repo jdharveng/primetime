@@ -1,21 +1,29 @@
-.progress {
+.timer-container {
+  background-color: #ee061a05;
+  height: 70%;
+  width: 100%;
+  display: flex;
+
+}
+
+.timer-progress {
   height: 100%;
   width: 100%;
+  padding-top: 10px;
 }
-.progress > svg {
-  height: 100%;
+.timer-progress > svg {
+  width: 95%;
+  height: 95%;
   display: block;
-  background-color: #ee061a05;
+  // background-color: #ee061a05;
 }
 
 .progressbar-text {
   color: black;
   font-weight: bold;
-  font-size: 70px;
 }
 
   .review-button:hover {
-
     color: white !important;
     text-decoration: none !important;
 
