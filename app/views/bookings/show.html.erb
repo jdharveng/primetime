@@ -5,7 +5,7 @@
       </div>
       <div class="booking-info">
         <div class="booking-activity-name">
-          <%= @activity.title %>
+          <%= link_to @activity.title, activity_path(@activity.id) %>
         </div>
 
         <% if @activity.payable == true || @activity.price != 0 %>
