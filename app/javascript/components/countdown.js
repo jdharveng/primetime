@@ -2,8 +2,8 @@ import ProgressBar from 'progressbar.js'
 
 function getDuration (){
   const activityEl = document.querySelector('.card-box');
-  return activityEl.dataset.duration * 60000;
-  // return 1000 * 5 ;
+  //return activityEl.dataset.duration * 60000;
+  return 1000 * 7 ;
 }
 
 function formatTime(milliseconds) {
