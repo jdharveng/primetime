@@ -9,7 +9,8 @@
       </div>
 
       <div>
-        <p id="logo_text">primetime</p>
+        <%= link_to 'primetime', root_url, id: "cta", id: "logo_text"%><!--
+        <p id="logo_text">primetime</p> -->
       </div>
 
       <!-- Avatar with dropdown menu -->
@@ -24,7 +25,7 @@
     <% else %>
       <!-- Login link (when logged out) -->
 
-      <p id="logo_text">primetime</p>
+      <%= link_to 'primetime', root_url, id: "cta", id: "logo_text"%>
       <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
     <% end %>
 </div>
