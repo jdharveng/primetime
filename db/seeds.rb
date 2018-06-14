@@ -292,7 +292,7 @@ puts 'Created Categories'
   )
 
   Activity.create!(
-  title: "Museum, amphitheater and garden at Gulbenkian",
+  title: "Museum and garden at Gulbenkian",
   description: "Music Season with Gulbenkian Orchestra and Choir, permanent exhibitions of the collections of Calouste Gulbenkian Museum and Modern Art Centre. Also temporary exhibitions, symposia and conferences. The immense garden of lush greenery is fresh and inviting, pieces of sculpture spread between paths and lawns.",
   address: "Gulbenkian Avenida de Berna 45, Lisbon",
   latitude: 0,
@@ -322,7 +322,7 @@ puts 'Created Categories'
   )
 
   Activity.create!(
-  title: "Esplanade, garden and a view over Lisbon",
+  title: "Esplanade and view over Lisbon",
   description: "It’s a peaceful romantic garden from the XIX century that is somewhat hidden. It has a fantastic view over Liberdade Avenue, São Pedro de Alcântara Hill, Downtown and Tejo River. By the way, the Torel Garden is situated on top of one of the seven hills of Lisbon.",
   address: "Jardim do Torel, R. Júlio de Andrade Lisbon",
   latitude: 0,
@@ -338,7 +338,7 @@ puts 'Created Categories'
 
   Activity.create!(
   title: "Indoor Rock Climbing",
-  description: "Vértigo is the biggest indoor climbing center of Lisbon, targeted at those looking for an alternative way to keep in shape with adrenaline, without the hazards and risks of outdoors climbing or those that wish to decompress after a long week of work and demo day presentations. It's guaranteed you will leave with a clear head (or at least a broken arm).",
+  description: "Vértigo is the biggest indoor climbing center of Lisbon, targeted at those looking for a way to keep in shape without the hazards and risks of outdoors climbing or those that wish to decompress after a long week of work and demo day presentations. It's guaranteed you will leave with a clear head (or at least a broken arm).",
   address: "Avenida Infante Dom Henrique, 1950-408 Lisboa",
   latitude: 0,
   longitude: 0,
@@ -435,18 +435,66 @@ puts 'Created Followers and Followees'
     state = "pending"
   end
 
-
  Booking.create!(
-  user: User.all.sample,
+  # user: User.all.sample,
+  user: User.where.not(first_name:"Andreia").sample,
   activity: activity,
   state: state,
   )
 
 end
 
+ Booking.create!(
+  user: userAndreia,
+  activity: Activity.find_by(title: "Esplanade and view over Lisbon"),
+  state: "paid",
+  )
+
+ Booking.create!(
+  user: userAndreia,
+  activity: Activity.find_by(title: "Museu do Azulejo"),
+  state: "not paid",
+  )
+
+  Booking.create!(
+  user: userAndreia,
+  activity: Activity.find_by(title:"Private Street Art Walk in Lisbon"),
+  state: "not paid",
+  )
+
+  Booking.create!(
+  user: userAndreia,
+  activity: Activity.find_by(title:"Museum and garden at Gulbenkian"),
+  state: "not paid",
+  )
+
+  Booking.create!(
+  user: userAndreia,
+  activity: Activity.find_by(title:"Oversee Lisbon at Miradouro São Pedro de Alcantara"),
+  state: "paid",
+  )
+
+  Booking.create!(
+  user: userAndreia,
+  activity: Activity.find_by(title:"Bifana at O Trevo"),
+  state: "not paid",
+  )
+
+  Booking.create!(
+  user: userAndreia,
+  activity: Activity.find_by(title:"Portuguese Cooking Lesson in Lisbon"),
+  state: "not paid",
+  )
+
+  Booking.create!(
+  user: userAndreia,
+  activity: Activity.find_by(title:"Have a cocktail at Cinco Lounge"),
+  state: "paid",
+  )
+
 puts 'Created Bookings'
 
-100.times do
+1000.times do
 
   Review.create!(
 
