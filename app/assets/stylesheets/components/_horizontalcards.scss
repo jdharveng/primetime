@@ -227,11 +227,20 @@
     padding-top: 7px;
   }
 
+.green-border {
+    border-color: darkgreen;
+    color: darkgreen;
+}
+
+.red-border {
+    border-color: red;
+    color: red;
+}
+
 .review-state {
-    color: white;
     padding: 5px;
     font-size: 12px;
-    width: 60px;
+    width: 70px;
     text-align: center;
     border-radius: 3px;
     height: 28px;
@@ -239,4 +248,7 @@
     display: flex;
     justify-content: space-around;
     padding-top: 7px;
+    border-style: solid;
+    border-width: 1px;
+    margin-right: 10px;
   }

@@ -19,13 +19,15 @@
         <%=d.day%>/<%= d.month %>/<%= d.year %> - <%= d.hour %>: <%= d.minute %>
       </div>
       <div class="myact-card-details">
-          <div class="review-state">
-              <% if booking.review == nil %>
+          <% if booking.review == nil %>
+              <div class="review-state red-border">
                  To Review
-              <% else %>
-                Reviewed
-              <% end %>
-          </div>
+              </div>
+          <% else %>
+              <div class="review-state green-border">
+                 Reviewed
+              </div>
+          <% end %>
         <% if booking.state == "paid" %>
           <div class="booking-state green">
               <%= booking.state %>
