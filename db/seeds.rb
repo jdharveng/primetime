@@ -8,7 +8,7 @@
   first_name:"Andreia",
   last_name: "Domingues",
   bio:"Andreia is a tv host that doesn't like tv and prefers reading, she can be found with a book in hand at the most random places and situations: mountain tops, car repair garages and in the middle of a hurricane ",
-  remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_100/v1528135116/Le_Wagon_18.04.27_039.jpg",
+  remote_picture_url: "https://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_100/v1528135116/Le_Wagon_18.04.27_039.jpg",
   address: "Rua Moeda 7, Lisboa, Portugal"
   )
 
@@ -18,7 +18,7 @@
   first_name:"Jerome",
   last_name: "Harveng",
   bio: "Jerome is a surfer, that travels the world in championships, but while other surfers like to discuss the waves to discuss philosophy (others eventually leave)",
-  remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/v1527684917/image_2.png",
+  remote_picture_url: "https://res.cloudinary.com/pmarzagao/image/upload/v1527684917/image_2.png",
   address: "Rua Moeda 7, Lisboa, Portugal"
   )
 
@@ -28,7 +28,7 @@
   first_name:"Pedro",
   last_name: "Marzagão",
   bio:"Pedro is a sky-diving professional who has spent most of his life up in the air. He goes on a new plane everyday but nothings makes him fly like a book",
-  remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/v1527683243/Pedro_Headshot_2.jpg",
+  remote_picture_url: "https://res.cloudinary.com/pmarzagao/image/upload/v1527683243/Pedro_Headshot_2.jpg",
   address: "Rua Senhora da Glória 104, Lisboa, Portugal"
   )
 
@@ -38,7 +38,7 @@
   first_name:"Marta",
   last_name: "Keller",
   bio:"Spent a weekend promoting glue for no pay. What gets me going now is supervising the production of basketballs in Hanford, CA. Was quite successful at developing jigsaw puzzles for fun and profit. What gets me going now is implementing dolls in Africa. Spent several months merchandising wooden horses in Ocean City, NJ. Spoke at an international conference about marketing country music in Nigeria.",
-  remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/v1527683260/8GaEWuxK_400x400.jpg",
+  remote_picture_url: "https://res.cloudinary.com/pmarzagao/image/upload/v1527683260/8GaEWuxK_400x400.jpg",
   address: "Rua Moeda 7, Lisboa, Portugal"
   )
 
@@ -48,7 +48,7 @@
   first_name:"Emily",
   last_name: "Burns",
   bio:"Once had a dream of working on g.i. joes in Miami, FL. Spent college summers lecturing about cellos for the underprivileged. Spent high school summers marketing lint in the aftermarket. Crossed the country getting to know crickets in Cuba. Practiced in the art of analyzing dolls on the black market. Garnered an industry award while getting my feet wet with sheep in Fort Lauderdale, FL.",
-  remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_100/v1528135035/Le_Wagon_18.04.27_064.jpg",
+  remote_picture_url: "https://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_100/v1528135035/Le_Wagon_18.04.27_064.jpg",
   address: "Rua Constantino Fernandes, 2, Lisboa, Portugal"
   )
 
@@ -58,7 +58,7 @@
   first_name:"Swen",
   last_name: "Kunzel",
   bio:"Prior to my current job I was testing the market for g.i. joes in West Palm Beach, FL. Once had a dream of writing about licorice in Atlantic City, NJ. Spent the better part of the 90's investing in puppets in Mexico. Spent the 80's investing in walnuts in Naples, FL. In 2009 I was licensing electric trains in Washington, DC. Spent 2001-2007 working with pubic lice in Ohio.",
-  remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_100/v1528135086/Le_Wagon_18.04.27_016.jpg",
+  remote_picture_url: "https://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_100/v1528135086/Le_Wagon_18.04.27_016.jpg",
   address: "Rua Manuel Marques, 15, Lisboa, Portugal"
   )
 
@@ -68,7 +68,7 @@
   first_name:"Antoine",
   last_name: "Quellier",
   bio:"Practiced in the art of donating wooden trains for the government. Set new standards for analyzing jump ropes in Africa. Won several awards for donating frisbees in Jacksonville, FL. Spent several months donating teddy bears worldwide. Spent childhood working with pond scum in Orlando, FL. Have a strong interest in buying and selling jigsaw puzzles in Los Angeles, CA.",
-  remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_100/v1528135017/Le_Wagon_18.04.27_045.jpg",
+  remote_picture_url: "https://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_100/v1528135017/Le_Wagon_18.04.27_045.jpg",
   address: "Rua da Misericordia 15, Lisboa Portugal"
   )
 
@@ -78,7 +78,7 @@
   first_name:"David",
   last_name: "Zwagemaker",
   bio:"Set new standards for working on psoriasis in New York, NY. Spent 2001-2005 supervising the production of bassoons in New York, NY. Spent a year merchandising acne in West Palm Beach, FL. Spent 2001-2005 analyzing cannibalism in Hanford, CA. Spent 2001-2007 selling crayon art in Ohio. Spent 2001-2008 writing about hobos in Washington, DC.",
-  remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_100/v1528135049/Le_Wagon_18.04.27_020.jpg",
+  remote_picture_url: "https://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_100/v1528135049/Le_Wagon_18.04.27_020.jpg",
   address: "Rua da Atalaia 25, Lisboa, Portugal"
   )
 
@@ -122,7 +122,7 @@ puts 'Created Categories'
   category: Category.find_by_name("Food Tasting"),
   user: userDavid,
   duration: 10,
-  remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138801/Amanteigaria.jpg",
+  remote_picture_url: "https://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138801/Amanteigaria.jpg",
   payable: true
   )
 
@@ -137,7 +137,7 @@ puts 'Created Categories'
   category: Category.find_by_name("Sightseeing"),
   user: userDavid,
   duration: 20,
-  remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138806/Miradouro-da-Grac%CC%A7a.jpg",
+  remote_picture_url: "https://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138806/Miradouro-da-Grac%CC%A7a.jpg",
   payable: false
   )
 
@@ -152,7 +152,7 @@ puts 'Created Categories'
   category: Category.find_by_name("Food Tasting"),
   user: userPedro,
   duration: 15,
-  remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138805/o-trevo.jpg",
+  remote_picture_url: "https://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138805/o-trevo.jpg",
   payable: true
   )
 
@@ -167,7 +167,7 @@ puts 'Created Categories'
   category: Category.find_by_name("Museum"),
   user: userJerome,
   duration: 40,
-  remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138807/museu-do-azulejo.jpg",
+  remote_picture_url: "https://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138807/museu-do-azulejo.jpg",
   payable: true
   )
 
@@ -182,7 +182,7 @@ puts 'Created Categories'
   category: Category.find_by_name("Exhibition"),
   user: userAndreia,
   duration: 80,
-  remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138795/Oceanario-Lisboa.jpg",
+  remote_picture_url: "https://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138795/Oceanario-Lisboa.jpg",
   payable: true
   )
 
@@ -197,7 +197,7 @@ puts 'Created Categories'
   category: Category.find_by_name("Bar"),
   user: userSwen,
   duration: 120,
-  remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138814/pub-crawl-lisbon-destination-tours-2.jpg",
+  remote_picture_url: "https://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138814/pub-crawl-lisbon-destination-tours-2.jpg",
   payable: true,
   )
 
@@ -212,12 +212,12 @@ puts 'Created Categories'
   category: Category.find_by_name("Sightseeing"),
   user: userAndreia,
   duration: 45,
-  remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138808/jardim-botanico.jpg",
+  remote_picture_url: "https://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_720/v1528138808/jardim-botanico.jpg",
   payable: true,
   )
 
   Activity.create!(
-  title: "Buy a vintage-style hat at Chapelaria Azevedo",
+  title: "Vintage hat at Chapelaria Azevedo",
   description: "A leftover from the days when a gentleman did not leave the house without his hat, and the era when Praça D. Pedro IV [Rossio square] was the hub of hat makers and milliners, by royal decree, the Chapelaria Azevedo Rua continues today, keeping abreast with new generations and trends. Today it offers an eclectic mix of classic and contemporary hat models – in addition to the experience of shopping in what looks like a cathedral, albeit a profane cathedral of the hat – with its wooden furnishings with glass doors filled with wondrous items from floor to ceiling. Behind the shop, where hats were once made, one can still find the chimney through which the fumes and vapours resulting from the moulding of felt were released. The most frequently told story in the shop is of how the founder fled phylloxera in 1886, a disastrous wine harvest forcing Manuel Aquino de Azevedo Rua to leave wine-making in his rural home behind and try his luck in the country’s capital. We hereby challenge the visitor to locate, inside the shop, a discreetly exhibited bottle of wine. For that is the story it tells, without making an explicit reference to the shop’s origins. The shop is peopled by many other stories; the hat is, after all, a social emblem loaded with symbolism and interpretations. It was not so long ago that we distinguished between rich and poor, and various professions, just by the hat the people in question wore. Only a few vestiges remain of that symbolism, but lots of variety: festive headpieces for bridal parties; the noble top hat, be it small or tall, for diplomats; the democratic beret; the protective woollen hat; the bowler; the Panama; the colonial war helmet; and the youthful cap. But the shop doesn’t stock just hats – it also sells gloves, walking sticks and umbrellas. If you don’t know what a Portuguese tricorne is then feel free to ask here, as the shop is a Portuguese reference in making this three-cornered hat worn by the traditional horseback bullfighter. So much so, that one particular memory, or perhaps a legend, persists in the story told by José Manuel, who owned the shop in the 1990s: I remember my father watching bullfights on television and whenever a tricorne fell to the ground he would shout: ‘Stamp on it, bull. Stamp on it!’ Given that a new one would most probably have to be ordered from Azevedo Rua… - Step on it, bull. Step on it!",
   address: "Praça D. Pedro IV 73, Lisbon",
   latitude: 0,
@@ -232,7 +232,7 @@ puts 'Created Categories'
   )
 
   Activity.create!(
-  title: "Pair of handmade gloves at Luvaria Ulisses",
+  title: "Handmade gloves at Luvaria Ulisses",
   description: "amous for the quality of its gloves and the tiny dimensions of the shop, the Luvaria Ulisses can be likened to a pearl – because of its concentrated value. A feeling of success is easily achieved in the shop – just three customers and it’s full to the brim. The limited space is, however, all the space necessary for the shop’s variations on a theme: the glove. Made-to-measure gloves in seven different original sizes that can then be adapted to the customer’s hands. In fine sheepskin, with a bow on the back of the hand, or with a button, embroidery, applications – the variations are endless. Even so, a glove is no longer what it was in the 1920s when Ulisses opened. That was a time when a lady would not be seen outside the house without her gloves. Even in the 1970s, when Carlos Carvalho, one of the current owners, entered the business as an assistant, there were still five glove shops in the Chiado district alone. After the Revolution in 1974, using gloves took on a new social significance and the other glove shops gradually disappeared. Ulisses has remained thanks to its clientele that remains loyal to the quality and personalised service it offers.",
   address: "Rua do Carmo 87-A",
   latitude: 0,
@@ -242,7 +242,7 @@ puts 'Created Categories'
   category: Category.find_by_name("Glamour"),
   user: userEmily,
   duration: 30,
-  remote_picture_url: "http://images-cdn.impresa.pt/visao/2016-07-21-mj12173.jpg-1/original/mw-860",
+  remote_picture_url: "https://images-cdn.impresa.pt/visao/2016-07-21-mj12173.jpg-1/original/mw-860",
   payable: true,
   )
 
@@ -272,7 +272,7 @@ puts 'Created Categories'
   category: Category.find_by_name("Bar"),
   user: userJerome,
   duration: 60,
-  remote_picture_url: "http://images-cdn.impresa.pt/activa/2017-04-19-Cinco-Lounge.jpg/original",
+  remote_picture_url: "https://images-cdn.impresa.pt/activa/2017-04-19-Cinco-Lounge.jpg/original",
   payable: true,
   )
 
@@ -347,7 +347,7 @@ puts 'Created Categories'
   category: Category.find_by_name("Sports"),
   user: userJerome,
   duration: 70,
-  remote_picture_url:"http://res.cloudinary.com/pmarzagao/image/upload/v1528895123/indoorclimbing.jpg",
+  remote_picture_url:"https://res.cloudinary.com/pmarzagao/image/upload/v1528895123/indoorclimbing.jpg",
   payable: true,
   )
 
@@ -362,7 +362,7 @@ puts 'Created Categories'
   category: Category.find_by_name("Literature"),
   user: userEmily,
   duration: 60,
-  remote_picture_url:"http://res.cloudinary.com/pmarzagao/image/upload/v1528895968/fabricabracodeprata.jpg",
+  remote_picture_url:"https://res.cloudinary.com/pmarzagao/image/upload/v1528895968/fabricabracodeprata.jpg",
   payable: true,
   )
 
@@ -377,7 +377,7 @@ puts 'Created Categories'
   category: Category.find_by_name("Theatre"),
   user: userPedro,
   duration: 90,
-  remote_picture_url:"http://res.cloudinary.com/pmarzagao/image/upload/v1528896657/teatromeridional.jpg",
+  remote_picture_url:"https://res.cloudinary.com/pmarzagao/image/upload/v1528896657/teatromeridional.jpg",
   payable: true,
   )
 
