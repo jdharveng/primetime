@@ -47,7 +47,7 @@
   password:"123456",
   first_name:"Emily",
   last_name: "Burns",
-  bio:"Once had a dream of working on g.i. joes in Miami, FL. Spent college summers lecturing about cellos for the underprivileged. Spent high school summers marketing lint in the aftermarket. Crossed the country getting to know crickets in Cuba. Practiced in the art of analyzing dolls on the black market. Garnered an industry award while getting my feet wet with sheep in Fort Lauderdale, FL.",
+  bio:"Once had a dream of becoming an austronaut in the local amusement park. Spent college summers lecturing about cellos for the underprivileged. Spent high school summers marketing gummy bears in the aftermarket.",
   remote_picture_url: "https://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_100/v1528135035/Le_Wagon_18.04.27_064.jpg",
   address: "Rua Constantino Fernandes, 2, Lisboa, Portugal"
   )
@@ -57,7 +57,7 @@
   password:"123456",
   first_name:"Swen",
   last_name: "Kunzel",
-  bio:"Prior to my current job I was testing the market for g.i. joes in West Palm Beach, FL. Once had a dream of writing about licorice in Atlantic City, NJ. Spent the better part of the 90's investing in puppets in Mexico. Spent the 80's investing in walnuts in Naples, FL. In 2009 I was licensing electric trains in Washington, DC. Spent 2001-2007 working with pubic lice in Ohio.",
+  bio:"Prior to my current job I was testing the market for g.i. joes in West Palm Beach, FL. Once had a dream of writing about licorice in Atlantic City, NJ. Spent the better part of the 90's investing in puppets in Mexico.",
   remote_picture_url: "https://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_100/v1528135086/Le_Wagon_18.04.27_016.jpg",
   address: "Rua Manuel Marques, 15, Lisboa, Portugal"
   )
@@ -67,7 +67,7 @@
   password:"123456",
   first_name:"Antoine",
   last_name: "Quellier",
-  bio:"Practiced in the art of donating wooden trains for the government. Set new standards for analyzing jump ropes in Africa. Won several awards for donating frisbees in Jacksonville, FL. Spent several months donating teddy bears worldwide. Spent childhood working with pond scum in Orlando, FL. Have a strong interest in buying and selling jigsaw puzzles in Los Angeles, CA.",
+  bio:"Practiced in the art of donating wooden trains for the government. Set new standards for analyzing jump ropes in Africa. Won several awards for donating frisbees in Algarve. Spent several months donating teddy bears worldwide.",
   remote_picture_url: "https://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_100/v1528135017/Le_Wagon_18.04.27_045.jpg",
   address: "Rua da Misericordia 15, Lisboa Portugal"
   )
@@ -77,7 +77,7 @@
   password:"123456",
   first_name:"David",
   last_name: "Zwagemaker",
-  bio:"Set new standards for working on psoriasis in New York, NY. Spent 2001-2005 supervising the production of bassoons in New York, NY. Spent a year merchandising acne in West Palm Beach, FL. Spent 2001-2005 analyzing cannibalism in Hanford, CA. Spent 2001-2007 selling crayon art in Ohio. Spent 2001-2008 writing about hobos in Washington, DC.",
+  bio:"Set new standards for working on toy design in New York, NY. Spent 2001-2007 selling crayon art in Ohio. Spent 2001-2008 writing about hobos in Washington, DC.",
   remote_picture_url: "https://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_100/v1528135049/Le_Wagon_18.04.27_020.jpg",
   address: "Rua da Atalaia 25, Lisboa, Portugal"
   )
@@ -233,7 +233,7 @@ puts 'Created Categories'
 
   Activity.create!(
   title: "Handmade gloves at Luvaria Ulisses",
-  description: "Famous for the quality of its gloves and the tiny dimensions of the shop, the Luvaria Ulisses can be likened to a pearl – because of its concentrated value. A feeling of success is easily achieved in the shop – just three customers and it’s full to the brim. The limited space is, however, all the space necessary for the shop’s variations on a theme: the glove. Made-to-measure gloves in seven different original sizes that can then be adapted to the customer’s hands. Even so, a glove is no longer what it was in the 1920s when Ulisses opened. That was a time when a lady would not be seen outside the house without her gloves. After the Revolution in 1974, using gloves took on a new social significance and the other glove shops gradually disappeared. Ulisses has remained thanks to its clientele that remains loyal to the quality and personalised service it offers.",
+  description: "Famous for the quality of its gloves and the tiny dimensions of the shop, the Luvaria Ulisses can be likened to a pearl – because of its concentrated value. A feeling of success is easily achieved in the shop – just three customers and it’s full to the brim. The limited space is, however, all the space necessary for the shop’s variations on a theme: the glove. Made-to-measure gloves in seven different original sizes that can then be adapted to the customer’s hands. Ulisses has remained thanks to its clientele that remains loyal to the quality and personalised service it offers.",
   address: "Rua do Carmo 87-A",
   latitude: 0,
   longitude: 0,
@@ -338,7 +338,7 @@ puts 'Created Categories'
 
   Activity.create!(
   title: "Indoor Rock Climbing",
-  description: "Vértigo is the biggest indoor climbing center of Lisbon, targeted at those who looking for an alternative way to keep in shape with adrenaline, without the hazards and risks of outdoors climbing or those that wish to decompress after a long week of work and demo day presentations. It's guaranteed you will leave with a clear head (or at least a broken arm).",
+  description: "Vértigo is the biggest indoor climbing center of Lisbon, targeted at those looking for an alternative way to keep in shape with adrenaline, without the hazards and risks of outdoors climbing or those that wish to decompress after a long week of work and demo day presentations. It's guaranteed you will leave with a clear head (or at least a broken arm).",
   address: "Avenida Infante Dom Henrique, 1950-408 Lisboa",
   latitude: 0,
   longitude: 0,
