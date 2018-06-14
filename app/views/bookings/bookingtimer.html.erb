@@ -18,6 +18,12 @@
 
       <div class="col-xs-4 buttons-container">
         <button class="cta-button half-width">Start</button>
+        <% ulat = current_user.latitude.to_s %>
+        <% ulng = current_user.longitude %>
+        <% latitude = @booking.activity.latitude %>
+        <% longitude = @booking.activity.longitude %>
+        <% url = "https://www.google.com/maps/dir/?api=1&origin=#{ulat},#{ulng}&destination=#{latitude},#{longitude}" %>
+        <%= link_to "Map", url, class: "passive-button half-width right-border-red" %>
         <%= link_to "Review", new_booking_review_path(@booking), class: "passive-button half-width" %>
   <!--       <button class="review-button cta-button">Review<i class="fas fa-caret-right"></i></button> -->
       </div>
