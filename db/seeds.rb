@@ -203,7 +203,7 @@ puts 'Created Categories'
 
   Activity.create!(
   title: "Explore the Tropical Botanical Garden",
-  description: "The Tropical Botanical Garden in Belém (sometimes referred to as the Jardim Museu Agricola Tropical) is a lush oasis of exotic flora set in landscaped gardens that surround the 18th-century Palácio dos Condes da Calheta, these days used as research centre of the Institute for Tropical Sciences. Visitors can appreciate an array of tropical and subtropical plants, and imposing date palm, fig and monkey puzzle trees. Kids can feed the ducks on the lake and play hide and seek under the garden's verdant canopy. The palace regularly hosts scientific exhibitions about the research on natural resources, people and history of tropical regions.",
+  description: "The Tropical Botanical Garden in Belém is a lush oasis of exotic flora set in landscaped gardens that surround the 18th-century Palácio dos Condes da Calheta, these days used as research centre of the Institute for Tropical Sciences. Visitors can appreciate an array of tropical and subtropical.",
   address: "Largo dos Jerónimos, Lisbon, 1400-209",
   latitude: 0,
   longitude: 0,
@@ -218,7 +218,7 @@ puts 'Created Categories'
 
   Activity.create!(
   title: "Vintage hat at Chapelaria Azevedo",
-  description: "A leftover from the days when a gentleman did not leave the house without his hat, and the era when Praça Rossio was the hub of hat makers and milliners, by royal decree, the Chapelaria Azevedo Rua continues today, keeping abreast with new generations and trends. Today it offers an eclectic mix of classic and contemporary hat models.",
+  description: "A leftover from the days when a gentleman did not leave the house without his hat, and the era when Praça Rossio was the hub of hat makers and milliners, by royal decree, the Chapelaria Azevedo Rua continues today, keeping abreast with new generations and trends.",
   address: "Praça D. Pedro IV 73, Lisbon",
   latitude: 0,
   longitude: 0,
@@ -233,7 +233,7 @@ puts 'Created Categories'
 
   Activity.create!(
   title: "Handmade gloves at Luvaria Ulisses",
-  description: "Famous for the quality of its gloves and the tiny dimensions of the shop, the Luvaria Ulisses can be likened to a pearl – because of its concentrated value. A feeling of success is easily achieved in the shop – just three customers and it’s full to the brim. The limited space is, however, all the space necessary for the shop’s variations on a theme: the glove. Made-to-measure gloves in seven different original sizes that can then be adapted to the customer’s hands. Ulisses has remained thanks to its clientele that remains loyal to the quality and personalised service it offers.",
+  description: "Famous for the quality of its gloves and the tiny dimensions of the shop, the Luvaria Ulisses can be likened to a pearl – because of its concentrated value. The limited space is, however, all the space necessary for the shop’s variations on a theme: the glove. Ulisses has remained thanks to a clientele that remains loyal.",
   address: "Rua do Carmo 87-A",
   latitude: 0,
   longitude: 0,
