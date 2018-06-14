@@ -18,7 +18,14 @@
         <% d = DateTime.parse(booking.created_at.to_s) %>
         <%=d.day%>/<%= d.month %>/<%= d.year %> - <%= d.hour %>: <%= d.minute %>
       </div>
-      <div class="card-details">
+      <div class="myact-card-details">
+          <div class="review-state">
+              <% if booking.review == nil %>
+                 To Review
+              <% else %>
+                Reviewed
+              <% end %>
+          </div>
         <% if booking.state == "paid" %>
           <div class="booking-state green">
               <%= booking.state %>

@@ -79,6 +79,15 @@
   min-width: 140px;
 }
 
+.myact-card-details {
+  display: flex;
+  justify-content: flex-end;
+  // border-width: 1px;
+  // border-style: solid;
+  // border-color: black;
+  min-width: 140px;
+}
+
 .v-card-details {
   display: flex;
   margin-left:10px;
@@ -205,6 +214,20 @@
   }
 
 .booking-state {
+    color: white;
+    padding: 5px;
+    font-size: 12px;
+    width: 60px;
+    text-align: center;
+    border-radius: 3px;
+    height: 28px;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 7px;
+  }
+
+.review-state {
     color: white;
     padding: 5px;
     font-size: 12px;
