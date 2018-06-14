@@ -1,57 +1,86 @@
 <div class="container">
   <div class="row full-height">
     <div class="col-xs-12 col-md-4 col-md-offset-4 small-padding background-color height-full-percent">
-      <div class="user-profile-box overflow-scroll">
+      <div class="full-container overflow-scroll">
+
         <div class="user-picture">
             <%= cl_image_tag(@user.picture, class:"avatar-huge") %>
         </div>
+
         <div class="user-name">
             <%= @user.first_name+" "+@user.last_name %>
         </div>
+
         <div class="user-bio">
             <%= @user.bio %>
         </div>
+
         <div class="user-name-followers">
-            <p><%= @user.first_name+"'s followers" %></p>
+            <% if @user.followers.count == 1 %>
+                <p><%= @user.first_name+" has "+@user.followers.count.to_s+" follower." %></p>
+            <% else %>
+                 <p><%= @user.first_name+" has "+@user.followers.count.to_s+" followers." %></p>
+            <% end %>
         </div>
+
         <div class="red-line-box full-width">
             <div class="red-line"></div>
         </div>
+
         <div class="follow-box">
           <div class="user-followers-pics">
             <% if @user.followers.count == 0 %>
-              <div class="no-followers-info">
-                <p>No followers to show</p>
-                <%="Be the first to follow "+@user.first_name %>
-              </div>
+                  <div class="no-followers-info">
+                    <p>No followers to show</p>
+                    <%="Be the first to follow "+@user.first_name %>
+                  </div>
             <% else %>
-                <% @user.followers[0,5].each_with_index do |follower, index| %>
-                <%= cl_image_tag(follower.picture, class:"avatar-large each-follower", style:"left:#{index*10}px; z-index:#{@user.followers.count-index}") %>
-              <% end %>
+                    <% @user.followers[0,5].each_with_index do |follower, index| %>
+                    <%= cl_image_tag(follower.picture, class:"avatar-large each-follower", style:"left:#{index*10}px; z-index:#{@user.followers.count-index}") %>
+                  <% end %>
             <% end %>
           </div>
+
+
         </div>
-        <div class="full-container container-start">
+
+        <div class="follow-activity-container">
+
             <div class="activity-counter">
-              <p> <%= @user.first_name%> has
-              <% if (@user.activities).size === 1 %>
-                  1 activity</p>
-              <% else %>
-                  <%=(@user.activities).size%> activities</p>
+                  <p> <%= @user.first_name%> has
+                  <% if (@user.activities).size === 1 %>
+                      1 activity</p>
+                  <% else %>
+                      <%=(@user.activities).size%> activities</p>
+                  <% end %>
+            </div>
+
+              <div class="red-line-box full-width">
+                  <div class="red-line"></div>
+              </div>
+
+            <div class="follow-activity-box">
+                <% @user.activities.each do |activity| %>
+                    <div class="col-xs-4 card-container">
+                      <%= render 'shared/horizontalcards', activity: activity %>
+                    </div>
               <% end %>
             </div>
-            <div class="red-line"></div>
-            <% @user.activities.each do |activity| %>
-              <div class="col-xs-4 card-container">
-                <%= render 'shared/horizontalcards', activity: activity %>
-              </div>
-            <% end %>
+
         </div>
       </div>
+
       <div class="col-xs-4 buttons-container">
-          <button class="back-button passive-button half-width" onclick="goBack()"><i class="fas fa-caret-left"></i>GO BACK</button>
-          <button class="next-button cta-button half-width"><%= link_to "Follow", new_follow_path(@user.id)%> <i class="fas fa-user-plus"></i></button>
+
+          <% if @user.followers.include?(current_user) %>
+              <button class="back-button passive-button full-width" onclick="goBack()"><i class="fas fa-caret-left"></i>GO BACK</button>
+          <% else %>
+              <button class="back-button passive-button half-width" onclick="goBack()"><i class="fas fa-caret-left"></i>GO BACK</button>
+              <button class="next-button cta-button half-width"><%= link_to "Follow", new_follow_path(@user.id)%> <i class="fas fa-user-plus"></i></button>
+
+          <% end %>
       </div>
+
     </div>
   </div>
 </div>
