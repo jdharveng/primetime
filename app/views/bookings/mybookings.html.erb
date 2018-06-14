@@ -5,7 +5,7 @@
 <!-- <div class="container-index">
   <div class="row"> -->
       <div class="payment-status-title">Paid</div>
-      <div class="cards-container overflow-scroll-half">
+      <div class="cards-container overflow-scroll-half red-bottom-border">
           <% @bookings.each do |booking| %>
             <% if booking.state == "paid" %>
               <div class="col-xs-4 card-container">
@@ -16,12 +16,18 @@
       </div>
 
       <div class="payment-status-title">Not Paid</div>
-      <div class="cards-container overflow-scroll-half">
-          <% @bookings.each do |booking| %>
-            <% if booking.state != "paid" %>
-              <div class="col-xs-4 card-container">
-                <%= render 'shared/horizontalcardsmyact', activity: booking.activity, booking: booking %>
+      <div class="cards-container overflow-scroll-half red-bottom-border">
+          <% if @bookings.count == 0 %>
+              <div class="nothing-to-show">
+                  Nothing to show here at this moment.
               </div>
+          <% else %>
+            <% @bookings.each do |booking| %>
+              <% if booking.state != "paid" %>
+                <div class="col-xs-4 card-container">
+                  <%= render 'shared/horizontalcardsmyact', activity: booking.activity, booking: booking %>
+                </div>
+              <% end %>
             <% end %>
           <% end %>
       </div>
