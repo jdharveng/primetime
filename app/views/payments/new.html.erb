@@ -5,7 +5,11 @@
       </div>
       <div class="booking-payment-info">
         <div class="booking-activity-current-user">
-          <%= current_user.first_name+" "+current_user.last_name %>
+          <% if current_user.first_name == nil || current_user.first_name == nil %>
+            <p>Payment</p>
+          <% else %>
+              <%= current_user.first_name+" "+current_user.last_name %>
+          <% end %>
         </div>
         <div class="booking-activity-name">
           <%= @booking.activity.title %>
