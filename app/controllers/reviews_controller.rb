@@ -22,8 +22,14 @@ before_action :set_booking, only: [:show, :new, :create]
 
     #raise
     authorize @review
+    if current_user.first_name == nil
+      name = ""
+    else
+      name = current_user.first_name
+    end
+
     if @review.save
-      redirect_to mybookings_path, notice: "Thanks for your review " + current_user.first_name + " !"
+      redirect_to mybookings_path, notice: "Thanks for your review " + name + " !"
     else
       flash[:alert]= "You need to give at least 1 star !"
       render :new
