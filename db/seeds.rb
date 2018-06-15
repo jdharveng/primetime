@@ -347,7 +347,7 @@ puts 'Created Categories'
   category: Category.find_by_name("Sports"),
   user: userJerome,
   duration: 70,
-  remote_picture_url:"https://res.cloudinary.com/pmarzagao/image/upload/v1528895123/indoorclimbing.jpg",
+  remote_picture_url:"http://res.cloudinary.com/pmarzagao/image/upload/c_scale,h_640,w_1195/v1528996953/axo5rhri1b93qtk8snhq.jpg",
   payable: true,
   )
 
