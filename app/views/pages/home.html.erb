@@ -1,97 +1,110 @@
 <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 <div class="container-flow">
   <div class="banner" style="background-image:  linear-gradient(-225deg, rgba(255,255,0,0.9) 0%, rgba(255,0,0,0.9) 50%), url('<%= image_path "banner.jpg" %>');">
-<!--   <div class="banner" style="background-image:  linear-gradient(-225deg, rgba(0,101,168,0.9) 0%, rgba(0,36,61,0.9) 50%), url('<%= image_path "banner.jpg" %>');"> -->
-   <!--  <div class="banner" style="background-image:  linear-gradient(-225deg, rgba(0,101,168,0.9) 0%, rgba(58,43,73,0.95) 50%), url('<%= image_path "banner.jpg" %>');">
- -->
         <div>
           <div class="logo-margin">
             <%= image_tag "logo_red.png", height: 80 %>
           </div>
           <h1>primetime</h1>
           <p>enjoy yours, every day</p>
-          <%= link_to 'I want it', root_url + "filters", id: "cta", class: "btn btn-danger btn-lg"%>
+          <%= link_to 'I WANT IT', root_url + "filters", id: "cta", class: "landing-cta"%>
         </div>
       </div>
 </div>
 <div class="container">
   <div class="row">
-    <div class="col-xs-12 col-md-4 col-md-offset-4 small-padding background-color">
+    <div class="col-xs-12 col-md-4 col-md-offset-4 small-padding background-color height-full-percentage">
 <!-- <div class="container-index">
   <div class="row"> -->
       <div class="full-container container-start">
-          <h1 class="landing-value-prop-main-title">primetime helps you make time for the things you value</h1>
-          <div class="props-container">
-<!--             <div id="first-element-value-prop" class="logo-prop">
-                <%= image_tag "logo_red.png", height: 40 %>
-            </div> -->
-            <h2 class="landing-value-prop-title" >Make time for things that energize you every day</h2>
-
-              <p class="landing-value-prop-paragraph">Sometimes it is not easy to make time to make each day a bit special, by doing something, no matter how little, of the things we love. Primetime helps you rememeber to do that little something everyday.</p>
+          <div class="landing-h1">
+            <p>WHAT IS PRIMETIME</p>
+            <h1>Primetime is a community driven web app with a clear mission: Help you find the best activities, curated by a network of time effective people just like you</h1>
+            <%=image_tag("iphone6_silver_portrait (1).png", class:"landing-mockup")%>
+          </div>
+          <div class="value-proposition-container">
+            <div class="landing-title">
+               <h2>MAKE TIME FOR THE THINGS YOU VALUE</h2>
             </div>
+            <div class="value-proposition-box">
+              <div class="value-proposition-icon">
+                <%=image_tag("noun_1774935_cc")%>
+              </div>
+              <div class="value-proposition-title">
+                <h3>Discover around you</h3>
+              </div>
+              <div class="value-proposition-bullet">
+                <h4>There's plenty out there to make your day better. Tons of experiences are waiting for you, right at your doorstep.</h4>
+              </div>
+            </div>
+            <div class="value-proposition-box">
+              <div class="value-proposition-icon">
+                <%=image_tag("noun_1772870_cc")%>
+              </div>
+              <div class="value-proposition-title">
+                <h3>Belong to a community</h3>
+              </div>
+              <div class="value-proposition-bullet">
+                <h4>Contribute to the community with your own suggestions, follow, rate and review. Be part of making it grow.</h4>
+              </div>
+            </div>
+            <div class="value-proposition-box">
+              <div class="value-proposition-icon">
+                <%=image_tag("noun_1624078_cc")%>
+              </div>
+              <div class="value-proposition-title">
+                <h3>Not your usual suspect</h3>
+              </div>
+              <div class="value-proposition-bullet">
+                <h4>Not like other apps out there. Brings time focus and a tailored approach to activity suggestions</h4>
+              </div>
+            </div>
+          </div>
 
-            <div class="props-container">
-<!--         <div class="logo-margin">
-            <%= image_tag "logo_red.png", height: 40 %>
-          </div> -->
-        <h2 class="landing-value-prop-title">Discover the best activities to make your day</h2>
-          <p class="landing-value-prop-paragraph">Primetime allows you to make the most of the free time you have, helping you find the best activities, curated by a network of time effective people just like you.</p>
-</div>
+          <div class="testimonials-container">
+            <div class="testimonials-title">
+              <h2>WHAT OTHERS THINK OF IT</h2>
+            </div>
+            <div class="testimonials-box">
+              <div class="testimonial-icon">
+                <img class="avatar-large avatar-testimonial" src="https://res.cloudinary.com/pmarzagao/image/upload/v1528727610/bghqlddvjzu4jdq0rokv.jpg">
+              </div>
+              <div class="testimonial-bullet">
+                <blockquote>"I am always trying to make the best of my time and feel that each day deserves some time devoted to make things with meaning. Other apps present a laundry list of events to do, but no way to filter by the time I had available to do them. This is such a time saver."</blockquote>
+              </div>
+              <div class="testimonial-signature">
+                <cite>Andreia, Lisbon</cite>
+              </div>
+            </div>
+            <div class="testimonials-box">
+              <div class="testimonial-icon">
+                <img class="avatar-large avatar-testimonial" src="https://res.cloudinary.com/pmarzagao/image/upload/v1527684917/image_2.png">
+              </div>
+              <div class="testimonial-bullet">
+                <blockquote>With time, you also feel you would like to share some of the activities that you love with the community, and it is very easy to do so. You also begin noticing the best curators of actitivities and easily follow them. I feel part of a community of like-minded people.</blockquote>
+              </div>
+              <div class="testimonial-signature">
+                <cite>Jerôme, Brussels</cite>
+              </div>
+            </div>
+            <div class="testimonials-box">
+              <div class="testimonial-icon">
+                <img class="avatar-large avatar-testimonial" src="https://res.cloudinary.com/pmarzagao/image/upload/v1528819825/hs3lp5u4bejcd2fzxx4b.jpg">
+              </div>
+              <div class="testimonial-bullet">
+                <blockquote>It is really amazing that you get to book the activities and pay some of them through the platform. That way I don't have to worry about having cash available when I get to the place. One less concern when enjoying my activity.</blockquote>
+              </div>
+              <div class="testimonial-signature">
+                <cite>Pedro, Lisbon</cite>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="credits">
+        <div class="developed-by">
 
-          <div class="props-container">
-<!--         <div class="logo-margin">
-            <%= image_tag "logo_red.png", height: 40 %>
-          </div> -->
-        <h2 class="landing-value-prop-title">Belong to a community of people that value time as much as you do</h2>
-          <p class="landing-value-prop-paragraph">Primetime allows you to follow people that want to spend their free time as wisely as you do. You can also give back to the community by sharing your activities. And yes, you can always share with your friends what you are about to do.</p>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-<hr>
-
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-md-4 col-md-offset-4 small-padding background-color full-height">
-<!-- <div class="container-index">
-  <div class="row"> -->
-      <div class="full-container container-start">
-          <h1 class="landing-value-prop-main-title">What our users say</h1>
-<div class="props-container-testimonials">
-        <img class="avatar-large avatar-testimonial" src="https://res.cloudinary.com/pmarzagao/image/upload/v1528727610/bghqlddvjzu4jdq0rokv.jpg">
-
-        <!-- <h2 class="landing-user-name">Andreia</h2> -->
-          <p class="landing-value-prop-paragraph">"I am always trying to make the best of my time and feel that each day deserves some time devoted to make things with meaning. Other apps present a laundry list of events to do, but no way to filter by the time I had available to do them. This is such a time saver."</p>
-
-</div>
-          <p class="signature">-- <i>Andreia, Lisbon</i></p>
-
-<div class="props-container-testimonials">
-
-          <img class="avatar-large avatar-testimonial" src="https://res.cloudinary.com/pmarzagao/image/upload/v1528819825/hs3lp5u4bejcd2fzxx4b.jpg">
-
-        <!-- <h2 class="landing-user-name">Pedro</h2> -->
-          <p class="landing-value-prop-paragraph">"It is really amazing that you get to book the activities and pay some of them through the platform. That way I don't have to worry about having cash available when I get to the place. One less concern when enjoying my activity."</p>
-</div>
-<p class="signature">-- <i>Pedro, Lisbon</i></p>
-
-<div class="props-container-testimonials">
-          <img class="avatar-large avatar-testimonial" src="https://res.cloudinary.com/pmarzagao/image/upload/v1527684917/image_2.png">
-
-    <!--     <h2 class="landing-user-name">Jerôme</h2> -->
-          <p class="landing-value-prop-paragraph">"With time, you also feel you would like to share some of the activities that you love with the community, and it is very easy to do so. You also begin noticing the best curators of actitivities and easily follow them. I feel part of a community of like-minded people."</p>
-</div>
-<p class="signature">-- <i>Jerôme, Brussels</i></p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<script>
-  var goFS = document.getElementById("cta");
-  goFS.addEventListener("click", function() {
-      document.body.requestFullscreen();
-  }, false);
-</script>
